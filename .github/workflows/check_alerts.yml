@@ -1,0 +1,59 @@
+name: Mercari Alerts
+
+on:
+  schedule:
+    # Every 15 minutes. GitHub often delays scheduled runs by a few minutes
+    # under load - that's normal and not worth fighting. Going below ~5
+    # minutes mostly just increases the odds of being rate-limited.
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}   # manual trigger from the Actions tab
+
+permissions:
+  contents: write         # so the run can commit the updated state file
+
+# Never let two runs race on the state-file commit.
+concurrency:
+  group: mercari-alerts
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Self-test the matching engine
+        # Pure offline logic tests. If these fail the rules engine is broken
+        # and any "no new listings" result would be meaningless.
+        run: |
+          python tests/test_matching.py
+          python tests/test_runner_smoke.py
+
+      - name: Check alerts
+        run: python mercari_alert.py
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+
+      - name: Commit updated state
+        if: always()
+        run: |
+          git config user.name "mercari-alert-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add seen_state.json .term_counts.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "Update alert state [skip ci]"
+            git pull --rebase --autostash
+            git push
+          fi

@@ -1,0 +1,140 @@
+# ===========================================================================
+# Mercari Japan alerts
+#
+# Don't hand-write these from scratch. Generate them:
+#
+#     python learn_alert.py --name my-alert \
+#         --label "Readable name" \
+#         <url of a past listing> <another> <another> \
+#         --not <url of a listing you do NOT want>
+#
+# ...read the report it prints, then re-run with --write to append it here.
+# Hand-tune afterwards; the fields are all documented below.
+#
+# Test any change without sending email or touching state:
+#     python mercari_alert.py --dry-run --only my-alert --explain
+# ===========================================================================
+#
+# FIELDS
+#   name        required, unique. Used as the state key - renaming an alert
+#               makes it re-baseline once (silently, no email).
+#   label       what shows up in the email. Defaults to `name`.
+#   queries     the search fan-out. EVERY query runs; results are pooled and
+#               de-duplicated. More queries = better recall, and costs
+#               nothing in false alerts because `match` filters locally.
+#   match.require   AND of ORs. Each inner list is "at least one of these".
+#                   Keep it loose - this is a safety net, not the filter.
+#   match.signals   term -> weight. Summed over title + description.
+#                   Title hits count 1.25x. This is the real filter.
+#   match.exclude   any hit rejects the listing outright.
+#   match.min_score the bar a listing must clear. Listings that score at
+#                   least 55% of it land in the email's "possible matches"
+#                   section instead of vanishing, so you can tune.
+#   match.scope     "full" reads descriptions (recommended - sellers hide the
+#                   important details there). "title" is title-only.
+#   presets         extra exclude bundles: no_repro, no_junk, no_bulk,
+#                   no_parts, no_graded.
+#   price_min / price_max      yen, filtered server-side.
+#   mercari_exclude            Mercari's own "exclude words" box.
+#   min_interval_minutes       don't re-check more often than this. Use it to
+#                              run cheap alerts every 15 min and broad ones
+#                              hourly.
+#   suppress_relists           true = stay quiet when a seller deletes and
+#                              re-posts the same item to bump it.
+#   paused                     true = skip without deleting.
+#
+# Reproductions, want-to-buy posts, "box only" and similar are excluded
+# automatically for every alert. Set use_default_excludes: false to opt out.
+
+alerts:
+
+  # -------------------------------------------------------------------------
+  # REAL EXAMPLE - generated from your four C-E2 listings.
+  # The weights below came from measuring how common each term is on Mercari:
+  # ワンピース matches ~480k listings so it counts for almost nothing, while
+  # C-E2 matches ~45 so it counts for a lot. Re-run learn_alert.py to refresh
+  # those numbers against live data.
+  # -------------------------------------------------------------------------
+  - name: op-hyperbattle-ce2
+    label: One Piece Hyper Battle C-E2 (Going Merry)
+    queries:
+      - C-E2
+      - ゴーイング・メリー号
+      - ルフィ海賊団
+      - ハイパーバトル
+      - ゴーイング・メリー号 ルフィ海賊団
+      - ハイパーバトル カードダス
+      - C-E2 ルフィ海賊団
+    match:
+      require:
+        - [ワンピース, ルフィ海賊団, ゴーイング・メリー号]
+      signals:
+        C-E2: 13.04
+        ゴーイング・メリー号: 12.67
+        ルフィ海賊団: 11.56
+        ハイパーバトル: 9.14
+        出航: 7.57
+        カードダス: 2.01
+        カードゲーム: 1.05
+        プロモ: 1.17
+        ワンピース: 0.38
+      exclude: [ノーマル]
+      min_score: 19.3
+      scope: full
+    learned_from: [m64572484257, m83971401198, m89240778353, m45169992781]
+
+  # -------------------------------------------------------------------------
+  # TEMPLATE - retro video games. Delete or adapt.
+  # Useful vocabulary: ファミコン FC / スーパーファミコン スーファミ SFC /
+  # メガドライブ / PCエンジン / セガサターン / ドリームキャスト / ゲームボーイ
+  # 箱説 (box + manual) / 完品 / カセット / 未開封 / 動作確認済
+  # Watch out for: ソフトのみ, 説明書のみ, 箱のみ (excluded by default),
+  # and 非売品 vs 体験版.
+  # -------------------------------------------------------------------------
+  - name: example-retro-game
+    paused: true
+    label: "EXAMPLE: SFC game, boxed"
+    queries:
+      - スーパーファミコン 箱説
+      - スーファミ 完品
+    match:
+      require:
+        - [スーパーファミコン, スーファミ, SFC]
+      signals:
+        箱説: 4.0
+        完品: 3.0
+        取扱説明書: 2.0
+        動作確認済: 1.0
+      exclude: [ソフトのみ, カセットのみ, 端子のみ]
+      min_score: 5.0
+      scope: full
+    presets: [no_junk]
+    price_max: 20000
+    min_interval_minutes: 30
+
+  # -------------------------------------------------------------------------
+  # TEMPLATE - Weekly Shonen Jump / magazines. Delete or adapt.
+  # Issues are identified as 年 + 号: "1988年 34号". Both usually appear, but
+  # often only in the description - keep scope: full.
+  # The big trap is 切り抜き (single cut-out pages) and コピー, which flood
+  # results for any famous chapter. Both are excluded below.
+  # -------------------------------------------------------------------------
+  - name: example-jump-issue
+    paused: true
+    label: "EXAMPLE: Weekly Shonen Jump 1997 issue 43"
+    queries:
+      - 週刊少年ジャンプ 1997 43号
+      - 少年ジャンプ 1997年 43
+      - ジャンプ 43号 1997
+    match:
+      require:
+        - [週刊少年ジャンプ, 少年ジャンプ, ジャンプ]
+      signals:
+        1997年: 6.0
+        43号: 8.0
+        付録: 1.0
+        表紙: 1.0
+      exclude: [切り抜き, 抜けあり, コピー, 複製版, ページのみ]
+      min_score: 9.0
+      scope: full
+    min_interval_minutes: 60
