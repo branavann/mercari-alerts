@@ -7,9 +7,13 @@ stays pure and testable offline.
 
 import asyncio
 import json
+import re
 import sys
 import time
 from pathlib import Path
+
+# Every mercari.jp item id looks like this in URLs and in calls to m.item(id).
+_ID_PATTERN = re.compile(r"^m\d{6,}$")
 
 _SEARCH_ENUMS = None
 
@@ -98,6 +102,11 @@ class MercariClient:
         res = await self._retrying(lambda: self._m.search(query, **kwargs), f"search({query!r})")
         items = list(res.items)[:limit]
         num_found = getattr(getattr(res, "meta", None), "num_found", None)
+
+        if items and not getattr(self, "_dumped_sample", False):
+            self._dumped_sample = True
+            dump_item_attrs(items[0], f"first result of search({query!r})")
+
         return items, num_found
 
     async def item(self, item_id):
@@ -150,6 +159,73 @@ def parse_item_id(s):
     return s
 
 
+def dump_item_attrs(item, context=""):
+    """
+    Print every public-ish attribute of a mercapi item object to stderr, once.
+    Purely diagnostic - lets us see the library's actual field names in the
+    GitHub Actions log instead of guessing again offline.
+    """
+    print(f"DEBUG item sample ({context}): type={type(item).__module__}.{type(item).__name__}",
+          file=sys.stderr)
+    seen = set()
+    for name in dir(item):
+        if name.startswith("__"):
+            continue
+        try:
+            v = getattr(item, name)
+        except Exception as e:
+            print(f"DEBUG   .{name} = <error: {e}>", file=sys.stderr)
+            continue
+        if callable(v):
+            continue
+        seen.add(name)
+        rep = repr(v)
+        if len(rep) > 200:
+            rep = rep[:200] + "...(truncated)"
+        print(f"DEBUG   .{name} = {rep}", file=sys.stderr)
+    if not seen:
+        print("DEBUG   (no non-callable public attributes found)", file=sys.stderr)
+
+
+def _scan_for_id(obj, _depth=0, _seen_ids=None):
+    """
+    Fallback ID lookup: walk an object's attributes (including single-
+    underscore-prefixed ones, since a library may keep the id "private")
+    looking for a string shaped like a Mercari item id. Used when none of
+    the guessed attribute names hit.
+    """
+    if _depth > 2 or obj is None:
+        return None
+    if _seen_ids is None:
+        _seen_ids = set()
+    if id(obj) in _seen_ids:
+        return None
+    _seen_ids.add(id(obj))
+
+    values = {}
+    for name in dir(obj):
+        if name.startswith("__"):
+            continue
+        try:
+            v = getattr(obj, name)
+        except Exception:
+            continue
+        if callable(v):
+            continue
+        values[name] = v
+
+    for v in values.values():
+        if isinstance(v, str) and _ID_PATTERN.match(v):
+            return v
+    # nested objects (e.g. item.item / item.data wrapping the real fields)
+    for v in values.values():
+        if hasattr(v, "__dict__") or hasattr(type(v), "__slots__"):
+            found = _scan_for_id(v, _depth + 1, _seen_ids)
+            if found:
+                return found
+    return None
+
+
 def summary_fields(item):
     """
     Pull the fields we need out of a mercapi item object, tolerating naming
@@ -162,14 +238,18 @@ def summary_fields(item):
                 return v
         return default
 
-    thumb = first("thumbnails", "photos", "photo_urls", "images")
+    thumb = first("thumbnails", "photos", "photo_urls", "images", "photoUrls", "imageUrls")
     if isinstance(thumb, (list, tuple)):
         thumb = thumb[0] if thumb else None
 
+    item_id = first("id", "id_", "item_id", "itemId", "_id", "productId", "product_id")
+    if not item_id:
+        item_id = _scan_for_id(item)
+
     return {
-        "id": first("id", "item_id"),
-        "name": first("name", "title", default=""),
-        "price": first("price", default=None),
+        "id": item_id,
+        "name": first("name", "title", "productName", default=""),
+        "price": first("price", "productPrice", default=None),
         "thumbnail": thumb,
         "seller_id": first("seller_id", "sellerId"),
         "status": first("status"),

@@ -53,15 +53,22 @@ async def gather_candidates(client, alert, verbose=True):
         except Exception as e:
             print(f"    query {q!r} failed: {e}", file=sys.stderr)
             continue
-        new_here = 0
+        new_here, no_id = 0, 0
         for it in items:
             s = summary_fields(it)
-            if s["id"] and s["id"] not in found:
+            if not s["id"]:
+                no_id += 1
+                continue
+            if s["id"] not in found:
                 found[s["id"]] = s
                 new_here += 1
         if verbose:
             total = f"{num_found:,}" if isinstance(num_found, int) else "?"
             print(f"    {q!r}: {len(items)} returned ({total} total), {new_here} new to this run")
+        if no_id:
+            print(f"    WARNING: {no_id}/{len(items)} results for {q!r} had no extractable "
+                  f"item id (see the DEBUG item sample above/below for the real field names) "
+                  f"and were skipped", file=sys.stderr)
     return found
 
 
