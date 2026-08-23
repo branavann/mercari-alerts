@@ -1,0 +1,112 @@
+{
+ "status": "ok",
+ "kind": "learn",
+ "alert": {
+  "name": "op-hyperbattle-c-j1",
+  "label": "One Piece Hyper Battle C-J1",
+  "queries": [
+   "ジャンプフェスタ2000",
+   "ルフィ海賊団",
+   "ルフィ海賊団 ワンピース",
+   "ルフィ海賊団 冒険",
+   "ジャンプフェスタ2000 ルフィ海賊団",
+   "ワンピース 冒険",
+   "ジャンプフェスタ2000 ワンピース",
+   "ジャンプフェスタ2000 冒険"
+  ],
+  "match": {
+   "require": [
+    [
+     "冒険",
+     "ルフィ海賊団",
+     "ワンピース"
+    ]
+   ],
+   "signals": {
+    "ジャンプフェスタ2000": 10.85,
+    "ルフィ海賊団": 9.46,
+    "ワンピース": 5.47,
+    "冒険": 5.47,
+    "ハイパーバトル": 2.0,
+    "カードダス": 2.0,
+    "CJ1": 1.0,
+    "ONEPIECE": 1.0
+   },
+   "exclude": [],
+   "min_score": 15.2,
+   "scope": "full"
+  },
+  "learned_from": [
+   "m41475097666",
+   "m30682188493",
+   "m82689805572",
+   "m80889515193",
+   "m32864989114",
+   "m99381382325",
+   "m22696038967",
+   "m34596789752"
+  ]
+ },
+ "report": "QUERY FAN-OUT\n  - ジャンプフェスタ2000    (rare term, 241 listings)\n  - ルフィ海賊団    (rare term, 704 listings)\n  - ルフィ海賊団 ワンピース    (title of example 1)\n  - ルフィ海賊団 冒険    (title of example 2)\n  - ジャンプフェスタ2000 ルフィ海賊団    (title of example 4)\n  - ワンピース 冒険    (title of example 8)\n  - ジャンプフェスタ2000 ワンピース    (shared terms)\n  - ジャンプフェスタ2000 冒険    (shared terms)\n\nRETRIEVAL COVERAGE   T = query matches the title alone,  d = only via description\n  ex1  [dTTTdTdd]  【限定品】ワンピース ハイパーバトル カードダス ルフィ海賊団 冒険を求めて\n  ex2  [dTTTdTdd]  ワンピースカード　ハイパーバトル ルフィ海賊団 冒険を求めて　特典　CJ1\n  ex3  [dTdTdddd]  【超希少】ONE PIECE ハイパーバトル ルフィ海賊団「冒険を求めて」\n  ex4  [TTdTTddT]  ジャンプフェスタ2000 ルフィ海賊団 冒険を求めて ONE PIECEカード\n  ex5  [TTdTTddT]  【未開封ジャンプフェスタ2000】ONE PIECE ルフィ海賊団 冒険を求めて\n  ex6  [dTTTdTdd]  ワンピースカード ハイパーバトル ルフィ海賊団 冒険を求めて ジャンプフェスタ\n  ex7  [dTTTdTdd]  ワンピースカード　ハイパーバトル ルフィ海賊団 冒険を求めて　特典　CJ1\n  ex8  [dddddTdd]  ワンピース カード ハイパーバトル C-J1 冒険を求めて ジャンプフェスタ\n\n  OK  every example is reachable by title alone (the safe case).\n\nTERM SPECIFICITY  (live Mercari result counts)\n        241 listings   ジャンプフェスタ2000           weight 10.85\n        704 listings   ルフィ海賊団                 weight 9.46\n     15,000 listings   ワンピース                  weight 5.47\n     15,000 listings   冒険                     weight 5.47\n     15,000 listings   カード                    not used\n     15,000 listings   特典                     not used\n\nSCORING   threshold = 15.2\n  ex1   score   41.35   PASS\n  ex2   score    42.1   PASS\n  ex3   score   40.73   PASS\n  ex4   score   43.95   PASS\n  ex5   score   38.95   PASS\n  ex6   score   38.85   PASS\n  ex7   score    42.1   PASS\n  ex8   score   40.73   PASS",
+ "term_counts": {
+  "ジャンプフェスタ2000": 241,
+  "ルフィ海賊団": 704,
+  "ワンピース": 15000,
+  "冒険": 15000,
+  "カード": 15000,
+  "特典": 15000
+ },
+ "examples": [
+  {
+   "id": "m41475097666",
+   "name": "【限定品】ワンピース ハイパーバトル カードダス ルフィ海賊団 冒険を求めて",
+   "price": 140000,
+   "url": "https://jp.mercari.com/item/m41475097666"
+  },
+  {
+   "id": "m30682188493",
+   "name": "ワンピースカード　ハイパーバトル ルフィ海賊団 冒険を求めて　特典　CJ1",
+   "price": 90500,
+   "url": "https://jp.mercari.com/item/m30682188493"
+  },
+  {
+   "id": "m82689805572",
+   "name": "【超希少】ONE PIECE ハイパーバトル ルフィ海賊団「冒険を求めて」",
+   "price": 95000,
+   "url": "https://jp.mercari.com/item/m82689805572"
+  },
+  {
+   "id": "m80889515193",
+   "name": "ジャンプフェスタ2000 ルフィ海賊団 冒険を求めて ONE PIECEカード",
+   "price": 79000,
+   "url": "https://jp.mercari.com/item/m80889515193"
+  },
+  {
+   "id": "m32864989114",
+   "name": "【未開封ジャンプフェスタ2000】ONE PIECE ルフィ海賊団 冒険を求めて",
+   "price": 180000,
+   "url": "https://jp.mercari.com/item/m32864989114"
+  },
+  {
+   "id": "m99381382325",
+   "name": "ワンピースカード ハイパーバトル ルフィ海賊団 冒険を求めて ジャンプフェスタ",
+   "price": 79980,
+   "url": "https://jp.mercari.com/item/m99381382325"
+  },
+  {
+   "id": "m22696038967",
+   "name": "ワンピースカード　ハイパーバトル ルフィ海賊団 冒険を求めて　特典　CJ1",
+   "price": 98000,
+   "url": "https://jp.mercari.com/item/m22696038967"
+  },
+  {
+   "id": "m34596789752",
+   "name": "ワンピース カード ハイパーバトル C-J1 冒険を求めて ジャンプフェスタ",
+   "price": 111111,
+   "url": "https://jp.mercari.com/item/m34596789752"
+  }
+ ],
+ "negatives": [],
+ "request_id": "rmt54l79kx58372",
+ "finished_at": "2026-08-23T01:26:13+00:00"
+}
