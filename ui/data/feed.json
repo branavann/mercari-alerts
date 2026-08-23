@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-08-23T21:37:54+00:00",
+ "generated_at": "2026-08-23T21:58:58+00:00",
  "entries": [
+  {
+   "id": "m98282836717",
+   "url": "https://jp.mercari.com/item/m98282836717",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
+   "name": "m_a_a様 リクエスト 8点 まとめ商品",
+   "price": 950,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m98282836717_1.jpg?1787521172",
+   "seller_id": "793239272",
+   "condition": "Fair",
+   "listed_at": "2026-08-23T21:39:32+09:00",
+   "detected_at": "2026-08-23T21:58:58+00:00",
+   "lag_seconds": 33566,
+   "score": 14.1,
+   "hits": [
+    "ゴーイング・メリー号",
+    "カードゲーム",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m85368600442",
+   "url": "https://jp.mercari.com/item/m85368600442",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
+   "name": "初期 ワンピース 1999年製 カードダスハイパーバトル C04 ルフィ",
+   "price": 6000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m85368600442_1.jpg?1787521855",
+   "seller_id": "639801661",
+   "condition": "Fair",
+   "listed_at": "2026-08-23T21:50:55+09:00",
+   "detected_at": "2026-08-23T21:58:58+00:00",
+   "lag_seconds": 32883,
+   "score": 14.41,
+   "hits": [
+    "ハイパーバトル",
+    "カードダス",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m45850179105",
    "url": "https://jp.mercari.com/item/m45850179105",
