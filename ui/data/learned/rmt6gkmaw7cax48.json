@@ -1,0 +1,114 @@
+{
+ "status": "ok",
+ "kind": "learn",
+ "alert": {
+  "name": "op-hyperbattle-ce2",
+  "label": "One Piece Hyper Battle C-E2",
+  "queries": [
+   "ゴーイング・メリー号",
+   "C-E2",
+   "ルフィ海賊団",
+   "ハイパーバトル",
+   "出航",
+   "ゴーイング・メリー号 ルフィ海賊団",
+   "C-E2 ルフィ海賊団",
+   "ハイパーバトル ワンピース"
+  ],
+  "match": {
+   "require": [
+    [
+     "ワンピース",
+     "ルフィ海賊団",
+     "ゴーイング・メリー号"
+    ]
+   ],
+   "signals": {
+    "ゴーイング・メリー号": 11.58,
+    "C-E2": 8.16,
+    "ルフィ海賊団": 3.78,
+    "ハイパーバトル": 7.64,
+    "出航": 9.87,
+    "ワンピース": 2.19,
+    "カードダス": 2.19,
+    "神経質な方": 5.47
+   },
+   "exclude": [
+    "替え防止の為返品不可"
+   ],
+   "min_score": 29.6,
+   "scope": "full"
+  },
+  "learned_from": [
+   "m45169992781",
+   "m64572484257",
+   "m89240778353",
+   "m83971401198"
+  ]
+ },
+ "report": "QUERY FAN-OUT\n  - ゴーイング・メリー号    (rare term, 138 listings)\n  - C-E2    (rare term, 1,912 listings)\n  - ルフィ海賊団    (rare term, 704 listings)\n  - ハイパーバトル    (rare term, 2,837 listings)\n  - 出航    (rare term, 514 listings)\n  - ゴーイング・メリー号 ルフィ海賊団    (title of example 1)\n  - C-E2 ルフィ海賊団    (title of example 3)\n  - ハイパーバトル ワンピース    (title of example 4)\n\nRETRIEVAL COVERAGE   T = query matches the title alone,  d = only via description\n  ex1  [TdTdTTdd]  ワンピース 旧 カードゲーム ルフィ海賊団 出航！ゴーイング・メリー号　F650\n  ex2  [TdTdTTdd]  ワンピース 旧 カードゲーム ルフィ海賊団 出航！ゴーイング・メリー号　F626\n  ex3  [dTTTddTT]  【美品】ワンピース ハイパーバトル カードダス C-E2 ルフィ海賊団\n  ex4  [dddTdddT]  カードダス　ワンピース　ハイパーバトル　プロモカード1枚\n\n  OK  every example is reachable by title alone (the safe case).\n\nTERM SPECIFICITY  (live Mercari result counts)\n        138 listings   ゴーイング・メリー号             weight 11.58\n        514 listings   出航                     weight 9.87\n        704 listings   ルフィ海賊団                 weight 3.78\n      1,912 listings   C-E2                   weight 8.16\n      2,837 listings   ハイパーバトル                weight 7.64\n     15,000 listings   ワンピース                  weight 2.19\n     15,000 listings   カードダス                  weight 2.19\n     15,000 listings   神経質な方                  weight 5.47\n\nLEARNED EXCLUDES  (review these - a wrong one silently kills real hits)\n  - 替え防止の為返品不可\n\nSCORING   threshold = 29.6\n  ex1   score   57.73   PASS\n  ex2   score   57.73   PASS\n  ex3   score   56.87   PASS\n  ex4   score   53.88   PASS\n  neg1  score     0.0   rejected by exclude '替え防止の為返品不可'\n  neg2  score     0.0   rejected by exclude '替え防止の為返品不可'\n  neg3  score    10.2   correctly rejected\n  neg4  score     0.0   rejected by exclude '替え防止の為返品不可'\n  neg5  score   24.27   borderline (would land in the 'possible' section)",
+ "term_counts": {
+  "C-E2": 1912,
+  "ゴーイング・メリー号": 138,
+  "ワンピース": 15000,
+  "ルフィ海賊団": 704,
+  "ハイパーバトル": 2837,
+  "カードダス": 15000,
+  "神経質な方": 15000,
+  "出航": 514
+ },
+ "examples": [
+  {
+   "id": "m45169992781",
+   "name": "ワンピース 旧 カードゲーム ルフィ海賊団 出航！ゴーイング・メリー号　F650",
+   "price": 299800,
+   "url": "https://jp.mercari.com/item/m45169992781"
+  },
+  {
+   "id": "m64572484257",
+   "name": "ワンピース 旧 カードゲーム ルフィ海賊団 出航！ゴーイング・メリー号　F626",
+   "price": 240000,
+   "url": "https://jp.mercari.com/item/m64572484257"
+  },
+  {
+   "id": "m89240778353",
+   "name": "【美品】ワンピース ハイパーバトル カードダス C-E2 ルフィ海賊団",
+   "price": 98000,
+   "url": "https://jp.mercari.com/item/m89240778353"
+  },
+  {
+   "id": "m83971401198",
+   "name": "カードダス　ワンピース　ハイパーバトル　プロモカード1枚",
+   "price": 120000,
+   "url": "https://jp.mercari.com/item/m83971401198"
+  }
+ ],
+ "negatives": [
+  {
+   "id": "m12819663565",
+   "name": "ワンピース　カードダス　非売品　C-E1 ルフィ海賊団　三人の大海賊",
+   "url": "https://jp.mercari.com/item/m12819663565"
+  },
+  {
+   "id": "m72163554436",
+   "name": "ワンピースカード　非売品　C-E1 ルフィ海賊団　三人の大海賊",
+   "url": "https://jp.mercari.com/item/m72163554436"
+  },
+  {
+   "id": "m68008672060",
+   "name": "【希少】【美品】ワンピース カードダス 「ルフィ海賊団　冒険を求めて　CJ1」",
+   "url": "https://jp.mercari.com/item/m68008672060"
+  },
+  {
+   "id": "m74212279131",
+   "name": "匿*️様 極美品　ワンピースカードダスハイパーバトル　C-J1 ルフィ海賊団　冒",
+   "url": "https://jp.mercari.com/item/m74212279131"
+  },
+  {
+   "id": "m40879559060",
+   "name": "ワンピースカードダス ハイパーバトル 来場者特典 2枚セット プロモ",
+   "url": "https://jp.mercari.com/item/m40879559060"
+  }
+ ],
+ "request_id": "rmt6gkmaw7cax48",
+ "finished_at": "2026-08-23T23:49:29+00:00"
+}
