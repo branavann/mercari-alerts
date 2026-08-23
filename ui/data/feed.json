@@ -1,6 +1,81 @@
 {
- "generated_at": "2026-08-23T18:42:55+00:00",
+ "generated_at": "2026-08-23T19:08:13+00:00",
  "entries": [
+  {
+   "id": "m52982875868",
+   "url": "https://jp.mercari.com/item/m52982875868",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
+   "name": "ワンピース カードゲーム ルフィ海賊団 Carddass 2001 S120",
+   "price": 2300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m52982875868_1.jpg?1787310520",
+   "seller_id": "811501487",
+   "condition": "Worn",
+   "listed_at": "2026-08-21T11:08:40+09:00",
+   "detected_at": "2026-08-23T19:08:13+00:00",
+   "lag_seconds": 233973,
+   "score": 16.24,
+   "hits": [
+    "ルフィ海賊団",
+    "カードゲーム",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m66969499025",
+   "url": "https://jp.mercari.com/item/m66969499025",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
+   "name": "ワンピース　カードダス　ハイパーバトル　ナミ　アーロン一味幹部　C151",
+   "price": 4700,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m66969499025_1.jpg?1782380473",
+   "seller_id": "265160775",
+   "condition": "Fair",
+   "listed_at": "2026-06-25T09:41:13+09:00",
+   "detected_at": "2026-08-23T19:08:13+00:00",
+   "lag_seconds": 5164020,
+   "score": 14.41,
+   "hits": [
+    "ハイパーバトル",
+    "カードダス",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m88128576773",
+   "url": "https://jp.mercari.com/item/m88128576773",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
+   "name": "ワンピース　ハイパーバトル　ミスウェンズデー　謎の女　c363 ビビ　カードダス",
+   "price": 3000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m88128576773_1.jpg?1782557436",
+   "seller_id": "265160775",
+   "condition": "Good",
+   "listed_at": "2026-06-27T10:50:36+09:00",
+   "detected_at": "2026-08-23T19:08:13+00:00",
+   "lag_seconds": 4987057,
+   "score": 14.41,
+   "hits": [
+    "ハイパーバトル",
+    "カードダス",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m54896566341",
    "url": "https://jp.mercari.com/item/m54896566341",
