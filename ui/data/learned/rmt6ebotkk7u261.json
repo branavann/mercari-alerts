@@ -1,0 +1,133 @@
+{
+ "status": "ok",
+ "kind": "learn",
+ "alert": {
+  "name": "c-j1",
+  "label": "One Piece C-J1",
+  "queries": [
+   "ルフィ海賊団",
+   "冒険を求めて",
+   "ルフィ海賊団 冒険を求めて",
+   "ルフィ海賊団 CJ1",
+   "ルフィ海賊団 ワンピース"
+  ],
+  "match": {
+   "require": [
+    [
+     "ルフィ海賊団",
+     "冒険を求めて"
+    ]
+   ],
+   "signals": {
+    "ルフィ海賊団": 3.78,
+    "冒険を求めて": 8.59,
+    "ワンピースカード": 0.8,
+    "カードダス": 2.0,
+    "ジャンプフェスタ2000": 2.0,
+    "ハイパーバトル": 2.0,
+    "CJ1": 1.0,
+    "ONEPIECE": 1.0
+   },
+   "exclude": [
+    "濡れ"
+   ],
+   "min_score": 12.3,
+   "scope": "full"
+  },
+  "learned_from": [
+   "m63888895222",
+   "m74212279131",
+   "m41475097666",
+   "m68008672060",
+   "m85791701405",
+   "m73424087914",
+   "m39635209171",
+   "m93111735446"
+  ]
+ },
+ "report": "QUERY FAN-OUT\n  - ルフィ海賊団    (rare term, 704 listings)\n  - 冒険を求めて    (rare term, 1,366 listings)\n  - ルフィ海賊団 冒険を求めて    (title of example 1)\n  - ルフィ海賊団 CJ1    (title of example 2)\n  - ルフィ海賊団 ワンピース    (title of example 5)\n\nRETRIEVAL COVERAGE   T = query matches the title alone,  d = only via description\n  ex1  [TTT..]  【美品・激レア非売品】ONEPIECE ルフィ海賊団　冒険を求めて\n  ex2  [TddTT]  匿*️様 極美品　ワンピースカードダスハイパーバトル　C-J1 ルフィ海賊団　冒\n  ex3  [TTT.T]  【限定品】ワンピース ハイパーバトル カードダス ルフィ海賊団 冒険を求めて\n  ex4  [TTTTT]  【希少】【美品】ワンピース カードダス 「ルフィ海賊団　冒険を求めて　CJ1」\n  ex5  [TddTT]  【限定品】ワンピース カードダス ルフィ海賊団 CJ1 ジャンプフェスタ2000\n  ex6  [TTT.T]  ワンピース カードダス ルフィ海賊団 ジャンプフェスタ2000 冒険を求めて\n  ex7  [TTT.T]  r*n様 ルフィ海賊団　冒険を求めて　旧ワンピースカードゲーム\n  ex8  [TTTTd]  C-J1 ルフィ海賊団　冒険を求めて\n\n  OK  every example is reachable by title alone (the safe case).\n\nTERM SPECIFICITY  (live Mercari result counts)\n        704 listings   ルフィ海賊団                 weight 3.78\n      1,366 listings   冒険を求めて                 weight 8.59\n     15,000 listings   カード                    not used\n\nLEARNED EXCLUDES  (review these - a wrong one silently kills real hits)\n  - 濡れ\n\nSCORING   threshold = 12.3\n  ex1   score   22.71   PASS\n  ex2   score   23.56   PASS\n  ex3   score   23.26   PASS\n  ex4   score   20.21   PASS\n  ex5   score   23.56   PASS\n  ex6   score   24.46   PASS\n  ex7   score   16.46   PASS\n  ex8   score   24.51   PASS\n  neg1  score     0.0   rejected by exclude '濡れ'\n  neg2  score   10.72   borderline (would land in the 'possible' section)\n  neg3  score     0.0   rejected by exclude '濡れ'\n  neg4  score     0.0   rejected by exclude '濡れ'\n  neg5  score    5.72   correctly rejected",
+ "term_counts": {
+  "ルフィ海賊団": 704,
+  "冒険を求めて": 1366,
+  "カード": 15000
+ },
+ "examples": [
+  {
+   "id": "m63888895222",
+   "name": "【美品・激レア非売品】ONEPIECE ルフィ海賊団　冒険を求めて",
+   "price": 1950,
+   "url": "https://jp.mercari.com/item/m63888895222"
+  },
+  {
+   "id": "m74212279131",
+   "name": "匿*️様 極美品　ワンピースカードダスハイパーバトル　C-J1 ルフィ海賊団　冒",
+   "price": 65000,
+   "url": "https://jp.mercari.com/item/m74212279131"
+  },
+  {
+   "id": "m41475097666",
+   "name": "【限定品】ワンピース ハイパーバトル カードダス ルフィ海賊団 冒険を求めて",
+   "price": 140000,
+   "url": "https://jp.mercari.com/item/m41475097666"
+  },
+  {
+   "id": "m68008672060",
+   "name": "【希少】【美品】ワンピース カードダス 「ルフィ海賊団　冒険を求めて　CJ1」",
+   "price": 35000,
+   "url": "https://jp.mercari.com/item/m68008672060"
+  },
+  {
+   "id": "m85791701405",
+   "name": "【限定品】ワンピース カードダス ルフィ海賊団 CJ1 ジャンプフェスタ2000",
+   "price": 3500,
+   "url": "https://jp.mercari.com/item/m85791701405"
+  },
+  {
+   "id": "m73424087914",
+   "name": "ワンピース カードダス ルフィ海賊団 ジャンプフェスタ2000 冒険を求めて",
+   "price": 49999,
+   "url": "https://jp.mercari.com/item/m73424087914"
+  },
+  {
+   "id": "m39635209171",
+   "name": "r*n様 ルフィ海賊団　冒険を求めて　旧ワンピースカードゲーム",
+   "price": 22000,
+   "url": "https://jp.mercari.com/item/m39635209171"
+  },
+  {
+   "id": "m93111735446",
+   "name": "C-J1 ルフィ海賊団　冒険を求めて",
+   "price": 57777,
+   "url": "https://jp.mercari.com/item/m93111735446"
+  }
+ ],
+ "negatives": [
+  {
+   "id": "m30829127214",
+   "name": "ルフィ海賊団 冒険の夜明け S17 ワンピースカード ハイパーバトル カードダス",
+   "url": "https://jp.mercari.com/item/m30829127214"
+  },
+  {
+   "id": "m95080896400",
+   "name": "ワンピース カードダスハイパーバトル ルフィ海賊団 冒険の夜明け",
+   "url": "https://jp.mercari.com/item/m95080896400"
+  },
+  {
+   "id": "m34613358583",
+   "name": "ワンピース カードダス ルフィ海賊団 冒険の始まり S75",
+   "url": "https://jp.mercari.com/item/m34613358583"
+  },
+  {
+   "id": "m82637234380",
+   "name": "ワンピース カードゲーム ルフィ海賊団 冒険の夜明け",
+   "url": "https://jp.mercari.com/item/m82637234380"
+  },
+  {
+   "id": "m81673027670",
+   "name": "ワンピース カードゲーム ルフィ海賊団 虹の島を目指す冒険者",
+   "url": "https://jp.mercari.com/item/m81673027670"
+  }
+ ],
+ "request_id": "rmt6ebotkk7u261",
+ "finished_at": "2026-08-23T22:46:32+00:00"
+}
