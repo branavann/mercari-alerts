@@ -33,6 +33,7 @@ from mlert.feed import CONDITION_LABELS, make_entry               # noqa: E402
 from mlert.learn import Example, learn                            # noqa: E402
 from mlert.mercari import (MercariClient, item_url, parse_item_id,  # noqa: E402
                            summary_fields)
+from mlert.refine import card_terms, rule_tights                  # noqa: E402
 from mlert.rules import evaluate                                  # noqa: E402
 
 OUT_DIR = ROOT / "ui" / "data"
@@ -84,6 +85,11 @@ async def do_preview(request_id, payload):
     alert = Alert(payload["alert"], source="preview")
     client = MercariClient(cache_path=ROOT / ".term_counts.json")
 
+    # Listings already dismissed in the panel. They stay out of the preview so
+    # the headline count reflects what you would actually be shown.
+    rejected_ids = {str(x) for x in (payload.get("rejected_ids")
+                                     or alert.rejected_ids or []) if x}
+
     per_query, candidates = [], {}
     for q in alert.queries:
         try:
@@ -101,7 +107,7 @@ async def do_preview(request_id, payload):
         added = 0
         for it in items:
             s = summary_fields(it)
-            if s["id"] and s["id"] not in candidates:
+            if s["id"] and s["id"] not in candidates and s["id"] not in rejected_ids:
                 candidates[s["id"]] = s
                 added += 1
         per_query.append({"query": q, "returned": len(items),
@@ -109,16 +115,17 @@ async def do_preview(request_id, payload):
 
     matched, borderline, budget = [], [], PREVIEW_DETAIL_BUDGET
     for item_id, s in candidates.items():
+        desc = None
         v = evaluate(alert.rules, s["name"], None)
         if v.needs_description and budget > 0:
             try:
                 full = await client.item(item_id)
                 budget -= 1
-                v = evaluate(alert.rules, s["name"],
-                             getattr(full, "description", "") or "")
+                desc = getattr(full, "description", "") or ""
+                v = evaluate(alert.rules, s["name"], desc)
             except Exception:
-                pass
-        rec = dict(s, score=v.score, hits=v.hits)
+                desc = None
+        rec = dict(s, score=v.score, hits=v.hits, _desc=desc)
         if v.status == "match":
             matched.append(rec)
         elif v.status == "borderline":
@@ -127,6 +134,10 @@ async def do_preview(request_id, payload):
     def card(rec, status):
         e = make_entry(alert, rec, status)
         e["condition"] = CONDITION_LABELS.get(rec.get("condition_id"))
+        # What the panel needs to work out, on its own and without another
+        # workflow run, which words separate the listings you reject from the
+        # ones you keep. See mlert/refine.py.
+        e.update(card_terms(rec.get("name"), rec.get("_desc")))
         return e
 
     cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
@@ -157,6 +168,8 @@ async def do_preview(request_id, payload):
         "borderline": len(borderline),
         "min_score": alert.rules.min_score,
         "detail_fetches_used": PREVIEW_DETAIL_BUDGET - budget,
+        "hidden_rejected": len(rejected_ids),
+        "current_tight": rule_tights(alert.rules),
         "sample": [card(r, "match") for r in matched[:PREVIEW_SAMPLE]],
         "near_misses": [card(r, "borderline") for r in borderline[:8]],
     }

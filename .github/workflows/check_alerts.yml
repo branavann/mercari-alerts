@@ -37,6 +37,8 @@ jobs:
           python tests/test_matching.py
           python tests/test_runner_smoke.py
           python tests/test_ui_data.py
+          python tests/test_refine.py
+          node tests/test_refine_js.mjs
 
       - name: Check alerts
         run: python mercari_alert.py

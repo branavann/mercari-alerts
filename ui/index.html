@@ -102,11 +102,38 @@ textarea{resize:vertical;min-height:76px;font-family:var(--mono);font-size:13px}
 .lc .price{font:600 19px/1 var(--mono)}
 .lc .usd{font-size:12px;color:var(--muted2);font-family:var(--sans);font-weight:400;margin-left:6px}
 .lc .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.lc .ttl-en{font-size:11.5px;line-height:1.35;color:var(--muted2);font-style:italic;max-height:2.8em;overflow:hidden;margin-top:-3px}
 .lc .why{font-size:11.5px;color:var(--muted2);line-height:1.4;max-height:2.8em;overflow:hidden}
 .lc .acts{display:flex;gap:7px;margin-top:auto;padding-top:4px}
 .lc .acts a,.lc .acts button{flex:1;text-align:center;text-decoration:none;padding:7px;border-radius:8px;font-size:13px;border:1px solid var(--line2);background:var(--panel2);cursor:pointer}
 .lc .acts a.go{background:var(--accent);border-color:var(--accent);color:#fff}
 .lc.dim{opacity:.62}
+.lc .marks{display:flex;gap:7px;margin-top:auto;padding-top:4px}
+.lc .marks button.jm{flex:1;padding:7px 6px;border-radius:8px;font-size:12.5px;cursor:pointer;
+  border:1px solid var(--line2);background:var(--panel2);color:var(--muted);white-space:nowrap}
+.lc .marks button.jm.yes:hover{border-color:var(--ok);color:#6fbf87}
+.lc .marks button.jm.no:hover{border-color:var(--warn);color:#e0b269}
+.lc .marks button.jm.yes.on{background:var(--ok-soft);border-color:rgba(74,158,102,.55);color:#6fbf87;font-weight:500}
+.lc .marks button.jm.no.on{background:var(--warn-soft);border-color:rgba(201,138,46,.5);color:#e0b269;font-weight:500}
+.lc .marks + .acts{margin-top:7px}
+.lc.rej{opacity:.5;border-color:rgba(201,138,46,.45)}
+.lc.rej .ph img{filter:grayscale(1)}
+.lc.rej .ttl{text-decoration:line-through;text-decoration-color:var(--muted2)}
+.lc.yes{border-color:rgba(74,158,102,.55);box-shadow:0 0 0 1px rgba(74,158,102,.25)}
+/* The bar floats over the grid, so leave room to scroll the last row clear
+   of it - otherwise the bottom cards' buttons are permanently unreachable. */
+.feedgrid.markable{padding-bottom:96px}
+.refinebar{position:sticky;bottom:14px;z-index:5;margin-top:14px;padding:12px 14px;border:1px solid rgba(201,138,46,.45);
+  background:var(--panel);box-shadow:0 -6px 18px rgba(0,0,0,.35);border-radius:var(--r);
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.refinebar .grow{flex:1;min-width:180px}
+.prop{display:flex;gap:10px;align-items:flex-start;padding:9px 11px;border:1px solid var(--line);
+  border-radius:9px;background:var(--panel2);margin-bottom:7px}
+.prop input{margin-top:3px;flex:0 0 auto}
+.prop .t{font-weight:500}
+.prop .d{font-size:11.5px;color:var(--muted2);margin-top:2px}
+.en{color:var(--muted2);font-weight:400;font-size:.88em;font-style:italic}
+.en::before{content:"— "}
 
 /* ---------- table ---------- */
 .tablewrap{border:1px solid var(--line);border-radius:var(--r);overflow-x:auto;background:var(--panel)}
@@ -185,6 +212,9 @@ pre.report{background:#0c0908;border:1px solid var(--line);border-radius:10px;pa
 </div>
 <div class="toastwrap" id="toasts"></div>
 
+<!-- Shared with tests/test_refine_js.mjs so the reject-and-refine logic is
+     covered by the same suite CI runs. -->
+<script src="refine.js"></script>
 <script>
 "use strict";
 /* ===================================================================
@@ -201,7 +231,7 @@ const LS = "mercari-alerts.settings.v1";
 const WF_PREVIEW = "ui_preview.yml", WF_LEARN = "ui_learn.yml";
 
 /* ---------- settings ---------- */
-const defaults = {owner:"", repo:"", branch:"main", token:"", jpy:150, mmEmail:"", autoTranslate:true};
+const defaults = {owner:"", repo:"", branch:"main", token:"", jpy:150, mmEmail:"", autoTranslate:true, showEn:true};
 let S = load();
 function load(){ try{ return Object.assign({}, defaults, JSON.parse(localStorage.getItem(LS)||"{}")); }catch(e){ return {...defaults}; } }
 function save(){ try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){ toast("Could not save settings (private browsing?)","err"); } }
@@ -450,6 +480,108 @@ async function translateToJa(text){
   return null;
 }
 
+/* ---------- Japanese -> English, so the rules stay readable -----------
+   The alert's own vocabulary is Japanese, which makes the learn report and
+   the filter proposals unreadable if you don't read Japanese. Every term
+   shown in the UI can therefore carry an English gloss.
+
+   The curated dictionary above is reversed first: it is domain vocabulary
+   somebody chose on purpose, so it beats machine translation on exactly the
+   words that matter here (カードダス -> "carddass", not "card dust").
+   Anything it doesn't know goes to MyMemory once and is then cached. ---- */
+
+const RDICT = (()=>{
+  const r = {};
+  // First English spelling wins: DICT lists the canonical name first and
+  // aliases after it ("sfc" / "snes" both map to スーパーファミコン).
+  for(const [en,ja] of Object.entries(DICT)) if(!(ja in r)) r[ja] = en;
+  return r;
+})();
+
+// Words that carry meaning for a collector but aren't product names, so no
+// dictionary would list them. Machine translation mangles most of these.
+const RDICT_EXTRA = {
+  "冒険":"adventure","冒険を求めて":"seeking adventure","冒険の夜明け":"dawn of adventure",
+  "求めて":"seeking","夜明け":"dawn","海賊団":"pirate crew","一味":"crew",
+  "旧":"old / original","初期":"early print","当時物":"period original",
+  "限定品":"limited edition","超希少":"ultra rare","希少":"rare","貴重":"valuable",
+  "美品":"excellent condition","極美品":"near mint","状態":"condition",
+  "未開封":"sealed","開封済":"opened","動作確認済":"tested working",
+  "まとめ":"bulk lot","まとめ売り":"bulk lot","まとめて":"bundled","セット":"set",
+  "枚":"cards (counter)","特典":"bonus / promo","付録":"magazine insert",
+  "非売品":"not for sale","景品":"prize","大会限定":"tournament exclusive",
+  "ジャンプフェスタ":"Jump Festa","ジャンプフェスタ2000":"Jump Festa 2000",
+  "切り抜き":"cut-out page","複製":"reproduction","訳あり":"flawed","ジャンク":"junk",
+  "送料込":"shipping included","即購入":"buy it now ok","値下げ":"price reduced",
+};
+Object.assign(RDICT, RDICT_EXTRA);   // curated extras win over reversed DICT
+
+const EN_KEY = "mercari-alerts.encache.v1";
+let ENCACHE = (()=>{ try{ return JSON.parse(localStorage.getItem(EN_KEY)||"{}"); }catch(e){ return {}; } })();
+function cacheEn(k,v){ ENCACHE[k]=v; try{ localStorage.setItem(EN_KEY, JSON.stringify(ENCACHE)); }catch(e){} }
+
+/* Synchronous best guess. Returns null when nothing is known yet. */
+function englishFor(term){
+  if(!term || !hasJa(term)) return null;
+  const t = String(term).trim();
+  if(RDICT[t]) return RDICT[t];
+  if(ENCACHE[t]) return ENCACHE[t];
+  return null;
+}
+
+/* Inline "(english)" after a Japanese term, if we have one and it's wanted. */
+function gloss(term){
+  if(!S.showEn) return null;
+  const en = englishFor(term);
+  return en ? el("span",{class:"en"}," ",en) : null;
+}
+
+let enPending = false;
+/* Fill in the terms we don't know yet, then re-render once. */
+async function ensureEnglish(terms, redraw){
+  if(!S.showEn || enPending) return;
+  const todo = [...new Set(terms.filter(t=>t && hasJa(t) && !englishFor(t)))].slice(0,24);
+  if(!todo.length) return;
+  enPending = true;
+  try{
+    for(const t of todo){
+      try{
+        const u = new URL("https://api.mymemory.translated.net/get");
+        u.searchParams.set("q", t.slice(0,120));
+        u.searchParams.set("langpair","ja|en");
+        if(S.mmEmail) u.searchParams.set("de", S.mmEmail);
+        const r = await fetch(u,{cache:"no-store"});
+        if(!r.ok) continue;
+        const j = await r.json();
+        const out = j && j.responseData && j.responseData.translatedText;
+        // MyMemory echoes the input when it has no translation.
+        if(j.responseStatus===200 && out && !hasJa(out) && out.trim().toLowerCase()!==t.toLowerCase()){
+          cacheEn(t, out.trim().toLowerCase());
+        } else { cacheEn(t, ""); }   // remember the miss; don't ask again
+      }catch(e){ /* offline or quota - leave it untranslated */ }
+    }
+  } finally { enPending = false; }
+  if(redraw) redraw();
+}
+
+/* A term -> English table. Far more use than translating a fixed-width
+   report in place, and it doubles as "what is this alert actually about". */
+function glossaryBox(terms, title){
+  const uniq = [...new Set(terms.filter(t=>t && hasJa(t)))];
+  if(!uniq.length) return null;
+  return el("div",{class:"card",style:"margin-top:14px"},
+    el("h3",{style:"margin-top:0"}, title||"What these words mean"),
+    el("div",{class:"tablewrap"}, el("table",null, el("tbody",null,
+      ...uniq.map(t=>{
+        const en = englishFor(t);
+        return el("tr",null,
+          el("td",{style:"width:45%"}, t),
+          el("td",{class:en?"":"muted"}, en || "—"));
+      })))),
+    el("p",{class:"help",style:"margin-top:9px"},
+      "Names of specific cards and sets often have no clean English — a dash just means nothing reliable was found."));
+}
+
 /* ===================================================================
    Views
    =================================================================== */
@@ -477,7 +609,8 @@ function listingCard(e, opts={}){
   if(e.relist)                tags.push(el("span",{class:"pill info"},"relist"));
   const lag = dur(e.lag_seconds);
 
-  return el("div",{class:"lc"+(e.status==="borderline"?" dim":"")},
+  return el("div",{class:"lc"+(e.status==="borderline"?" dim":"")
+      +(opts.mark==="no"?" rej":"")+(opts.mark==="yes"?" yes":"")},
     el("div",{class:"ph"},
       e.thumbnail ? el("img",{src:e.thumbnail, loading:"lazy", alt:""})
                   : el("div",{class:"noimg"},"no image"),
@@ -485,6 +618,10 @@ function listingCard(e, opts={}){
     ),
     el("div",{class:"body"},
       el("div",{class:"ttl"}, e.name || "(no title)"),
+      // Deciding correct vs wrong means reading the title, so translate it
+      // where that decision is actually being made.
+      opts.onMark && S.showEn && hasJa(e.name||"")
+        && el("div",{class:"ttl-en"}, englishFor(e.name) || "…"),
       el("div",{class:"price"}, yen(e.price), el("span",{class:"usd"}, usd(e.price))),
       el("div",{class:"meta"},
         e.detected_at && el("span",{class:"tiny muted"}, ago(e.detected_at)),
@@ -493,6 +630,13 @@ function listingCard(e, opts={}){
       ),
       lag && el("div",{class:"tiny muted"},"spotted ",lag," after it was listed"),
       (e.hits && e.hits.length) && el("div",{class:"why"},"matched: ",e.hits.join(", ")," · score ",String(e.score)),
+      opts.onMark && el("div",{class:"marks"},
+        el("button",{class:"jm yes"+(opts.mark==="yes"?" on":""),
+          onclick:()=>opts.onMark(opts.mark==="yes"?null:"yes"),
+          title:"This IS the item I want"},"✓ Correct"),
+        el("button",{class:"jm no"+(opts.mark==="no"?" on":""),
+          onclick:()=>opts.onMark(opts.mark==="no"?null:"no"),
+          title:"This is NOT the item I want"},"✕ Wrong")),
       el("div",{class:"acts"},
         el("a",{class:"go",href:e.url,target:"_blank",rel:"noopener"},"View listing"),
         el("a",{href:`https://www.google.com/search?q=${encodeURIComponent(e.name||"")}`,target:"_blank",rel:"noopener"},"Look up")
@@ -641,7 +785,9 @@ function blankDraft(){
     price_min:"", price_max:"", target_price:"", exclude:[], presets:[],
     min_interval_minutes:"", per_query_limit:30, scope:"full",
     suppress_relists:false, notify_email:true,
-    match:null, learned:null, preview:null, busy:false, jaSuggest:null};
+    match:null, learned:null, preview:null, busy:false, jaSuggest:null,
+    // id -> preview card. marks holds "yes" / "no" per listing id.
+    marks:{}, cards:{}, refine:null, refinePick:null};
 }
 function viewWizard(editName){
   if(!W || (editName && W.editing!==editName) || (!editName && W.editing)){
@@ -656,7 +802,10 @@ function viewWizard(editName){
         exclude:[...((a.match&&a.match.exclude)||[])], presets:[...(a.presets||[])],
         min_interval_minutes:a.min_interval_minutes??"", per_query_limit:a.per_query_limit??30,
         scope:(a.match&&a.match.scope)||"full", suppress_relists:!!a.suppress_relists,
-        notify_email:a.notify_email!==false, match:a.match||null});
+        notify_email:a.notify_email!==false, match:a.match||null,
+        // Dismissals made in earlier sessions. The card bodies are gone, but
+        // the ids still need to survive a re-save.
+        rejectedOld:[...(a.rejected_ids||[])]});
     }
   }
   render();
@@ -716,7 +865,13 @@ function viewWizard(editName){
     });
     box.append(el("button",{class:"btn sm",onclick:()=>{W.examples.push("");render();}},"+ Add example"));
 
-    box.append(el("h3",null,"Listings you do NOT want ",el("span",{class:"tiny muted"},"(optional, but sharpens it a lot)")));
+    box.append(el("h3",null,"Listings you do NOT want ",
+      el("span",{class:"tiny muted"},"(optional, but this is what stops near-misses)")));
+    box.append(el("p",{class:"help",style:"margin:-6px 0 10px"},
+      "The useful ones are the near-misses: a different card from the same set, "
+      + "a bulk lot, a reprint. Nothing else tells the analysis which shared words "
+      + "name the series rather than the item — they look equally rare to it, so "
+      + "one example of what you don't want is worth several of what you do."));
     W.negatives.forEach((u,i)=>{
       box.append(el("div",{class:"row",style:"margin-bottom:8px"},
         el("div",{class:"grow"}, el("input",{type:"text",value:u,placeholder:"a wrong-but-similar listing",
@@ -733,8 +888,9 @@ function viewWizard(editName){
     if(W.learnMsg) box.append(el("p",{class:"sub",style:"margin-top:12px"}, W.learnMsg));
 
     if(W.learned){
-      box.append(el("h3",null,"What it worked out"));
-      box.append(el("div",{class:"chips",style:"margin-bottom:12px"},
+      box.append(el("div",{class:"spread"},
+        el("h3",{style:"margin:0"},"What it worked out"), englishToggle()));
+      box.append(el("div",{class:"chips",style:"margin:12px 0"},
         ...W.queries.map(q=>el("span",{class:"pill accent"},q))));
       box.append(el("pre",{class:"report"}, W.learned.report||""));
       box.append(el("p",{class:"help",style:"margin-top:10px"},
@@ -742,6 +898,30 @@ function viewWizard(editName){
         "Weights come from how rare each term is on Mercari — common words count for little."));
     }
     v.append(box);
+
+    if(W.learned && S.showEn){
+      const terms = learnedTerms();
+      v.append(glossaryBox(terms, "What these words mean"));
+      ensureEnglish(terms, render);
+    }
+  }
+
+  /* Every Japanese term the learn step put in front of you. */
+  function learnedTerms(){
+    const out = [];
+    W.queries.forEach(q=>q.split(/\s+/).forEach(t=>out.push(t)));
+    const m = (W.learned && W.learned.alert && W.learned.alert.match) || {};
+    Object.keys(m.signals||{}).forEach(t=>out.push(t));
+    (m.require||[]).forEach(g=>g.forEach(t=>out.push(t)));
+    (m.exclude||[]).forEach(t=>out.push(t));
+    return out;
+  }
+
+  function englishToggle(){
+    return el("label",{class:"toggle",style:"margin:0"},
+      el("input",{type:"checkbox", ...(S.showEn?{checked:"checked"}:{}),
+        onchange:e=>{ S.showEn=e.target.checked; save(); render(); }}),
+      "Show English");
   }
 
   async function runLearn(){
@@ -907,20 +1087,33 @@ function viewWizard(editName){
           el("td",{class:"muted"}, q.error? q.error : String(q.new_here))))))));
 
       if(p.sample && p.sample.length){
-        box.append(el("h3",null,"What it would catch"));
-        const g = el("div",{class:"feedgrid"}); p.sample.forEach(e=>g.append(listingCard(e,{showAlert:false})));
+        box.append(el("div",{class:"spread"},
+          el("h3",{style:"margin:0"},"What it would catch"), englishToggle()));
+        box.append(el("p",{class:"help",style:"margin:8px 0 12px"},
+          "Mark each one ✓ if it IS the item you want, ✕ if it isn't. A few of each is enough — confirming the right ones is what makes the filtering accurate, since it reveals what they have in common."));
+        const g = el("div",{class:"feedgrid markable"});
+        p.sample.forEach(e=>g.append(previewCard(e)));
         box.append(g);
+        if(S.showEn) ensureEnglish(p.sample.map(e=>e.name), render);
       } else {
         box.append(el("p",{class:"sub"},"Nothing currently matches. That's normal for a rare item — but if you expected hits, go back and loosen the threshold or add a query."));
       }
       if(p.near_misses && p.near_misses.length){
         box.append(el("h3",null,"Near misses ",el("span",{class:"tiny muted"},"— scored close but under the threshold")));
-        const g2 = el("div",{class:"feedgrid"}); p.near_misses.forEach(e=>g2.append(listingCard(e,{showAlert:false})));
+        const g2 = el("div",{class:"feedgrid markable"});
+        p.near_misses.forEach(e=>g2.append(previewCard(e)));
         box.append(g2);
         box.append(el("p",{class:"help",style:"margin-top:10px"},"If these look right, lower the score threshold on the Filters step. If they're junk, add an exclude word."));
       }
+      if(p.hidden_rejected){
+        box.append(el("p",{class:"help",style:"margin-top:10px"},
+          `${p.hidden_rejected} previously dismissed listing${p.hidden_rejected===1?"":"s"} kept out of this preview.`));
+      }
       box.append(el("div",{style:"margin-top:18px"},
         el("button",{class:"btn",onclick:runPreview},"Run again")));
+      if(W.refine) box.append(refinePanel());
+      const nyes = marked("yes").length, nno = marked("no").length;
+      if(nyes || nno) box.append(refineBar(nyes, nno));
     }
     v.append(box);
     v.append(el("div",{class:"wizfoot"},
@@ -928,12 +1121,171 @@ function viewWizard(editName){
       el("button",{class:"btn primary",onclick:()=>{W.step=4;render();}}, W.preview?"Next →":"Skip preview →")));
   }
 
+  /* ---- reject-and-refine ------------------------------------------------
+     Rejections are how you teach the alert the difference between "the right
+     kind of thing" and "the exact thing". The panel does the analysis locally
+     using term data the preview shipped with each card, so a click responds
+     immediately instead of costing another workflow run. ------------------ */
+
+  function previewCard(e){
+    W.cards[e.id] = e;
+    return listingCard(e, {showAlert:false, mark:W.marks[e.id]||null,
+      onMark:(m)=>{
+        if(m) W.marks[e.id]=m; else delete W.marks[e.id];
+        W.refine=null; W.refinePick=null;      // stale once the marks change
+        render();
+      }});
+  }
+
+  function allPreviewCards(){
+    const p=W.preview||{};
+    return [...(p.sample||[]), ...(p.near_misses||[])];
+  }
+
+  function marked(kind){
+    return allPreviewCards().filter(c=>(W.marks[c.id]||null)===kind);
+  }
+  function rejectedIdList(){
+    return Object.keys(W.marks).filter(id=>W.marks[id]==="no");
+  }
+
+  function refineBar(nyes, nno){
+    const bits=[];
+    if(nyes) bits.push(`${nyes} correct`);
+    if(nno) bits.push(`${nno} wrong`);
+    return el("div",{class:"refinebar"},
+      el("div",{class:"grow"},
+        el("div",null,"Marked ", el("b",null,bits.join(" · "))),
+        el("div",{class:"tiny muted"}, nyes
+          ? "The wrong ones stay out of this alert for good; both sides teach it what to filter on."
+          : "Tick ✓ on a couple of correct ones too — that's what makes the filtering accurate.")),
+      el("button",{class:"btn",onclick:()=>{W.marks={};W.refine=null;W.refinePick=null;render();}},"Clear"),
+      el("button",{class:"btn primary",onclick:buildSuggestions,disabled:!nno},"Suggest filters →"));
+  }
+
+  function buildSuggestions(){
+    const cur = (W.preview&&W.preview.current_tight) || {};
+    W.refine = MREFINE.suggest(
+      {confirmed:marked("yes"), rejected:marked("no"), unmarked:marked(null)},
+      cur, {minScore: currentMinScore()});
+    // Excludes are safe by construction, so start them ticked. A require is a
+    // hard gate that can silently kill future listings - opt in deliberately.
+    W.refinePick = {
+      // Specific words are safe to tick for you. Broad ones ("レア", "セット")
+      // and hard requirements are judgement calls — you opt in.
+      ex: W.refine.excludes.map(x=>!x.broad),
+      rq: W.refine.requires.map(()=>false),
+      th: false,
+    };
+    render();
+    const el2=$(".refpanel"); if(el2) el2.scrollIntoView({behavior:"smooth",block:"center"});
+  }
+
+  function currentMinScore(){
+    if(W.match && typeof W.match.min_score==="number") return W.match.min_score;
+    if(W.preview && typeof W.preview.min_score==="number") return W.preview.min_score;
+    return 0;
+  }
+
+  function refinePanel(){
+    const r=W.refine, pick=W.refinePick;
+    const box = el("div",{class:"card refpanel",style:"margin-top:18px"});
+    box.append(el("h3",{style:"margin-top:0"},"Learn from what you marked"));
+    box.append(el("p",{class:"sub"},
+      r.confirmedCount
+        ? `Comparing ${r.rejectedCount} wrong against ${r.confirmedCount} you confirmed correct.`
+        : `Comparing ${r.rejectedCount} wrong against ${r.unmarkedCount} unmarked.`));
+
+    r.warnings.forEach(w=>box.append(el("p",{class:"help",style:"color:#e0b269"},w)));
+
+    if(r.excludes.length){
+      box.append(el("h3",null,"Exclude these words"));
+      box.append(el("p",{class:"help",style:"margin:-6px 0 10px"},
+        r.confirmedCount
+          ? "None of these appear in a listing you confirmed, so they can't cost you the item. Any listing containing one is dropped outright."
+          : "None of these appear in a listing you kept. Any listing containing one is dropped outright."));
+      r.excludes.forEach((x,i)=>box.append(el("label",{class:"prop"},
+        el("input",{type:"checkbox", ...(pick.ex[i]?{checked:"checked"}:{}),
+          onchange:e=>{pick.ex[i]=e.target.checked;}}),
+        el("div",null,
+          el("div",{class:"t"}, x.term, gloss(x.term),
+            x.broad && el("span",{class:"pill warn",style:"margin-left:8px"},"broad")),
+          el("div",{class:"d"}, x.all ? `in all ${r.rejectedCount} wrong` : `in ${x.count} of ${r.rejectedCount} wrong`,
+            r.confirmedCount ? " · in none you confirmed" : " · in none you kept",
+            x.collateral ? ` · would also drop ${x.collateral} unmarked` : "",
+            x.broad ? " · describes any collectible, so this may block real listings too" : "")))));
+    }
+
+    if(r.requires.length){
+      box.append(el("h3",null,"Or require one of these ",
+        el("span",{class:"tiny muted"},"— the strongest filter available")));
+      box.append(el("p",{class:"help",style:"margin:-6px 0 10px"},
+        "Present in every listing you confirmed and none you rejected — usually the actual name of the thing you're hunting. Ticking several makes them alternatives: a listing needs at least one. Anything with none of them is dropped, so tick only wording you'd expect a genuine seller to use."));
+      r.requires.forEach((x,i)=>box.append(el("label",{class:"prop"},
+        el("input",{type:"checkbox", ...(pick.rq[i]?{checked:"checked"}:{}),
+          onchange:e=>{pick.rq[i]=e.target.checked;}}),
+        el("div",null,
+          el("div",{class:"t"},x.term, gloss(x.term)),
+          el("div",{class:"d"},`in all ${r.confirmedCount} confirmed · in none rejected`)))));
+    }
+
+    if(r.threshold){
+      box.append(el("h3",null,"Or just raise the bar"));
+      box.append(el("label",{class:"prop"},
+        el("input",{type:"checkbox", ...(pick.th?{checked:"checked"}:{}),
+          onchange:e=>{pick.th=e.target.checked;}}),
+        el("div",null,
+          el("div",{class:"t"},`Score threshold → ${r.threshold.value}`),
+          el("div",{class:"d"},`clears everything you kept (lowest ${r.threshold.clears}), blocks everything you rejected (highest ${r.threshold.blocks})`))));
+    }
+
+    if(S.showEn){
+      const terms = [...r.excludes.map(x=>x.term), ...r.requires.map(x=>x.term)];
+      ensureEnglish(terms, render);
+    }
+
+    box.append(el("div",{style:"margin-top:16px;display:flex;gap:9px;flex-wrap:wrap"},
+      el("button",{class:"btn primary",onclick:applyRefinements},"Apply and re-run preview"),
+      el("button",{class:"btn",onclick:()=>{applyRefinements(false);}},"Apply without re-running"),
+      el("button",{class:"btn",onclick:()=>{W.refine=null;W.refinePick=null;render();}},"Cancel")));
+    return box;
+  }
+
+  function applyRefinements(rerun=true){
+    const r=W.refine, pick=W.refinePick;
+    const chosenEx = r.excludes.filter((_,i)=>pick.ex[i]).map(x=>x.term);
+    const chosenRq = r.requires.filter((_,i)=>pick.rq[i]).map(x=>x.term);
+    const useTh = !!(r.threshold && pick.th);
+
+    // A require group or a threshold needs explicit rules to live in. In
+    // manual mode those are synthesised at save time, so materialise them now
+    // - which also freezes the wording, exactly what refining implies.
+    if((chosenRq.length || useTh) && !W.match) W.match = draftToAlert().match;
+
+    chosenEx.forEach(t=>{ if(!W.exclude.includes(t)) W.exclude.push(t); });
+    if(chosenRq.length) W.match.require = [...(W.match.require||[]), chosenRq];
+    if(useTh) W.match.min_score = r.threshold.value;
+
+    const bits=[];
+    if(chosenEx.length) bits.push(`${chosenEx.length} exclude word${chosenEx.length===1?"":"s"}`);
+    if(chosenRq.length) bits.push(chosenRq.length===1?"a required word":`${chosenRq.length} alternative required words`);
+    if(useTh) bits.push(`threshold ${r.threshold.value}`);
+    const nrej = rejectedIdList().length;
+    if(nrej) bits.push(`${nrej} dismissed listing${nrej===1?"":"s"}`);
+
+    W.refine=null; W.refinePick=null;
+    toast("Added "+bits.join(", "),"ok");
+    if(rerun) runPreview(); else render();
+  }
+
   async function runPreview(){
     if(!requireToken()) return;
-    W.busy=true; W.preview=null; W.previewMsg="Starting the preview on GitHub Actions…"; render();
+    W.busy=true; W.preview=null; W.refine=null; W.refinePick=null;
+    W.previewMsg="Starting the preview on GitHub Actions…"; render();
     const id = rid();
     try{
-      await dispatch(WF_PREVIEW, {request_id:id, payload: JSON.stringify({alert: draftToAlert()})});
+      await dispatch(WF_PREVIEW, {request_id:id, payload: JSON.stringify(
+        {alert: draftToAlert(), rejected_ids: rejectedIds()})});
       W.previewMsg="Querying Mercari and scoring the results…"; render();
       const res = await pollResult("previews", id, {onTick:(i)=>{
         W.previewMsg = `Querying Mercari and scoring the results… (${(i+1)*5}s)`;
@@ -961,6 +1313,8 @@ function viewWizard(editName){
       row("Price", [a.price_min?`min ¥${a.price_min}`:null, a.price_max?`max ¥${a.price_max}`:null,
                     a.target_price?`target ¥${a.target_price}`:null].filter(Boolean).join(", ")||"any"),
       row("Excludes", (a.match.exclude||[]).join(", ")||"defaults only"),
+      row("Required", (a.match.require||[]).map(g=>g.join(" / ")).join("  +  ")||"—"),
+      row("Dismissed listings", (a.rejected_ids||[]).length ? `${a.rejected_ids.length} — never shown again` : "none"),
       row("Threshold", String(a.match.min_score)),
       row("Reads descriptions", a.match.scope==="full"?"yes":"no"),
       row("Email", a.notify_email?"on":"off")))));
@@ -977,6 +1331,11 @@ function viewWizard(editName){
       el("button",{class:"btn",onclick:()=>{W.step=3;render();}},"← Back"), el("span")));
 
     function row(k,val){ return el("tr",null,el("td",{class:"muted",style:"width:180px"},k),el("td",null,val||"—")); }
+  }
+
+  /* Dismissals from this session plus any the alert already carried. */
+  function rejectedIds(){
+    return [...new Set([...(W.rejectedOld||[]), ...rejectedIdList()])];
   }
 
   function draftToAlert(){
@@ -1013,6 +1372,8 @@ function viewWizard(editName){
     if(tp!=null&&!isNaN(tp)) a.target_price=tp;
     if(mi!=null&&!isNaN(mi)) a.min_interval_minutes=mi;
     if(W.learned&&W.learned.alert&&W.learned.alert.learned_from) a.learned_from=W.learned.alert.learned_from;
+    const rj = rejectedIds();
+    if(rj.length) a.rejected_ids = rj;
     Object.keys(a).forEach(k=>a[k]===undefined&&delete a[k]);
     return a;
   }

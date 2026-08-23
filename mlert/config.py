@@ -42,6 +42,10 @@ class Alert:
         self.suppress_relists = bool(d.get("suppress_relists", False))
         self.notify_email = bool(d.get("notify_email", True))
         self.notes = d.get("notes") or ""
+        # Listings dismissed by hand in the panel's preview. Kept as a list of
+        # item ids so a rejection sticks even when the rules still match it -
+        # some listings are simply wrong in a way no keyword describes.
+        self.rejected_ids = set(str(x) for x in (d.get("rejected_ids") or []) if x)
 
         self.rules = MatchRules.from_dict(
             d.get("match"),

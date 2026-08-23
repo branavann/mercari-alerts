@@ -358,6 +358,17 @@ def learn(examples, negatives=None, max_queries=8, max_signals=12,
     thr = min(thr, weakest_pos * 0.75)   # our own examples must pass easily
     rules.min_score = float(max(3.0, round(thr, 1)))
 
+    # Deliberately NOT raised to shut out siblings ("same series, wrong
+    # card"). Doing that needs the threshold above what the shared vocabulary
+    # alone scores, and no statistic available here can tell a shared term
+    # from an identifying one: ルフィ海賊団 (704 listings) and 冒険を求めて
+    # (90) look equally rare, yet one names a whole sub-series and the other
+    # names one card. Every threshold high enough to block the sibling also
+    # blocks a terse but genuine listing - and missing the item is the
+    # expensive mistake. Two things do supply the missing information, and
+    # both come from you: negative examples here, and marking results correct
+    # or wrong in the preview.
+
     queries = _build_queries(examples, cands_by_tight, max_queries=max_queries,
                              counts=counts)
     report = coverage_report(examples, live_negs, negatives, queries, rules, counts,

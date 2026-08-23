@@ -172,6 +172,14 @@ written.** `C-E2` = `CE-2` = `CE2` = `Ｃ－Ｅ２`; `ゴーイング・メリ�
 fold together. Short codes still respect word boundaries, so `F626` won't
 match inside `AF6261`.
 
+**Card names survive their hiragana.** Splitting Japanese on script changes
+is cheap and works well for product names, but on its own it destroys exactly
+the words that separate one card from its siblings — `冒険を求めて`,
+`冒険の夜明け` and `虹の島を目指す冒険者` all collapse to `冒険`, which every
+card in the series has. Terms are therefore also extracted as phrases that
+bridge short hiragana, so those three stay distinct and can be filtered on.
+Fragments ending in a bare particle (`冒険を`) are dropped.
+
 **Sold-price comps.** `python comps.py <alert-name>` runs the alert's queries
 against *sold* listings, applies the same match rules, and reports the real
 distribution — so you know whether ¥98,000 is a steal or a rip-off, and it
@@ -228,6 +236,57 @@ The wizard's first step is the important one. It offers two modes:
 **Preview** answers "what would this actually catch?" before you commit —
 it runs your queries against live Mercari, scores everything they return,
 and shows the matches, the per-query breakdown, and the near-misses.
+
+#### Marking results correct or wrong
+
+Every preview card has **✓ Correct** and **✕ Wrong**. This is the main way to
+sharpen an alert, because the hard case is never "wrong series" — it's the
+right series, wrong card. `冒険を求めて`, `冒険の夜明け` and `虹の島を目指す
+冒険者` are three different cards that share every other word in their titles.
+
+Mark a few each way and press **Suggest filters**. The panel compares the two
+groups and proposes:
+
+- **exclude words** — in listings you marked wrong, in none you confirmed
+- **a required word** — in every listing you confirmed, in none you rejected.
+  Usually the actual name of the thing you're hunting, and the strongest
+  filter available. Off by default.
+- **a higher threshold** — only when the scores already separate cleanly
+
+Confirming matters more than rejecting. Marking something correct is real
+evidence; *not* rejecting it is not, so a word common to everything you merely
+left alone is never turned into a hard requirement — that is how an alert goes
+silent. Rejections also stick: their item ids are saved with the alert, so
+those exact listings never return even if the rules still match them.
+
+Three rules keep a suggestion from quietly costing you a real find:
+
+- a word appearing in anything you confirmed is never proposed
+- a word made up *entirely* of the alert's own vocabulary is never proposed.
+  `ワンピースカードダス` can be missing from your confirmed listings purely
+  because those sellers typed a space, and excluding it would bin the next
+  seller who doesn't. Merely *containing* an alert word is fine —
+  `冒険の夜明け` contains `冒険`, and excluding it is the whole point.
+- broad words (`レア`, `セット`, `カードゲーム`) are shown, tagged **broad**,
+  and left unticked
+
+When something is confirmed, excluding a word that also appears in unmarked
+listings becomes allowed — the panel says how many it would drop rather than
+hiding the cost.
+
+The analysis runs in your browser and answers instantly; the Japanese
+segmentation it needs was computed by the preview job and shipped with each
+card. Nothing is written until you press Apply, and nothing reaches the repo
+until you save the alert.
+
+#### If you don't read Japanese
+
+**Show English** (top right of the preview and learn steps) translates listing
+titles inline and glosses every Japanese term in the proposals, the learn
+report, and the rule chips. A curated collectibles dictionary answers first —
+it knows `カードダス` is "carddass" — and anything it doesn't know goes to
+MyMemory once and is cached in your browser. Specific card and set names often
+have no clean English; a dash means nothing reliable was found, not an error.
 
 ### Publishing it
 
@@ -348,19 +407,23 @@ serve_ui.py          serve the control panel locally
 alerts.json          alerts owned by the web UI
 alerts.yaml          hand-written alerts
 ui/
-  index.html         the whole control panel, one file, no build step
+  index.html         the control panel, one file, no build step
+  refine.js          turns rejected listings into proposed filters
   data/              feed.json, status.json, preview + learn results
 tools/ui_task.py     the preview / learn jobs the UI dispatches
 mlert/
   textutil.py        Japanese normalisation + term extraction
   rules.py           scoring engine
   learn.py           learning from examples
+  refine.py          term data behind the reject-and-refine loop
   mercari.py         the only file that touches the network
   state.py           seen-items, price history, relist fingerprints
   feed.py            the JSON files the UI reads
   notify.py          email composition + Gmail SMTP
   config.py          alerts.json + alerts.yaml loading
 tests/               offline tests against real listing fixtures
+  test_refine_js.mjs   node tests for the suggestion engine
+  test_ui_browser.py   optional Playwright pass over the panel
 .github/workflows/
   check_alerts.yml   scheduled checker
   ui_preview.yml     dispatched by the UI

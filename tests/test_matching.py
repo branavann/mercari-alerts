@@ -75,6 +75,37 @@ def test_adjacent_latin_words_keep_their_boundaries():
     assert tu.contains("CE2", tu.prep("カード C-E2 です")), "code variants must still fold"
 
 
+def test_card_names_survive_their_hiragana():
+    # The real failure this fixes: three cards in one series whose names only
+    # differ in the part script-run segmentation used to throw away. Without
+    # bridging, all three reduce to 冒険 and no threshold can separate them.
+    want = set(tu.extract_terms("ルフィ海賊団 冒険を求めて"))
+    dawn = set(tu.extract_terms("ルフィ海賊団 冒険の夜明け"))
+    rainbow = set(tu.extract_terms("虹の島を目指す冒険者"))
+    assert "冒険を求めて" in want
+    assert "冒険の夜明け" in dawn
+    assert "虹の島" in rainbow
+    assert "冒険を求めて" not in dawn and "冒険を求めて" not in rainbow
+
+
+def test_bridged_phrases_do_not_end_on_a_particle():
+    terms = tu.extract_terms("冒険を求めて")
+    assert "冒険を" not in terms, terms
+    assert "冒険を求めて" in terms
+
+
+def test_bridging_does_not_cross_a_space():
+    terms = tu.extract_terms("ルフィ海賊団 冒険を求めて")
+    assert not any(t.startswith("海賊団 ") or "団冒険" in t for t in terms), terms
+
+
+def test_bridging_stays_bounded_on_long_text():
+    prose = "この商品は非常に綺麗な状態でありまして、" * 40
+    terms = tu.extract_terms(prose)
+    assert len(terms) < 400, len(terms)
+    assert all(len(t) <= 24 for t in terms)
+
+
 def test_boilerplate_is_stopped():
     assert tu.is_stopword("発送") and tu.is_stopword("神経質") and tu.is_stopword("綺麗")
     assert not tu.is_stopword("ハイパーバトル")

@@ -1,0 +1,364 @@
+{
+ "status": "ok",
+ "kind": "preview",
+ "request_id": "testreq",
+ "alert_name": "op-ce2",
+ "queries": [
+  {
+   "query": "ハイパーバトル ルフィ海賊団",
+   "returned": 30,
+   "total_on_mercari": 1911,
+   "new_here": 6
+  }
+ ],
+ "candidates": 6,
+ "matched": 6,
+ "matched_24h": 1,
+ "borderline": 0,
+ "min_score": 18.0,
+ "detail_fetches_used": 0,
+ "hidden_rejected": 0,
+ "current_tight": {
+  "require": [
+   [
+    "わんぴーす",
+    "onepiece"
+   ]
+  ],
+  "signals": {
+   "るふぃ海賊団": 6.0,
+   "はいぱーばとる": 5.0,
+   "かーどだす": 4.0,
+   "わんぴーす": 4.0,
+   "冒険": 4.0
+  },
+  "exclude": [
+   "複製"
+  ]
+ },
+ "sample": [
+  {
+   "id": "m1",
+   "url": "https://jp.mercari.com/item/m1",
+   "marketplace": "mercari",
+   "alert": "op-ce2",
+   "alert_label": "One Piece C-E2",
+   "name": "【限定品】ワンピース ハイパーバトル カードダス ルフィ海賊団 冒険を求めて",
+   "price": 140000,
+   "thumbnail": null,
+   "condition": "Fair",
+   "detected_at": "2026-08-23T00:00:00+00:00",
+   "score": 30.5,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピース",
+    "冒険",
+    "ハイパーバトル"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false,
+   "lag_seconds": 36000,
+   "terms": [
+    "ハイパーバトル",
+    "ルフィ海賊団",
+    "冒険を求めて",
+    "ワンピース",
+    "カードダス",
+    "冒険を求",
+    "限定品",
+    "ルフィ",
+    "海賊団",
+    "求めて",
+    "冒険"
+   ],
+   "tterms": [
+    "はいぱーばとる",
+    "るふぃ海賊団",
+    "冒険を求めて",
+    "わんぴーす",
+    "かーどだす",
+    "冒険を求",
+    "限定品",
+    "るふぃ",
+    "海賊団",
+    "求めて",
+    "冒険"
+   ],
+   "generic": [],
+   "tt": "限定品わんぴーすはいぱーばとるかーどだするふぃ海賊団冒険を求めて"
+  },
+  {
+   "id": "m2",
+   "url": "https://jp.mercari.com/item/m2",
+   "marketplace": "mercari",
+   "alert": "op-ce2",
+   "alert_label": "One Piece C-E2",
+   "name": "ワンピースカード　ハイパーバトル ルフィ海賊団 冒険を求めて　特典　CJ1",
+   "price": 90500,
+   "thumbnail": null,
+   "condition": "Fair",
+   "detected_at": "2026-08-23T00:00:00+00:00",
+   "score": 29.25,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピース",
+    "冒険",
+    "ハイパーバトル"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false,
+   "lag_seconds": 36000,
+   "terms": [
+    "CJ1",
+    "ワンピースカード",
+    "ハイパーバトル",
+    "ルフィ海賊団",
+    "冒険を求めて",
+    "冒険を求",
+    "ルフィ",
+    "海賊団",
+    "求めて",
+    "冒険",
+    "特典"
+   ],
+   "tterms": [
+    "cj1",
+    "わんぴーすかーど",
+    "はいぱーばとる",
+    "るふぃ海賊団",
+    "冒険を求めて",
+    "冒険を求",
+    "るふぃ",
+    "海賊団",
+    "求めて",
+    "冒険",
+    "特典"
+   ],
+   "generic": [
+    "特典"
+   ],
+   "tt": "わんぴーすかーどはいぱーばとるるふぃ海賊団冒険を求めて特典cj1"
+  },
+  {
+   "id": "m3",
+   "url": "https://jp.mercari.com/item/m3",
+   "marketplace": "mercari",
+   "alert": "op-ce2",
+   "alert_label": "One Piece C-E2",
+   "name": "ワンピースカードダス　ハイパーバトル まとめ300枚　ルフィ海賊団　冒険を求めて",
+   "price": 299999,
+   "thumbnail": null,
+   "condition": "Fair",
+   "detected_at": "2026-08-23T00:00:00+00:00",
+   "score": 30.5,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピース",
+    "冒険",
+    "ハイパーバトル"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false,
+   "lag_seconds": 36000,
+   "terms": [
+    "ワンピースカードダス",
+    "ハイパーバトル",
+    "300枚",
+    "ルフィ海賊団",
+    "冒険を求めて",
+    "冒険を求",
+    "ルフィ",
+    "海賊団",
+    "求めて",
+    "冒険"
+   ],
+   "tterms": [
+    "わんぴーすかーどだす",
+    "はいぱーばとる",
+    "300枚",
+    "るふぃ海賊団",
+    "冒険を求めて",
+    "冒険を求",
+    "るふぃ",
+    "海賊団",
+    "求めて",
+    "冒険"
+   ],
+   "generic": [],
+   "tt": "わんぴーすかーどだすはいぱーばとるまとめ300枚るふぃ海賊団冒険を求めて"
+  },
+  {
+   "id": "m4",
+   "url": "https://jp.mercari.com/item/m4",
+   "marketplace": "mercari",
+   "alert": "op-ce2",
+   "alert_label": "One Piece C-E2",
+   "name": "ワンピース カードダスハイパーバトル ルフィ海賊団 冒険の夜明け",
+   "price": 5000,
+   "thumbnail": null,
+   "condition": "Fair",
+   "detected_at": "2026-08-23T00:00:00+00:00",
+   "score": 30.5,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピース",
+    "冒険",
+    "ハイパーバトル"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false,
+   "lag_seconds": 36000,
+   "terms": [
+    "カードダスハイパーバトル",
+    "ルフィ海賊団",
+    "冒険の夜明け",
+    "ワンピース",
+    "冒険の夜明",
+    "ルフィ",
+    "海賊団",
+    "夜明け",
+    "冒険",
+    "夜明"
+   ],
+   "tterms": [
+    "かーどだすはいぱーばとる",
+    "るふぃ海賊団",
+    "冒険の夜明け",
+    "わんぴーす",
+    "冒険の夜明",
+    "るふぃ",
+    "海賊団",
+    "夜明け",
+    "冒険",
+    "夜明"
+   ],
+   "generic": [],
+   "tt": "わんぴーすかーどだすはいぱーばとるるふぃ海賊団冒険の夜明け"
+  },
+  {
+   "id": "m5",
+   "url": "https://jp.mercari.com/item/m5",
+   "marketplace": "mercari",
+   "alert": "op-ce2",
+   "alert_label": "One Piece C-E2",
+   "name": "ワンピース カードゲーム ルフィ海賊団 冒険の夜明け",
+   "price": 34000,
+   "thumbnail": null,
+   "condition": "Fair",
+   "detected_at": "2026-08-23T00:00:00+00:00",
+   "score": 25.5,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピース",
+    "冒険",
+    "ハイパーバトル"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false,
+   "lag_seconds": 36000,
+   "terms": [
+    "ルフィ海賊団",
+    "冒険の夜明け",
+    "ワンピース",
+    "冒険の夜明",
+    "ルフィ",
+    "海賊団",
+    "夜明け",
+    "冒険",
+    "夜明",
+    "カードゲーム"
+   ],
+   "tterms": [
+    "るふぃ海賊団",
+    "冒険の夜明け",
+    "わんぴーす",
+    "冒険の夜明",
+    "るふぃ",
+    "海賊団",
+    "夜明け",
+    "冒険",
+    "夜明",
+    "かーどげーむ"
+   ],
+   "generic": [
+    "かーどげーむ"
+   ],
+   "tt": "わんぴーすかーどげーむるふぃ海賊団冒険の夜明け"
+  },
+  {
+   "id": "m6",
+   "url": "https://jp.mercari.com/item/m6",
+   "marketplace": "mercari",
+   "alert": "op-ce2",
+   "alert_label": "One Piece C-E2",
+   "name": "ワンピース カードゲーム ルフィ海賊団 虹の島を目指す冒険者",
+   "price": 10000,
+   "thumbnail": null,
+   "condition": "Fair",
+   "detected_at": "2026-08-23T00:00:00+00:00",
+   "score": 25.5,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピース",
+    "冒険",
+    "ハイパーバトル"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false,
+   "lag_seconds": 36000,
+   "terms": [
+    "虹の島を目指す冒険者",
+    "島を目指す冒険者",
+    "虹の島を目指す",
+    "ルフィ海賊団",
+    "虹の島を目指",
+    "目指す冒険者",
+    "ワンピース",
+    "島を目指す",
+    "島を目指",
+    "ルフィ",
+    "海賊団",
+    "冒険者",
+    "虹の島",
+    "目指す",
+    "目指",
+    "カードゲーム"
+   ],
+   "tterms": [
+    "虹の島を目指す冒険者",
+    "島を目指す冒険者",
+    "虹の島を目指す",
+    "るふぃ海賊団",
+    "虹の島を目指",
+    "目指す冒険者",
+    "わんぴーす",
+    "島を目指す",
+    "島を目指",
+    "るふぃ",
+    "海賊団",
+    "冒険者",
+    "虹の島",
+    "目指す",
+    "目指",
+    "かーどげーむ"
+   ],
+   "generic": [
+    "かーどげーむ"
+   ],
+   "tt": "わんぴーすかーどげーむるふぃ海賊団虹の島を目指す冒険者"
+  }
+ ],
+ "near_misses": []
+}

@@ -251,6 +251,7 @@ _GENERIC_SURFACE = """
 カード シングルカード セット まとめ まとめ売り 大量 コレクション レア 限定 希少
 当時物 レトロ ビンテージ ヴィンテージ 昭和 平成 ジャンク 訳あり 訳有り
 ゲーム グッズ アイテム 本体 付属 付属品 おまけ 特典
+カードゲーム トレカ トレーディングカード プロモ プロモカード 特典カード
 """
 GENERIC = {tight(w) for w in _GENERIC_SURFACE.split() if tight(w)}
 
@@ -271,10 +272,67 @@ _HAS_DIGIT = re.compile(r"\d")
 _HAS_ALPHA = re.compile(r"[a-z]")
 
 
+# Single hiragana that are grammar, not part of a word. A phrase ending in
+# one of these is a fragment ("冒険を"), so it isn't worth offering.
+_PARTICLES = set("をのにはがともでへやかねよなばらしぬ")
+
+# Bridging limits. A card name is a handful of runs; anything longer is a
+# sentence, and sentences make terrible search terms.
+_MAX_BRIDGE_HIRA = 3      # interior hiragana run: を, の, を求め...
+_MAX_PHRASE_RUNS = 5      # content (non-hiragana) runs per phrase
+_MAX_PHRASE_CHARS = 16
+_MAX_PHRASES = 240        # hard stop so long descriptions stay cheap
+
+
+def _bridged_phrases(nfkc_text: str, runs):
+    """
+    Phrases that span short hiragana, so okurigana and particles survive.
+
+    Script-run segmentation alone destroys exactly the words that tell two
+    cards apart:
+
+        冒険を求めて  ->  冒険        "Seeking Adventure"
+        冒険の夜明け  ->  冒険, 夜明   "Dawn of Adventure"
+        虹の島を目指す冒険者 -> 目指, 冒険者
+
+    All three collapse onto 冒険, which is also in every other card in the
+    series - so the matcher cannot separate them at any threshold. Bridging
+    recovers 冒険を求めて / 冒険の夜明け / 虹の島 as whole terms.
+    """
+    out = []
+    n = len(runs)
+    for i in range(n):
+        _s0, c0, a0, _b0 = runs[i]
+        if c0 == _C_HIRA:
+            continue                     # a phrase must start on content
+        content, bridged, j = 1, False, i + 1
+        while j < n and content <= _MAX_PHRASE_RUNS:
+            sj, cj, aj, bj = runs[j]
+            if aj != runs[j - 1][3]:
+                break                    # a space or punctuation ends it
+            if cj == _C_HIRA:
+                if len(sj) > _MAX_BRIDGE_HIRA:
+                    break
+                bridged = True
+            else:
+                content += 1
+            if bj - a0 > _MAX_PHRASE_CHARS:
+                break
+            # Plain adjacent-run compounds are emitted by the caller already;
+            # only phrases that actually crossed hiragana are new here.
+            if bridged and not (cj == _C_HIRA and len(sj) == 1 and sj in _PARTICLES):
+                out.append(nfkc_text[a0:bj])
+                if len(out) >= _MAX_PHRASES:
+                    return out
+            j += 1
+    return out
+
+
 def extract_terms(text: str, max_len: int = 24):
     """
-    Candidate identity terms from a title or description: script runs plus
-    adjacent-run bigrams. Returns a de-duplicated list of surface forms.
+    Candidate identity terms from a title or description: script runs,
+    adjacent-run compounds, and phrases bridging short hiragana. Returns a
+    de-duplicated list of surface forms.
     """
     runs = script_runs(text)
     out, seen = [], set()
@@ -307,6 +365,10 @@ def extract_terms(text: str, max_len: int = 24):
         if c1 == _C_HIRA or c2 == _C_HIRA:
             continue
         add(s1 + s2)
+
+    # ...and phrases that cross hiragana, which is where card names live.
+    for phrase in _bridged_phrases(nfkc(text), runs):
+        add(phrase)
 
     return out
 
