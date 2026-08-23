@@ -83,6 +83,8 @@ textarea{resize:vertical;min-height:76px;font-family:var(--mono);font-size:13px}
 .chip{display:inline-flex;align-items:center;gap:7px;background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:6px 8px 6px 11px;font-size:13.5px}
 .chip button{background:none;border:none;color:var(--muted2);cursor:pointer;font-size:15px;line-height:1;padding:0 2px}
 .chip button:hover{color:var(--accent)}
+.chip.accent{border-color:rgba(226,84,42,.45);color:var(--fg)}
+.chip .en{margin-left:-2px}
 
 .toggle{display:inline-flex;align-items:center;gap:9px;cursor:pointer;user-select:none;font-size:13.5px}
 .toggle input{appearance:none;width:38px;height:21px;border-radius:999px;background:var(--line2);position:relative;cursor:pointer;transition:.15s;flex:none;margin:0}
@@ -787,7 +789,7 @@ function blankDraft(){
     suppress_relists:false, notify_email:true,
     match:null, learned:null, preview:null, busy:false, jaSuggest:null,
     // id -> preview card. marks holds "yes" / "no" per listing id.
-    marks:{}, cards:{}, refine:null, refinePick:null};
+    marks:{}, cards:{}, refine:null, refinePick:null, droppedQueries:[]};
 }
 function viewWizard(editName){
   if(!W || (editName && W.editing!==editName) || (!editName && W.editing)){
@@ -890,8 +892,31 @@ function viewWizard(editName){
     if(W.learned){
       box.append(el("div",{class:"spread"},
         el("h3",{style:"margin:0"},"What it worked out"), englishToggle()));
-      box.append(el("div",{class:"chips",style:"margin:12px 0"},
-        ...W.queries.map(q=>el("span",{class:"pill accent"},q))));
+      box.append(el("p",{class:"help",style:"margin:8px 0 8px"},
+        "These are the searches it will run, pooled together. Drop any that look "
+        + "wrong or too broad — each one only decides what gets fetched, so removing "
+        + "it costs you nothing except the listings that search would have found."));
+      box.append(el("div",{class:"chips",style:"margin:0 0 6px"},
+        ...W.queries.map((q,i)=>el("span",{class:"chip accent"}, q, gloss(q),
+          el("button",{title:"Drop this search",
+            onclick:()=>{
+              if(W.queries.length<=1){ toast("An alert needs at least one search","err"); return; }
+              W.droppedQueries=[...(W.droppedQueries||[]), q];
+              W.queries.splice(i,1);
+              W.preview=null;               // no longer describes these queries
+              render();
+            }},"×")))));
+      if((W.droppedQueries||[]).length){
+        box.append(el("p",{class:"help",style:"margin:2px 0 12px"},
+          `${W.droppedQueries.length} dropped: ${W.droppedQueries.join(", ")} · `,
+          el("a",{href:"#",onclick:e=>{
+            e.preventDefault();
+            W.droppedQueries.forEach(q=>{ if(!W.queries.includes(q)) W.queries.push(q); });
+            W.droppedQueries=[]; W.preview=null; render();
+          }},"restore all")));
+      } else {
+        box.append(el("div",{style:"height:6px"}));
+      }
       box.append(el("pre",{class:"report"}, W.learned.report||""));
       box.append(el("p",{class:"help",style:"margin-top:10px"},
         "The coverage grid proves each example you gave would have been found. " +
@@ -939,6 +964,7 @@ function viewWizard(editName){
       W.learned = res;
       const a = res.alert || {};
       W.queries = a.queries || [];
+      W.droppedQueries = [];   // a fresh analysis supersedes earlier pruning
       W.match = a.match || null;
       if(W.match && Array.isArray(W.match.exclude)) W.exclude = [...W.match.exclude];
       W.label = W.label || a.label || W.name;
@@ -1041,8 +1067,25 @@ function viewWizard(editName){
       box.append(el("h3",null,"Match rules"));
       box.append(el("p",{class:"help",style:"margin:-4px 0 10px"},
         `Score threshold ${W.match.min_score}. A listing must clear it to be a confident match; anything above ${Math.round(W.match.min_score*0.55*10)/10} shows as a possible match.`));
-      box.append(el("div",{class:"chips"}, ...Object.entries(W.match.signals||{})
-        .sort((a,b)=>b[1]-a[1]).map(([t,w])=>el("span",{class:"pill"+(w>=5?" accent":"")}, t," ",el("b",{class:"mono"},String(w))))));
+      box.append(el("p",{class:"help",style:"margin:-4px 0 10px"},
+        "Each word a listing contains adds its weight (×1.25 if it's in the title). "
+        + "Drop any that don't belong to this item — but a dropped word can no longer "
+        + "help a listing reach the threshold, so watch the best-case total below."));
+      const sig = Object.entries(W.match.signals||{}).sort((a,b)=>b[1]-a[1]);
+      box.append(el("div",{class:"chips"}, ...sig.map(([t,w])=>
+        el("span",{class:"chip"+(w>=5?" accent":"")}, t, gloss(t),
+          el("b",{class:"mono"},String(w)),
+          el("button",{title:"Drop this word from the scoring",
+            onclick:()=>{ delete W.match.signals[t]; W.preview=null; render(); }},"×")))));
+      // Best case = every signal present, all in the title. If that no longer
+      // clears the threshold the alert can never match anything again.
+      const best = Math.round(sig.reduce((a,[,w])=>a+w,0) * 1.25 * 10)/10;
+      const dead = best < W.match.min_score;
+      box.append(el("p",{class:"help",style:"margin-top:10px"+(dead?";color:#e0b269":"")},
+        dead
+          ? `A listing containing every one of these would score ${best}, which is under the threshold of ${W.match.min_score} — nothing can match. Lower the threshold or restore a word.`
+          : `A listing containing all of them scores ${best}, against a threshold of ${W.match.min_score}.`));
+      if(S.showEn) ensureEnglish(sig.map(([t])=>t), render);
       box.append(el("div",{class:"field",style:"margin-top:14px;max-width:220px"},
         el("label",null,"Score threshold"),
         el("input",{type:"number",step:"0.5",value:W.match.min_score,oninput:e=>W.match.min_score=Number(e.target.value)||0}),

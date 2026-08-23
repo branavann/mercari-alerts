@@ -217,6 +217,54 @@ def main():
               page.evaluate("() => { S.showEn=false; return gloss('まとめ'); }") is None)
         page.evaluate("() => { S.showEn=true; }")
 
+        # Pruning the learned query fan-out.
+        page.evaluate("""() => {
+            Object.assign(W, {step:1, mode:'examples',
+                queries:['ルフィ海賊団', '冒険を求めて', 'ルフィ海賊団 ワンピース'],
+                droppedQueries:[],
+                learned:{alert:{match:{signals:{}, require:[], exclude:[]}}, report:'x'}});
+            viewWizard();
+        }""")
+        page.wait_for_timeout(250)
+        chips = page.locator(".chips .chip.accent")
+        check("learned queries render as removable chips", chips.count() == 3, chips.count())
+        page.locator('.chip.accent:has-text("ルフィ海賊団 ワンピース") button').click()
+        page.wait_for_timeout(200)
+        qs = page.evaluate("() => W.queries")
+        check("dropping a query removes it", "ルフィ海賊団 ワンピース" not in qs, qs)
+        check("the drop is reversible", page.locator("text=restore all").count() == 1)
+        page.click("text=restore all")
+        page.wait_for_timeout(200)
+        check("restore brings it back", len(page.evaluate("() => W.queries")) == 3)
+
+        # The last query must not be removable - an alert with none is broken.
+        page.evaluate("() => { W.queries=['のこり']; W.droppedQueries=[]; viewWizard(); }")
+        page.wait_for_timeout(200)
+        page.locator('.chip.accent button').first.click()
+        page.wait_for_timeout(200)
+        check("the last query cannot be dropped",
+              page.evaluate("() => W.queries.length") == 1)
+
+        # Dropping scoring words, and the warning when it makes the alert dead.
+        page.evaluate("""() => {
+            Object.assign(W, {step:2, match:{require:[], exclude:[], scope:'full',
+                signals:{'冒険を求めて':12, 'ルフィ海賊団':9}, min_score:20}});
+            viewWizard();
+        }""")
+        page.wait_for_timeout(250)
+        # (12 + 9) x 1.25 title multiplier = 26.3
+        check("best-case total is shown",
+              "26.3" in page.locator("#view").inner_text()
+              and "threshold of 20" in page.locator("#view").inner_text(),
+              page.locator("#view").inner_text()[-300:])
+        page.locator('.chip:has-text("ルフィ海賊団") button').first.click()
+        page.wait_for_timeout(200)
+        check("dropping a signal removes it",
+              page.evaluate("() => Object.keys(W.match.signals)") == ["冒険を求めて"])
+        check("an unreachable threshold is called out",
+              "nothing can match" in page.locator("#view").inner_text())
+        shot(page, "5-signals.png")
+
         # The sticky refine bar must not break the phone layout.
         page.set_viewport_size({"width": 390, "height": 844})
         page.evaluate("() => { W.step = 3; viewWizard(); }")
