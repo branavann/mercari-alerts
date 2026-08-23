@@ -1,5 +1,15 @@
-"""Loading and validating alerts.yaml."""
+"""
+Loading and validating alert definitions.
 
+Alerts can live in two files:
+
+  alerts.json  - owned by the web UI. Machine-written, safe to rewrite.
+  alerts.yaml  - hand-editable, with comments. The UI never touches it.
+
+Both are loaded and merged. Names must be unique across the two.
+"""
+
+import json
 from pathlib import Path
 
 import yaml
@@ -8,11 +18,13 @@ from .rules import MatchRules
 
 
 class Alert:
-    def __init__(self, d):
+    def __init__(self, d, source="yaml"):
         self.raw = d
+        self.source = source
         self.name = d["name"]
         self.label = d.get("label") or self.name
         self.paused = bool(d.get("paused", False))
+        self.created_at = d.get("created_at")
 
         queries = d.get("queries")
         if not queries:
@@ -22,12 +34,14 @@ class Alert:
 
         self.price_min = d.get("price_min")
         self.price_max = d.get("price_max")
+        self.target_price = d.get("target_price")
         self.categories = d.get("categories") or []
         self.mercari_exclude = d.get("mercari_exclude")   # server-side exclude string
         self.min_interval_minutes = d.get("min_interval_minutes")
         self.per_query_limit = int(d.get("per_query_limit", 30))
         self.suppress_relists = bool(d.get("suppress_relists", False))
-        self.include_sold_for_comps = bool(d.get("include_sold_for_comps", False))
+        self.notify_email = bool(d.get("notify_email", True))
+        self.notes = d.get("notes") or ""
 
         self.rules = MatchRules.from_dict(
             d.get("match"),
@@ -35,35 +49,57 @@ class Alert:
             presets=d.get("presets"),
         )
         # A keyword-only alert with no match rules: require the keyword itself,
-        # so v1 configs keep behaving sensibly.
+        # so the simplest possible config still behaves sensibly.
         if not self.rules.require and not self.rules.signals and self.queries:
             self.rules.require = [[self.queries[0]]]
             self.rules.signals = {self.queries[0]: 5.0}
             self.rules.min_score = 3.0
-            self.rules.scope = d.get("match", {}).get("scope", "title") if d.get("match") else "title"
+            self.rules.scope = (d.get("match") or {}).get("scope", "title")
 
     def __repr__(self):
         return f"<Alert {self.name} ({len(self.queries)} queries)>"
 
 
-def load_alerts(path):
-    path = Path(path)
-    if not path.exists():
-        return []
-    data = yaml.safe_load(path.read_text("utf-8")) or {}
-    raw_alerts = data.get("alerts") or []
+def _validate(raw, seen, source):
+    if not isinstance(raw, dict) or "name" not in raw:
+        raise ValueError(f"every alert needs a 'name': {raw!r}")
+    if not (raw.get("queries") or raw.get("keyword")):
+        raise ValueError(f"alert '{raw['name']}' has no queries")
+    if raw["name"] in seen:
+        raise ValueError(
+            f"duplicate alert name '{raw['name']}' "
+            f"(defined in both alerts.json and alerts.yaml?)"
+        )
+    seen.add(raw["name"])
 
-    seen, alerts = set(), []
-    for d in raw_alerts:
-        if not isinstance(d, dict) or "name" not in d:
-            raise ValueError(f"every alert needs a 'name': {d!r}")
-        if not (d.get("queries") or d.get("keyword")):
-            raise ValueError(f"alert '{d['name']}' has no queries")
-        if d["name"] in seen:
-            raise ValueError(f"duplicate alert name: {d['name']}")
-        seen.add(d["name"])
-        alerts.append(Alert(d))
+
+def load_alerts(yaml_path, json_path=None):
+    """Load alerts from alerts.json and/or alerts.yaml."""
+    alerts, seen = [], set()
+
+    json_path = Path(json_path) if json_path else None
+    if json_path and json_path.exists():
+        data = json.loads(json_path.read_text("utf-8")) or {}
+        for raw in data.get("alerts") or []:
+            _validate(raw, seen, "alerts.json")
+            alerts.append(Alert(raw, source="json"))
+
+    yaml_path = Path(yaml_path)
+    if yaml_path.exists():
+        data = yaml.safe_load(yaml_path.read_text("utf-8")) or {}
+        for raw in data.get("alerts") or []:
+            _validate(raw, seen, "alerts.yaml")
+            alerts.append(Alert(raw, source="yaml"))
+
     return alerts
+
+
+def save_alerts_json(path, alert_dicts):
+    """Rewrite alerts.json. Used by the UI task runner, not the checker."""
+    path = Path(path)
+    path.write_text(
+        json.dumps({"alerts": alert_dicts}, ensure_ascii=False, indent=2), "utf-8"
+    )
 
 
 def append_alert(path, alert_dict):

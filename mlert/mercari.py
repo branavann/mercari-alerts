@@ -246,6 +246,10 @@ def summary_fields(item):
     if not item_id:
         item_id = _scan_for_id(item)
 
+    created = first("created", "created_at", "createdAt")
+    if hasattr(created, "isoformat"):
+        created = created.isoformat()
+
     return {
         "id": item_id,
         "name": first("name", "title", "productName", default=""),
@@ -253,4 +257,7 @@ def summary_fields(item):
         "thumbnail": thumb,
         "seller_id": first("seller_id", "sellerId"),
         "status": first("status"),
+        "created": created,
+        "condition_id": first("item_condition_id", "itemConditionId"),
+        "category_id": first("category_id", "categoryId"),
     }

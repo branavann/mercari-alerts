@@ -127,10 +127,12 @@ def evaluate(rules: MatchRules, title: str, description: str = None) -> Verdict:
     (search results); the returned Verdict will set needs_description=True
     if fetching the full item could change the outcome.
     """
-    title_t = tu.tight(title or "")
-    desc_t = tu.tight(description or "")
+    title_t = tu.prep(title or "")
+    desc_t = tu.prep(description or "")
     # NUL separator so no term can accidentally straddle title and description
-    both_t = title_t + "\x00" + desc_t
+    both_t = tu.Prepped()
+    both_t.t = title_t.t + "\x00" + desc_t.t
+    both_t.s = title_t.s + "\x00" + desc_t.s
     have_desc = description is not None
 
     # 1. Hard exclusions first (cheapest way to drop junk).
@@ -150,7 +152,7 @@ def evaluate(rules: MatchRules, title: str, description: str = None) -> Verdict:
         if tu.contains(term, title_t):
             score += weight * TITLE_MULTIPLIER
             hits.append(term)
-        elif desc_t and tu.contains(term, desc_t):
+        elif desc_t.t and tu.contains(term, desc_t):
             score += weight
             hits.append(term)
 

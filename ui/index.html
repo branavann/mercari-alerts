@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Mercari Alerts</title>
+<style>
+:root{
+  --bg:#100c0b; --panel:#181211; --panel2:#1e1715; --line:#2c221f; --line2:#3a2c27;
+  --fg:#f2ece7; --muted:#9d8f87; --muted2:#6f635c;
+  --accent:#e2542a; --accent-soft:rgba(226,84,42,.14); --accent-line:rgba(226,84,42,.42);
+  --ok:#4a9d68; --ok-soft:rgba(74,157,104,.16);
+  --warn:#c98a2e; --warn-soft:rgba(201,138,46,.16);
+  --info:#5b8fd6; --info-soft:rgba(91,143,214,.16);
+  --serif:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:12px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+::placeholder{color:var(--muted2)}
+
+/* ---------- shell ---------- */
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+.side{border-right:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{display:flex;align-items:center;gap:10px;padding:20px 18px 26px}
+.brand .mark{width:30px;height:30px;border-radius:8px;background:var(--accent);display:grid;place-items:center;font-weight:700;font-size:15px;color:#fff;flex:none}
+.brand h1{font:600 18px/1 var(--serif);margin:0;letter-spacing:.2px}
+.nav{display:flex;flex-direction:column;gap:2px;padding:0 10px}
+.nav a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;border-radius:9px;text-decoration:none;color:var(--muted);font-size:14px;border-left:2px solid transparent}
+.nav a .jp{font-size:11px;color:var(--muted2)}
+.nav a:hover{background:var(--panel2);color:var(--fg)}
+.nav a.on{background:var(--panel2);color:var(--fg);border-left-color:var(--accent)}
+.side-foot{margin-top:auto;padding:16px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted2);display:flex;flex-direction:column;gap:6px}
+.side-foot .who{color:var(--muted);word-break:break-all}
+.main{padding:30px 34px 80px;max-width:1500px;overflow-x:hidden}
+
+/* ---------- typography / bits ---------- */
+h2.page{font:400 30px/1.1 var(--serif);margin:0 0 4px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 22px}
+h3{font:600 15px/1.3 var(--sans);margin:26px 0 10px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.spread{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.grow{flex:1;min-width:0}
+.muted{color:var(--muted)}
+.tiny{font-size:12px}
+.mono{font-family:var(--mono)}
+.hide{display:none !important}
+
+.btn{background:var(--panel2);border:1px solid var(--line2);border-radius:9px;padding:8px 14px;cursor:pointer;font-size:14px;transition:.12s}
+.btn:hover{border-color:var(--muted2)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:500}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.danger{color:#e2705a;border-color:#4a2a24}
+.btn.danger:hover{background:#2a1714}
+.btn.sm{padding:5px 10px;font-size:13px;border-radius:7px}
+
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-size:13px;color:var(--muted)}
+.field .help{font-size:12px;color:var(--muted2)}
+input[type=text],input[type=number],input[type=password],textarea,select{
+  background:var(--panel);border:1px solid var(--line2);border-radius:9px;padding:10px 12px;width:100%;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--accent-line)}
+textarea{resize:vertical;min-height:76px;font-family:var(--mono);font-size:13px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.banner{background:linear-gradient(100deg,rgba(226,84,42,.10),rgba(226,84,42,.03));border:1px solid var(--accent-line);border-radius:var(--r);padding:16px 18px;margin-bottom:20px}
+
+.pill{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;font-size:11.5px;border:1px solid var(--line2);background:var(--panel2);color:var(--muted);white-space:nowrap}
+.pill.accent{background:var(--accent-soft);border-color:var(--accent-line);color:#f2a288}
+.pill.ok{background:var(--ok-soft);border-color:rgba(74,157,104,.4);color:#7ec99a}
+.pill.warn{background:var(--warn-soft);border-color:rgba(201,138,46,.4);color:#e0b269}
+.pill.info{background:var(--info-soft);border-color:rgba(91,143,214,.4);color:#94b8e8}
+
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--panel2);border:1px solid var(--line2);border-radius:8px;padding:6px 8px 6px 11px;font-size:13.5px}
+.chip button{background:none;border:none;color:var(--muted2);cursor:pointer;font-size:15px;line-height:1;padding:0 2px}
+.chip button:hover{color:var(--accent)}
+
+.toggle{display:inline-flex;align-items:center;gap:9px;cursor:pointer;user-select:none;font-size:13.5px}
+.toggle input{appearance:none;width:38px;height:21px;border-radius:999px;background:var(--line2);position:relative;cursor:pointer;transition:.15s;flex:none;margin:0}
+.toggle input::after{content:"";position:absolute;top:2px;left:2px;width:17px;height:17px;border-radius:50%;background:var(--muted);transition:.15s}
+.toggle input:checked{background:var(--accent)}
+.toggle input:checked::after{left:19px;background:#fff}
+
+/* ---------- listing cards ---------- */
+.feedgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.lc{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.lc .ph{position:relative;aspect-ratio:1;background:var(--panel2);overflow:hidden}
+.lc .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.lc .ph .noimg{width:100%;height:100%;display:grid;place-items:center;color:var(--muted2);font-size:12px}
+.lc .mk{position:absolute;top:9px;left:9px;background:rgba(226,84,42,.9);color:#fff;font-size:10.5px;padding:2px 7px;border-radius:6px;letter-spacing:.3px}
+.lc .body{padding:12px 13px 13px;display:flex;flex-direction:column;gap:8px;flex:1}
+.lc .ttl{font-size:13.5px;line-height:1.4;max-height:3.8em;overflow:hidden;color:var(--fg)}
+.lc .price{font:600 19px/1 var(--mono)}
+.lc .usd{font-size:12px;color:var(--muted2);font-family:var(--sans);font-weight:400;margin-left:6px}
+.lc .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.lc .why{font-size:11.5px;color:var(--muted2);line-height:1.4;max-height:2.8em;overflow:hidden}
+.lc .acts{display:flex;gap:7px;margin-top:auto;padding-top:4px}
+.lc .acts a,.lc .acts button{flex:1;text-align:center;text-decoration:none;padding:7px;border-radius:8px;font-size:13px;border:1px solid var(--line2);background:var(--panel2);cursor:pointer}
+.lc .acts a.go{background:var(--accent);border-color:var(--accent);color:#fff}
+.lc.dim{opacity:.62}
+
+/* ---------- table ---------- */
+.tablewrap{border:1px solid var(--line);border-radius:var(--r);overflow-x:auto;background:var(--panel)}
+table{width:100%;border-collapse:collapse;min-width:840px}
+th{text-align:left;font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--muted2);font-weight:500;padding:14px 16px;border-bottom:1px solid var(--line)}
+td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:14px}
+td.acts{white-space:nowrap}
+td.acts .row{flex-wrap:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.014)}
+
+/* ---------- wizard ---------- */
+.steps{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.step{display:flex;align-items:center;gap:8px;padding:7px 15px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);color:var(--muted2);font-size:13.5px}
+.step b{width:18px;height:18px;border-radius:50%;background:var(--line2);display:grid;place-items:center;font-size:11px;font-weight:600;color:var(--fg)}
+.step.done{color:var(--fg)}
+.step.done b{background:var(--line2)}
+.step.on{background:var(--accent-soft);border-color:var(--accent-line);color:#f2a288}
+.step.on b{background:var(--accent);color:#fff}
+.dash{color:var(--muted2)}
+.wizfoot{display:flex;justify-content:space-between;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+
+.tabsel{display:flex;gap:8px;margin-bottom:18px}
+.tabsel button{flex:1;padding:14px;border-radius:10px;border:1px solid var(--line2);background:var(--panel);cursor:pointer;text-align:left}
+.tabsel button.on{border-color:var(--accent-line);background:var(--accent-soft)}
+.tabsel button strong{display:block;font-size:14px;margin-bottom:3px}
+.tabsel button span{font-size:12px;color:var(--muted)}
+
+pre.report{background:#0c0908;border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto;font:12px/1.55 var(--mono);color:#cdbfb6;white-space:pre;max-height:460px}
+
+.spinner{width:15px;height:15px;border:2px solid var(--line2);border-top-color:var(--accent);border-radius:50%;animation:sp .7s linear infinite;display:inline-block;vertical-align:-2px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.toastwrap{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:9px;z-index:99}
+.toast{background:var(--panel2);border:1px solid var(--line2);border-left:3px solid var(--accent);border-radius:9px;padding:11px 15px;font-size:13.5px;max-width:400px;box-shadow:0 8px 26px rgba(0,0,0,.5);animation:in .18s}
+.toast.ok{border-left-color:var(--ok)} .toast.err{border-left-color:#c0473a}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty h3{font:400 20px/1 var(--serif);color:var(--fg);margin:0 0 8px}
+
+.statbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:22px}
+.statbar div{background:var(--panel);padding:14px 16px}
+.statbar .k{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted2);margin-bottom:5px}
+.statbar .v{font:600 21px/1 var(--mono)}
+.statbar .v small{font-size:12px;font-family:var(--sans);font-weight:400;color:var(--muted)}
+
+@media(max-width:820px){
+  /* auto 1fr, or the grid stretches the nav bar to fill half the screen */
+  .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .side{position:static;height:auto;flex-direction:row;align-items:center;overflow-x:auto;
+        border-right:none;border-bottom:1px solid var(--line)}
+  .brand{padding:12px 14px}.brand h1{display:none}
+  .nav{flex-direction:row;padding:0 8px}.nav a .jp{display:none}
+  .side-foot{display:none}
+  .main{padding:20px 16px 60px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><div class="mark">目</div><h1>Mercari Alerts</h1></div>
+    <nav class="nav" id="nav">
+      <a href="#/feed"><span>Feed</span><span class="jp">フィード</span></a>
+      <a href="#/alerts"><span>Alerts</span><span class="jp">通知</span></a>
+      <a href="#/new"><span>New alert</span><span class="jp">追加</span></a>
+      <a href="#/settings"><span>Settings</span><span class="jp">設定</span></a>
+    </nav>
+    <div class="side-foot">
+      <div class="who" id="whoami">not connected</div>
+      <div id="lastrun">—</div>
+    </div>
+  </aside>
+  <main class="main" id="view"></main>
+</div>
+<div class="toastwrap" id="toasts"></div>
+
+<script>
+"use strict";
+/* ===================================================================
+   Mercari Alerts - static control panel.
+
+   The page cannot reach Mercari (CORS + the API needs request signing),
+   so anything needing live data is dispatched to GitHub Actions and the
+   result is polled from ui/data/. Reads of committed data are plain
+   fetches; writes and dispatches use a GitHub token kept in this
+   browser's localStorage and sent only to api.github.com.
+   =================================================================== */
+
+const LS = "mercari-alerts.settings.v1";
+const WF_PREVIEW = "ui_preview.yml", WF_LEARN = "ui_learn.yml";
+
+/* ---------- settings ---------- */
+const defaults = {owner:"", repo:"", branch:"main", token:"", jpy:150, mmEmail:"", autoTranslate:true};
+let S = load();
+function load(){ try{ return Object.assign({}, defaults, JSON.parse(localStorage.getItem(LS)||"{}")); }catch(e){ return {...defaults}; } }
+function save(){ try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){ toast("Could not save settings (private browsing?)","err"); } }
+
+// Guess owner/repo from a github.io URL so first-run needs no typing.
+(function detect(){
+  if(S.owner && S.repo) return;
+  const m = location.hostname.match(/^([\w-]+)\.github\.io$/);
+  if(m){
+    S.owner = S.owner || m[1];
+    const seg = location.pathname.split("/").filter(Boolean);
+    if(!S.repo && seg.length) S.repo = seg[0];
+    save();
+  }
+})();
+
+/* ---------- tiny helpers ---------- */
+const $ = (s,r=document)=>r.querySelector(s);
+const el = (t,a,...kids)=>{const n=document.createElement(t); a=a||{};
+  for(const[k,v] of Object.entries(a)){ if(v==null||v===false)continue;
+    if(k==="class")n.className=v; else if(k==="html")n.innerHTML=v;
+    else if(k.startsWith("on"))n.addEventListener(k.slice(2),v); else n.setAttribute(k,v); }
+  for(const k of kids.flat()){ if(k==null||k===false)continue; n.append(k.nodeType?k:document.createTextNode(k)); }
+  return n;};
+const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function toast(msg,kind=""){
+  const t = el("div",{class:"toast "+kind},msg);
+  $("#toasts").append(t);
+  setTimeout(()=>{t.style.opacity="0";t.style.transition=".3s";setTimeout(()=>t.remove(),300);}, kind==="err"?9000:4500);
+}
+function yen(v){ return (typeof v==="number") ? "¥"+v.toLocaleString("en-US") : "—"; }
+function usd(v){ const r=Number(S.jpy)||150; return (typeof v==="number") ? "~$"+(v/r).toLocaleString("en-US",{maximumFractionDigits:v/r<100?2:0}) : ""; }
+function ago(iso){
+  if(!iso) return "";
+  const s = (Date.now()-new Date(iso).getTime())/1000;
+  if(isNaN(s)) return "";
+  if(s<90) return Math.max(0,Math.round(s))+"s ago";
+  if(s<5400) return Math.round(s/60)+"m ago";
+  if(s<172800) return Math.round(s/3600)+"h ago";
+  return Math.round(s/86400)+"d ago";
+}
+function dur(sec){
+  if(sec==null) return null;
+  if(sec<90) return sec+"s";
+  if(sec<5400) return Math.round(sec/60)+"m";
+  if(sec<172800) return Math.round(sec/3600)+"h";
+  return Math.round(sec/86400)+"d";
+}
+function slug(s){ return String(s||"").toLowerCase().normalize("NFKD").replace(/[^\w\s-]/g,"").trim().replace(/[\s_]+/g,"-").replace(/-+/g,"-").slice(0,48) || "alert"; }
+function rid(){ return "r"+Date.now().toString(36)+Math.random().toString(36).slice(2,8); }
+
+/* ---------- base64 <-> utf8 ---------- */
+function b64enc(str){
+  const bytes = new TextEncoder().encode(str); let bin="";
+  for(let i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i,i+0x8000));
+  return btoa(bin);
+}
+function b64dec(b64){
+  const bin = atob(String(b64).replace(/\s/g,""));
+  const bytes = Uint8Array.from(bin, c=>c.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+/* ---------- GitHub API ---------- */
+function haveRepo(){ return !!(S.owner && S.repo); }
+function haveToken(){ return !!(S.owner && S.repo && S.token); }
+
+async function gh(path, opts={}){
+  if(!haveToken()) throw new Error("No GitHub token set — open Settings and add one.");
+  const r = await fetch("https://api.github.com"+path, {
+    ...opts, cache:"no-store",
+    headers:{Authorization:"Bearer "+S.token, Accept:"application/vnd.github+json",
+             "X-GitHub-Api-Version":"2022-11-28", ...(opts.headers||{})}
+  });
+  if(r.status===404) return null;
+  if(!r.ok){
+    let d=""; try{ d = (await r.json()).message || ""; }catch(e){}
+    if(r.status===401) throw new Error("GitHub rejected the token (401). It may be expired or lack access.");
+    if(r.status===403) throw new Error("GitHub refused (403). Check the token has Contents + Actions write on this repo. "+d);
+    throw new Error(`GitHub ${r.status}: ${d||r.statusText}`);
+  }
+  return r.status===204 ? true : r.json();
+}
+const repoPath = p => `/repos/${S.owner}/${S.repo}/${p}`;
+
+async function getFile(path){
+  const j = await gh(repoPath(`contents/${path}?ref=${encodeURIComponent(S.branch)}&t=${Date.now()}`));
+  if(!j || !j.content) return null;
+  return {sha:j.sha, text:b64dec(j.content)};
+}
+async function putFile(path, text, message, sha){
+  return gh(repoPath(`contents/${path}`), {method:"PUT", body:JSON.stringify({
+    message, content:b64enc(text), branch:S.branch, ...(sha?{sha}:{})
+  })});
+}
+async function dispatch(workflow, inputs){
+  const r = await fetch(`https://api.github.com/repos/${S.owner}/${S.repo}/actions/workflows/${workflow}/dispatches`,{
+    method:"POST", cache:"no-store",
+    headers:{Authorization:"Bearer "+S.token, Accept:"application/vnd.github+json",
+             "X-GitHub-Api-Version":"2022-11-28","Content-Type":"application/json"},
+    body: JSON.stringify({ref:S.branch, inputs})
+  });
+  if(r.status===204) return true;
+  let d=""; try{ d=(await r.json()).message||""; }catch(e){}
+  if(r.status===404) throw new Error(`Workflow ${workflow} not found on branch ${S.branch}. Push the repo first, and make sure the token can read Actions.`);
+  throw new Error(`Could not start the workflow (${r.status}): ${d}`);
+}
+// Poll a committed result file until it appears.
+async function pollResult(dir, id, {tries=60, every=5000, onTick}={}){
+  for(let i=0;i<tries;i++){
+    await new Promise(r=>setTimeout(r, i===0?4000:every));
+    if(onTick) onTick(i, tries);
+    let f=null;
+    try{ f = await getFile(`ui/data/${dir}/${id}.json`); }catch(e){ /* transient */ }
+    if(f){ try{ return JSON.parse(f.text); }catch(e){ throw new Error("Result file was not valid JSON."); } }
+  }
+  throw new Error("Timed out waiting for the workflow. Check the Actions tab — it may still be running.");
+}
+
+/* ---------- committed data (no token needed on a public repo) ---------- */
+async function loadData(name){
+  try{
+    const r = await fetch(`data/${name}.json?t=${Date.now()}`, {cache:"no-store"});
+    if(r.ok) return await r.json();
+  }catch(e){}
+  if(haveToken()){
+    try{ const f = await getFile(`ui/data/${name}.json`); if(f) return JSON.parse(f.text); }catch(e){}
+  }
+  return null;
+}
+async function loadAlerts(){
+  // Prefer the API (always fresh); fall back to the published copy.
+  if(haveToken()){
+    try{ const f = await getFile("alerts.json"); if(f) return {doc:JSON.parse(f.text), sha:f.sha}; }catch(e){}
+  }
+  try{
+    const r = await fetch(`../alerts.json?t=${Date.now()}`,{cache:"no-store"});
+    if(r.ok) return {doc:await r.json(), sha:null};
+  }catch(e){}
+  return {doc:{alerts:[]}, sha:null};
+}
+async function saveAlerts(alerts, message){
+  const cur = haveToken() ? await getFile("alerts.json") : null;
+  const text = JSON.stringify({alerts}, null, 2)+"\n";
+  await putFile("alerts.json", text, message, cur?cur.sha:undefined);
+}
+
+/* ===================================================================
+   English -> Japanese search terms
+   A curated dictionary first (marketplace vocabulary that general
+   machine translation gets wrong), then MyMemory as a fallback.
+   =================================================================== */
+const DICT = {
+  // consoles / platforms
+  "wonderswan":"ワンダースワン","wonderswan color":"ワンダースワンカラー","swancrystal":"スワンクリスタル",
+  "famicom":"ファミコン","nintendo famicom":"ファミコン","nes":"ファミコン",
+  "super famicom":"スーパーファミコン","snes":"スーパーファミコン","sfc":"スーパーファミコン",
+  "game boy":"ゲームボーイ","gameboy":"ゲームボーイ","game boy advance":"ゲームボーイアドバンス",
+  "game boy color":"ゲームボーイカラー","virtual boy":"バーチャルボーイ",
+  "nintendo 64":"ニンテンドー64","gamecube":"ゲームキューブ","nintendo ds":"ニンテンドーDS",
+  "mega drive":"メガドライブ","genesis":"メガドライブ","sega saturn":"セガサターン",
+  "dreamcast":"ドリームキャスト","game gear":"ゲームギア","pc engine":"PCエンジン",
+  "neo geo":"ネオジオ","playstation":"プレイステーション","ps1":"プレイステーション",
+  "ps2":"プレイステーション2","msx":"MSX","pico":"ピコ",
+  // game / collectible condition & parts
+  "boxed":"箱説","complete in box":"完品","cib":"完品","manual":"説明書","instruction manual":"取扱説明書",
+  "cartridge":"カセット","disc":"ディスク","sealed":"未開封","new":"新品","used":"中古",
+  "working":"動作確認済","untested":"動作未確認","junk":"ジャンク","damaged":"訳あり",
+  "mint":"美品","near mint":"極美品","rare":"希少","limited":"限定","promo":"プロモ","promotional":"プロモ",
+  "bundle":"セット","lot":"まとめ売り","reproduction":"複製","repro":"リプロ","replica":"レプリカ",
+  "empty box":"空箱","box only":"箱のみ",
+  // trading cards
+  "trading card":"トレーディングカード","card":"カード","carddass":"カードダス",
+  "holo":"キラ","holographic":"キラ","foil":"キラ","single card":"シングルカード",
+  "graded":"鑑定済","booster pack":"パック","booster box":"ボックス","deck":"デッキ",
+  "tournament":"大会","tournament limited":"大会限定","prize":"景品","first edition":"初版",
+  // magazines
+  "weekly shonen jump":"週刊少年ジャンプ","shonen jump":"少年ジャンプ","jump":"ジャンプ",
+  "magazine":"雑誌","issue":"号","appendix":"付録","furoku":"付録","cover":"表紙",
+  "poster":"ポスター","clipping":"切り抜き","back issue":"バックナンバー","supplement":"別冊",
+  // One Piece
+  "one piece":"ワンピース","luffy":"ルフィ","zoro":"ゾロ","roronoa zoro":"ロロノア・ゾロ",
+  "nami":"ナミ","usopp":"ウソップ","sanji":"サンジ","chopper":"チョッパー","robin":"ロビン",
+  "franky":"フランキー","brook":"ブルック","jinbe":"ジンベエ","ace":"エース","shanks":"シャンクス",
+  "going merry":"ゴーイング・メリー号","thousand sunny":"サウザンド・サニー号",
+  "straw hat":"麦わら","straw hat pirates":"麦わらの一味","luffy pirates":"ルフィ海賊団",
+  "hyper battle":"ハイパーバトル","grand battle":"グランドバトル","devil fruit":"悪魔の実",
+  // other franchises worth having
+  "dragon ball":"ドラゴンボール","pokemon":"ポケモン","pokemon card":"ポケモンカード",
+  "yu-gi-oh":"遊戯王","yugioh":"遊戯王","gundam":"ガンダム","sailor moon":"セーラームーン",
+  "evangelion":"エヴァンゲリオン","final fantasy":"ファイナルファンタジー","dragon quest":"ドラゴンクエスト",
+  "figure":"フィギュア","plush":"ぬいぐるみ","keychain":"キーホルダー","sticker":"シール",
+  "artbook":"画集","soundtrack":"サウンドトラック","doujinshi":"同人誌"
+};
+const TCACHE_KEY = "mercari-alerts.tcache.v1";
+let TCACHE = (()=>{ try{ return JSON.parse(localStorage.getItem(TCACHE_KEY)||"{}"); }catch(e){ return {}; } })();
+function cacheT(k,v){ TCACHE[k]=v; try{ localStorage.setItem(TCACHE_KEY, JSON.stringify(TCACHE)); }catch(e){} }
+
+const hasJa = s => /[぀-ヿ㐀-鿿]/.test(s);
+
+function dictLookup(text){
+  const q = text.toLowerCase().trim().replace(/\s+/g," ");
+  if(DICT[q]) return {ja:DICT[q], src:"dictionary"};
+  // phrase-wise: translate each known term, keep unknown words as-is
+  const words = q.split(" ");
+  let out=[], any=false, i=0;
+  while(i<words.length){
+    let hit=null;
+    for(let n=Math.min(3,words.length-i); n>=1; n--){
+      const cand = words.slice(i,i+n).join(" ");
+      if(DICT[cand]){ hit={t:DICT[cand],n}; break; }
+    }
+    if(hit){ out.push(hit.t); i+=hit.n; any=true; }
+    else { out.push(words[i]); i++; }
+  }
+  return any ? {ja:out.join(" "), src:"dictionary"} : null;
+}
+
+async function translateToJa(text){
+  const key = text.toLowerCase().trim();
+  if(!key || hasJa(text)) return null;
+  if(TCACHE[key]) return TCACHE[key];
+
+  const d = dictLookup(text);
+  // A full dictionary hit is more trustworthy than machine translation for
+  // product vocabulary, so take it and stop.
+  if(d && !/[a-z]{3,}/.test(d.ja)){ cacheT(key,d); return d; }
+
+  try{
+    const u = new URL("https://api.mymemory.translated.net/get");
+    u.searchParams.set("q", text.slice(0,450));
+    u.searchParams.set("langpair","en|ja");
+    if(S.mmEmail) u.searchParams.set("de", S.mmEmail);
+    const r = await fetch(u, {cache:"no-store"});
+    if(r.ok){
+      const j = await r.json();
+      const t = j && j.responseData && j.responseData.translatedText;
+      if(j.responseStatus===200 && t && hasJa(t)){
+        const res = {ja:t.trim(), src:"MyMemory"};
+        cacheT(key,res); return res;
+      }
+    }
+  }catch(e){ /* offline or quota - fall through */ }
+  if(d){ cacheT(key,d); return d; }
+  return null;
+}
+
+/* ===================================================================
+   Views
+   =================================================================== */
+const state = {feed:null, status:null, alerts:null, alertsSha:null};
+
+async function refresh(){
+  const [feed,status,al] = await Promise.all([loadData("feed"), loadData("status"), loadAlerts()]);
+  state.feed = feed || {entries:[]};
+  state.status = status || {alerts:{}};
+  state.alerts = (al.doc && al.doc.alerts) || [];
+  state.alertsSha = al.sha;
+  $("#whoami").textContent = haveRepo() ? `${S.owner}/${S.repo}` : "repo not set";
+  const lr = state.status.last_run;
+  $("#lastrun").textContent = lr ? "checked "+ago(lr) : "no runs recorded yet";
+}
+
+/* ---------- listing card ---------- */
+function listingCard(e, opts={}){
+  const tags = [];
+  if(e.status==="borderline") tags.push(el("span",{class:"pill warn"},"possible"));
+  if(e.status==="baseline")   tags.push(el("span",{class:"pill"},"pre-existing"));
+  if(e.condition)             tags.push(el("span",{class:"pill"},e.condition));
+  if(e.target_hit)            tags.push(el("span",{class:"pill accent"},"at your price"));
+  if(e.deal)                  tags.push(el("span",{class:"pill ok"},"below median"));
+  if(e.relist)                tags.push(el("span",{class:"pill info"},"relist"));
+  const lag = dur(e.lag_seconds);
+
+  return el("div",{class:"lc"+(e.status==="borderline"?" dim":"")},
+    el("div",{class:"ph"},
+      e.thumbnail ? el("img",{src:e.thumbnail, loading:"lazy", alt:""})
+                  : el("div",{class:"noimg"},"no image"),
+      el("span",{class:"mk"}, e.marketplace==="mercari" ? "メルカリ" : (e.marketplace||"mercari"))
+    ),
+    el("div",{class:"body"},
+      el("div",{class:"ttl"}, e.name || "(no title)"),
+      el("div",{class:"price"}, yen(e.price), el("span",{class:"usd"}, usd(e.price))),
+      el("div",{class:"meta"},
+        e.detected_at && el("span",{class:"tiny muted"}, ago(e.detected_at)),
+        opts.showAlert!==false && e.alert_label && el("span",{class:"pill"}, e.alert_label),
+        ...tags
+      ),
+      lag && el("div",{class:"tiny muted"},"spotted ",lag," after it was listed"),
+      (e.hits && e.hits.length) && el("div",{class:"why"},"matched: ",e.hits.join(", ")," · score ",String(e.score)),
+      el("div",{class:"acts"},
+        el("a",{class:"go",href:e.url,target:"_blank",rel:"noopener"},"View listing"),
+        el("a",{href:`https://www.google.com/search?q=${encodeURIComponent(e.name||"")}`,target:"_blank",rel:"noopener"},"Look up")
+      )
+    )
+  );
+}
+
+/* ---------- Feed ---------- */
+const feedUi = {alert:"", kind:"all", q:""};
+function viewFeed(){
+  const v = $("#view"); v.innerHTML="";
+  const entries = (state.feed.entries||[]);
+  v.append(
+    el("div",{class:"spread"},
+      el("div",null, el("h2",{class:"page"},"Live feed"), el("p",{class:"sub"},"New listings matching your alerts.")),
+      el("a",{class:"btn primary",href:"#/new"},"+ New alert")
+    )
+  );
+
+  if(!entries.length){
+    v.append(el("div",{class:"empty"},
+      el("h3",null,"Nothing here yet"),
+      el("p",null,state.alerts.length
+        ? "Your alerts are running. New matches appear here after the next scheduled check."
+        : "Create your first alert to start watching Mercari."),
+      el("a",{class:"btn primary",href:"#/new"},"+ New alert")));
+    return;
+  }
+
+  const wk = entries.filter(e=>Date.now()-new Date(e.detected_at).getTime() < 7*864e5);
+  const lags = wk.map(e=>e.lag_seconds).filter(x=>typeof x==="number").sort((a,b)=>a-b);
+  const med = lags.length ? lags[Math.floor(lags.length/2)] : null;
+  v.append(el("div",{class:"statbar"},
+    el("div",null, el("div",{class:"k"},"This week"), el("div",{class:"v"}, String(wk.filter(e=>e.status==="match").length), el("small",null," matches"))),
+    el("div",null, el("div",{class:"k"},"Median spot time"), el("div",{class:"v"}, med!=null?dur(med):"—")),
+    el("div",null, el("div",{class:"k"},"Active alerts"), el("div",{class:"v"}, String(state.alerts.filter(a=>!a.paused).length))),
+    el("div",null, el("div",{class:"k"},"In feed"), el("div",{class:"v"}, String(entries.length))),
+    el("div",null, el("div",{class:"k"},"Last check"), el("div",{class:"v"}, el("small",null, state.status.last_run?ago(state.status.last_run):"—")))
+  ));
+
+  const sel = el("select",{onchange:e=>{feedUi.alert=e.target.value;renderList();}},
+    el("option",{value:""},"All alerts"),
+    ...state.alerts.map(a=>el("option",{value:a.name, ...(feedUi.alert===a.name?{selected:"selected"}:{})}, a.label||a.name)));
+  const kind = el("select",{onchange:e=>{feedUi.kind=e.target.value;renderList();}},
+    el("option",{value:"all"},"Everything"),
+    el("option",{value:"match"},"Confident matches"),
+    el("option",{value:"borderline"},"Possible matches"),
+    el("option",{value:"deal"},"Below median only"));
+  const q = el("input",{type:"text",placeholder:"Filter by title…",oninput:e=>{feedUi.q=e.target.value;renderList();}});
+  v.append(el("div",{class:"row",style:"margin-bottom:18px"},
+    el("div",{style:"width:210px"},sel), el("div",{style:"width:190px"},kind),
+    el("div",{class:"grow",style:"max-width:330px"},q),
+    el("button",{class:"btn sm",onclick:async()=>{await refresh();route();toast("Reloaded");}},"Reload")));
+
+  const listWrap = el("div"); v.append(listWrap);
+  function renderList(){
+    let rows = entries.slice();
+    if(feedUi.alert) rows = rows.filter(e=>e.alert===feedUi.alert);
+    if(feedUi.kind==="match") rows = rows.filter(e=>e.status==="match");
+    else if(feedUi.kind==="borderline") rows = rows.filter(e=>e.status==="borderline");
+    else if(feedUi.kind==="deal") rows = rows.filter(e=>e.deal);
+    if(feedUi.q){ const s=feedUi.q.toLowerCase(); rows = rows.filter(e=>(e.name||"").toLowerCase().includes(s)); }
+    listWrap.innerHTML="";
+    if(!rows.length){ listWrap.append(el("div",{class:"empty"},el("p",null,"Nothing matches that filter."))); return; }
+    const g = el("div",{class:"feedgrid"});
+    rows.slice(0,180).forEach(e=>g.append(listingCard(e)));
+    listWrap.append(g);
+    if(rows.length>180) listWrap.append(el("p",{class:"sub",style:"margin-top:16px"},`Showing the newest 180 of ${rows.length}.`));
+  }
+  renderList();
+}
+
+/* ---------- Alerts ---------- */
+function viewAlerts(){
+  const v = $("#view"); v.innerHTML="";
+  v.append(el("div",{class:"spread"},
+    el("div",null, el("h2",{class:"page"},"Alerts"),
+      el("p",{class:"sub"}, `${state.alerts.filter(a=>!a.paused).length} active · ${state.alerts.length} total`)),
+    el("a",{class:"btn primary",href:"#/new"},"+ New alert")));
+
+  if(!state.alerts.length){
+    v.append(el("div",{class:"empty"},el("h3",null,"No alerts yet"),
+      el("p",null,"Alerts you create here are saved to alerts.json in your repo."),
+      el("a",{class:"btn primary",href:"#/new"},"+ New alert")));
+    return;
+  }
+
+  const rows = state.alerts.map(a=>{
+    const st = (state.status.alerts||{})[a.name] || {};
+    return el("tr",null,
+      el("td",null, el("div",{style:"font-weight:500"}, a.label||a.name),
+                    el("div",{class:"tiny muted mono"}, a.name)),
+      el("td",null, el("div",{class:"chips"}, ...(a.queries||[]).slice(0,4).map(q=>el("span",{class:"pill"},q)),
+                     (a.queries||[]).length>4 && el("span",{class:"pill"},`+${a.queries.length-4}`))),
+      el("td",{class:"mono"}, String(st.matches_24h ?? 0)),
+      el("td",{class:"mono tiny muted"}, st.median_price!=null?yen(st.median_price):"—"),
+      el("td",{class:"tiny muted"}, st.last_checked?ago(st.last_checked):"never"),
+      el("td",null, a.paused ? el("span",{class:"pill"},"PAUSED") : el("span",{class:"pill ok"},"ACTIVE")),
+      el("td",{class:"acts"}, el("div",{class:"row"},
+        el("button",{class:"btn sm",onclick:()=>togglePause(a)}, a.paused?"Resume":"Pause"),
+        el("button",{class:"btn sm",onclick:()=>{location.hash="#/edit/"+encodeURIComponent(a.name);}},"Edit"),
+        el("button",{class:"btn sm danger",onclick:()=>removeAlert(a)},"Delete")))
+    );
+  });
+
+  v.append(el("div",{class:"tablewrap"}, el("table",null,
+    el("thead",null,el("tr",null,...["Alert","Queries","24h","Median","Last check","Status","Actions"].map(h=>el("th",null,h)))),
+    el("tbody",null,...rows))));
+
+  const yamlNote = el("p",{class:"sub",style:"margin-top:16px"},
+    "Alerts created here live in alerts.json. Anything defined in alerts.yaml still runs, but is edited by hand.");
+  v.append(yamlNote);
+}
+
+async function togglePause(a){
+  if(!requireToken()) return;
+  try{
+    const next = state.alerts.map(x=> x.name===a.name ? {...x, paused:!x.paused} : x);
+    await saveAlerts(next, `${a.paused?"Resume":"Pause"} alert ${a.name}`);
+    toast(`${a.label||a.name} ${a.paused?"resumed":"paused"}`,"ok");
+    await refresh(); route();
+  }catch(e){ toast(e.message,"err"); }
+}
+async function removeAlert(a){
+  if(!requireToken()) return;
+  if(!confirm(`Delete "${a.label||a.name}"?\n\nIts alert history stays in the feed, and its record of already-seen listings stays in seen_state.json — so re-creating it later with the same name won't re-notify you about old listings.`)) return;
+  try{
+    await saveAlerts(state.alerts.filter(x=>x.name!==a.name), `Delete alert ${a.name}`);
+    toast("Deleted","ok"); await refresh(); route();
+  }catch(e){ toast(e.message,"err"); }
+}
+function requireToken(){
+  if(haveToken()) return true;
+  toast("Add a GitHub token in Settings first — that's what lets this page save changes.","err");
+  location.hash="#/settings"; return false;
+}
+
+/* ===================================================================
+   New / edit alert wizard
+   =================================================================== */
+let W = null;
+function blankDraft(){
+  return {mode:"examples", step:1, editing:null,
+    name:"", label:"", queries:[], examples:[""], negatives:[""],
+    price_min:"", price_max:"", target_price:"", exclude:[], presets:[],
+    min_interval_minutes:"", per_query_limit:30, scope:"full",
+    suppress_relists:false, notify_email:true,
+    match:null, learned:null, preview:null, busy:false, jaSuggest:null};
+}
+function viewWizard(editName){
+  if(!W || (editName && W.editing!==editName) || (!editName && W.editing)){
+    W = blankDraft();
+    if(editName){
+      const a = state.alerts.find(x=>x.name===editName);
+      if(!a){ toast("That alert no longer exists","err"); location.hash="#/alerts"; return; }
+      Object.assign(W, {
+        editing:a.name, mode:"manual", name:a.name, label:a.label||"",
+        queries:[...(a.queries||[])],
+        price_min:a.price_min??"", price_max:a.price_max??"", target_price:a.target_price??"",
+        exclude:[...((a.match&&a.match.exclude)||[])], presets:[...(a.presets||[])],
+        min_interval_minutes:a.min_interval_minutes??"", per_query_limit:a.per_query_limit??30,
+        scope:(a.match&&a.match.scope)||"full", suppress_relists:!!a.suppress_relists,
+        notify_email:a.notify_email!==false, match:a.match||null});
+    }
+  }
+  render();
+
+  function render(){
+    const v = $("#view"); v.innerHTML="";
+    v.append(el("h2",{class:"page"}, W.editing?"Edit alert":"New alert"));
+    const names=["Search","Filters","Preview","Delivery"];
+    v.append(el("div",{class:"steps"}, ...names.flatMap((n,i)=>{
+      const idx=i+1, cls = W.step===idx?"step on":(W.step>idx?"step done":"step");
+      const node = el("div",{class:cls, onclick:()=>{ if(idx<W.step){W.step=idx;render();} }}, el("b",null,String(idx)), n);
+      return i? [el("span",{class:"dash"},"—"), node] : [node];
+    })));
+    ({1:step1,2:step2,3:step3,4:step4})[W.step](v);
+  }
+
+  /* ---- step 1: what to search for ---- */
+  function step1(v){
+    v.append(el("div",{class:"tabsel"},
+      el("button",{class:W.mode==="examples"?"on":"", onclick:()=>{W.mode="examples";render();}},
+        el("strong",null,"Learn from example listings"),
+        el("span",null,"Paste 2-4 past listings of the item. Best results — it reads how sellers actually word it.")),
+      el("button",{class:W.mode==="manual"?"on":"", onclick:()=>{W.mode="manual";render();}},
+        el("strong",null,"Type search terms"),
+        el("span",null,"Enter keywords yourself. Quick, but you supply the wording."))
+    ));
+
+    v.append(el("div",{class:"grid2"},
+      field("Alert name","Short id, used in filenames and state. Letters, numbers, hyphens.",
+        el("input",{type:"text",value:W.name,placeholder:"op-hyperbattle-ce2",
+          oninput:e=>{W.name=slug(e.target.value);e.target.value=W.name;}})),
+      field("Display name","What shows up in the feed and your emails.",
+        el("input",{type:"text",value:W.label,placeholder:"One Piece Hyper Battle C-E2",
+          oninput:e=>{W.label=e.target.value; if(!W.editing && !W.name) {} }}))
+    ));
+
+    if(W.mode==="examples") exampleMode(v); else manualMode(v);
+
+    v.append(el("div",{class:"wizfoot"},
+      el("a",{class:"btn",href:"#/alerts"},"Cancel"),
+      el("button",{class:"btn primary", disabled:!canLeave1(),
+        onclick:()=>{W.step=2;render();}},"Next →")));
+  }
+  function canLeave1(){ return !!(W.name && W.queries.length); }
+
+  function exampleMode(v){
+    const box = el("div",{class:"card",style:"margin-top:6px"});
+    box.append(el("p",{class:"sub",style:"margin:0 0 14px"},
+      "Paste Mercari URLs of the item — sold ones are perfect, the page stays up. " +
+      "Different-looking listings of the same thing teach it the most."));
+
+    W.examples.forEach((u,i)=>{
+      box.append(el("div",{class:"row",style:"margin-bottom:8px"},
+        el("div",{class:"grow"}, el("input",{type:"text",value:u,placeholder:"https://jp.mercari.com/item/m…",
+          oninput:e=>{W.examples[i]=e.target.value.trim();}})),
+        el("button",{class:"btn sm",onclick:()=>{W.examples.splice(i,1); if(!W.examples.length)W.examples=[""]; render();}},"×")));
+    });
+    box.append(el("button",{class:"btn sm",onclick:()=>{W.examples.push("");render();}},"+ Add example"));
+
+    box.append(el("h3",null,"Listings you do NOT want ",el("span",{class:"tiny muted"},"(optional, but sharpens it a lot)")));
+    W.negatives.forEach((u,i)=>{
+      box.append(el("div",{class:"row",style:"margin-bottom:8px"},
+        el("div",{class:"grow"}, el("input",{type:"text",value:u,placeholder:"a wrong-but-similar listing",
+          oninput:e=>{W.negatives[i]=e.target.value.trim();}})),
+        el("button",{class:"btn sm",onclick:()=>{W.negatives.splice(i,1); if(!W.negatives.length)W.negatives=[""]; render();}},"×")));
+    });
+    box.append(el("button",{class:"btn sm",onclick:()=>{W.negatives.push("");render();}},"+ Add"));
+
+    box.append(el("div",{style:"margin-top:18px"},
+      el("button",{class:"btn primary", disabled:W.busy || !W.examples.filter(Boolean).length || !W.name,
+        onclick:runLearn}, W.busy? [el("span",{class:"spinner"})," Learning…"] : "Analyse these listings")));
+    if(!W.name) box.append(el("p",{class:"help",style:"margin-top:8px"},"Give the alert a name first."));
+
+    if(W.learnMsg) box.append(el("p",{class:"sub",style:"margin-top:12px"}, W.learnMsg));
+
+    if(W.learned){
+      box.append(el("h3",null,"What it worked out"));
+      box.append(el("div",{class:"chips",style:"margin-bottom:12px"},
+        ...W.queries.map(q=>el("span",{class:"pill accent"},q))));
+      box.append(el("pre",{class:"report"}, W.learned.report||""));
+      box.append(el("p",{class:"help",style:"margin-top:10px"},
+        "The coverage grid proves each example you gave would have been found. " +
+        "Weights come from how rare each term is on Mercari — common words count for little."));
+    }
+    v.append(box);
+  }
+
+  async function runLearn(){
+    if(!requireToken()) return;
+    W.busy=true; W.learnMsg="Starting the analysis on GitHub Actions…"; render();
+    const id = rid();
+    try{
+      await dispatch(WF_LEARN, {request_id:id, payload: JSON.stringify({
+        examples: W.examples.filter(Boolean), negatives: W.negatives.filter(Boolean),
+        name: W.name, label: W.label || W.name, measure_specificity:true})});
+      W.learnMsg = "Fetching your examples and measuring term rarity on Mercari — usually 40-90 seconds.";
+      render();
+      const res = await pollResult("learned", id, {onTick:(i)=>{ W.learnMsg = `Working… (${(i+1)*5}s)`; const p=$(".sub"); if(p)p.textContent=W.learnMsg; }});
+      if(res.status!=="ok") throw new Error(res.error||"The analysis failed.");
+      W.learned = res;
+      const a = res.alert || {};
+      W.queries = a.queries || [];
+      W.match = a.match || null;
+      if(W.match && Array.isArray(W.match.exclude)) W.exclude = [...W.match.exclude];
+      W.label = W.label || a.label || W.name;
+      W.learnMsg = "";
+      toast("Learned a search strategy from your examples","ok");
+    }catch(e){ W.learnMsg=""; toast(e.message,"err"); }
+    W.busy=false; render();
+  }
+
+  function manualMode(v){
+    const box = el("div",{class:"card",style:"margin-top:6px"});
+    box.append(el("label",{class:"tiny muted"},"What are you hunting for?"));
+    const inp = el("input",{type:"text",placeholder:"e.g. wonderswan one piece",style:"margin-top:6px",
+      onkeydown:e=>{ if(e.key==="Enter"){ e.preventDefault(); addQuery(e.target.value); e.target.value=""; } },
+      oninput:e=>suggest(e.target.value)});
+    box.append(inp);
+    box.append(el("p",{class:"help",style:"margin-top:6px"},
+      "Press Enter to add. Every word in one query must match (AND). Add several queries — they all run, and the scoring pass filters the results, so more queries only helps."));
+
+    const sug = el("div",{style:"margin-top:10px"});
+    box.append(sug);
+    let tTimer=null;
+    function suggest(text){
+      clearTimeout(tTimer);
+      if(!text || !S.autoTranslate || hasJa(text)){ sug.innerHTML=""; return; }
+      tTimer = setTimeout(async ()=>{
+        const r = await translateToJa(text);
+        sug.innerHTML="";
+        if(!r) return;
+        sug.append(el("div",{class:"row",style:"background:var(--panel2);border:1px solid var(--line2);border-radius:9px;padding:9px 12px"},
+          el("span",{class:"tiny muted"},"日本語"),
+          el("span",null,"Also search "),
+          el("strong",{style:"color:var(--accent)"}, r.ja),
+          el("span",{class:"tiny muted"},"· "+r.src),
+          el("button",{class:"btn sm",style:"margin-left:auto",onclick:()=>{addQuery(r.ja);}},"Add")));
+      }, 450);
+    }
+
+    box.append(el("h3",null,"Queries that will run"));
+    if(!W.queries.length) box.append(el("p",{class:"help"},"No queries yet."));
+    box.append(el("div",{class:"chips"}, ...W.queries.map((q,i)=>
+      el("span",{class:"chip"}, q, el("button",{onclick:()=>{W.queries.splice(i,1);render();}},"×")))));
+    v.append(box);
+
+    function addQuery(q){
+      q = (q||"").trim().replace(/\s+/g," ");
+      if(!q) return;
+      if(!W.queries.includes(q)) W.queries.push(q);
+      if(!W.name) W.name = slug(q);
+      render();
+    }
+  }
+
+  /* ---- step 2: filters ---- */
+  function step2(v){
+    const box = el("div",{class:"card"});
+    box.append(el("div",{class:"grid2"},
+      field("Min price (¥)","", el("input",{type:"number",value:W.price_min,oninput:e=>W.price_min=e.target.value})),
+      field("Max price (¥)","Filtered by Mercari itself.", el("input",{type:"number",value:W.price_max,oninput:e=>W.price_max=e.target.value})),
+      field("Target price (¥)","Optional. Listings at or under this get flagged in the feed and email.",
+        el("input",{type:"number",value:W.target_price,oninput:e=>W.target_price=e.target.value}))
+    ));
+
+    box.append(el("h3",null,"Exclude words"));
+    box.append(el("p",{class:"help",style:"margin:-4px 0 8px"},
+      "Any hit rejects the listing outright — a wrong one silently kills real results, so prefer raising the score threshold instead."));
+    const exInp = el("input",{type:"text",placeholder:"複製, ジャンク, 切り抜き — press Enter",
+      onkeydown:e=>{ if(e.key==="Enter"){e.preventDefault();
+        e.target.value.split(",").map(s=>s.trim()).filter(Boolean).forEach(t=>{ if(!W.exclude.includes(t))W.exclude.push(t); });
+        e.target.value=""; render(); } }});
+    box.append(exInp);
+    box.append(el("div",{class:"chips",style:"margin-top:10px"}, ...W.exclude.map((t,i)=>
+      el("span",{class:"chip"}, t, el("button",{onclick:()=>{W.exclude.splice(i,1);render();}},"×")))));
+    box.append(el("p",{class:"help",style:"margin-top:10px"},
+      "Reproductions, want-to-buy posts and “box only” listings are already excluded for every alert."));
+
+    box.append(el("h3",null,"Exclusion bundles"));
+    const PRESETS = {no_junk:"Junk / damaged", no_bulk:"Bulk lots & sets", no_parts:"Box or manual only",
+                     no_graded:"Graded slabs", no_repro:"Reproductions (already on by default)"};
+    box.append(el("div",{class:"chips"}, ...Object.entries(PRESETS).map(([k,lbl])=>{
+      const on = W.presets.includes(k);
+      return el("button",{class:"btn sm"+(on?" primary":""), onclick:()=>{
+        W.presets = on ? W.presets.filter(x=>x!==k) : [...W.presets,k]; render();}}, lbl);
+    })));
+
+    box.append(el("h3",null,"Advanced"));
+    box.append(el("div",{class:"grid2"},
+      field("Check no more often than","Minutes. Blank = every scheduled run.",
+        el("input",{type:"number",value:W.min_interval_minutes,placeholder:"15",oninput:e=>W.min_interval_minutes=e.target.value})),
+      field("Results per query","Higher catches more, costs more API calls.",
+        el("input",{type:"number",value:W.per_query_limit,oninput:e=>W.per_query_limit=e.target.value})),
+      field("Read descriptions?","Sellers bury card codes and issue numbers in the body. Strongly recommended.",
+        selectEl({full:"Yes — title + description", title:"Title only (faster)"}, W.scope, x=>W.scope=x))
+    ));
+    box.append(el("label",{class:"toggle",style:"margin-top:6px"},
+      el("input",{type:"checkbox", ...(W.suppress_relists?{checked:"checked"}:{}) ,onchange:e=>W.suppress_relists=e.target.checked}),
+      "Stay quiet when a seller deletes and re-posts the same item"));
+
+    if(W.match){
+      box.append(el("h3",null,"Match rules"));
+      box.append(el("p",{class:"help",style:"margin:-4px 0 10px"},
+        `Score threshold ${W.match.min_score}. A listing must clear it to be a confident match; anything above ${Math.round(W.match.min_score*0.55*10)/10} shows as a possible match.`));
+      box.append(el("div",{class:"chips"}, ...Object.entries(W.match.signals||{})
+        .sort((a,b)=>b[1]-a[1]).map(([t,w])=>el("span",{class:"pill"+(w>=5?" accent":"")}, t," ",el("b",{class:"mono"},String(w))))));
+      box.append(el("div",{class:"field",style:"margin-top:14px;max-width:220px"},
+        el("label",null,"Score threshold"),
+        el("input",{type:"number",step:"0.5",value:W.match.min_score,oninput:e=>W.match.min_score=Number(e.target.value)||0}),
+        el("span",{class:"help"},"Lower = more results, more noise.")));
+    }
+
+    v.append(box);
+    v.append(el("div",{class:"wizfoot"},
+      el("button",{class:"btn",onclick:()=>{W.step=1;render();}},"← Back"),
+      el("button",{class:"btn primary",onclick:()=>{W.step=3;render();}},"Next →")));
+  }
+
+  /* ---- step 3: preview ---- */
+  function step3(v){
+    const box = el("div",{class:"card"});
+    if(!W.preview && !W.busy){
+      box.append(el("h3",{style:"margin-top:0"},"Test it against the live market"));
+      box.append(el("p",{class:"sub"},
+        "This runs your queries on Mercari right now and scores everything they return, so you can see exactly what this alert would catch before you save it."));
+      box.append(el("div",{class:"chips",style:"margin-bottom:16px"}, ...W.queries.map(q=>el("span",{class:"pill"},q))));
+      box.append(el("button",{class:"btn primary",onclick:runPreview},"Run preview"));
+      box.append(el("p",{class:"help",style:"margin-top:10px"},"Runs on GitHub Actions — takes about a minute."));
+    }
+    if(W.busy){
+      box.append(el("p",null, el("span",{class:"spinner"})," ", W.previewMsg||"Running…"));
+      box.append(el("p",{class:"help"},"You can watch it in your repo's Actions tab."));
+    }
+    if(W.preview){
+      const p = W.preview;
+      box.append(el("div",{class:"banner"},
+        el("div",{style:"font-size:19px;font-weight:500;margin-bottom:4px"},
+          `This alert matches ${p.matched} listing${p.matched===1?"":"s"} right now`),
+        el("div",{class:"sub",style:"margin:0"},
+          `${p.matched_24h} of them were listed in the last 24 h · ${p.candidates} candidates were scored · ${p.borderline} near-misses`)));
+
+      box.append(el("div",{class:"tablewrap",style:"margin-bottom:18px"}, el("table",null,
+        el("thead",null,el("tr",null,el("th",null,"Query"),el("th",null,"Returned"),el("th",null,"Total on Mercari"),el("th",null,"New to this run"))),
+        el("tbody",null,...(p.queries||[]).map(q=>el("tr",null,
+          el("td",{class:"mono tiny"},q.query),
+          el("td",null,q.error?el("span",{class:"pill warn"},"error"):String(q.returned)),
+          el("td",{class:"muted"}, q.total_on_mercari!=null?q.total_on_mercari.toLocaleString():"—"),
+          el("td",{class:"muted"}, q.error? q.error : String(q.new_here))))))));
+
+      if(p.sample && p.sample.length){
+        box.append(el("h3",null,"What it would catch"));
+        const g = el("div",{class:"feedgrid"}); p.sample.forEach(e=>g.append(listingCard(e,{showAlert:false})));
+        box.append(g);
+      } else {
+        box.append(el("p",{class:"sub"},"Nothing currently matches. That's normal for a rare item — but if you expected hits, go back and loosen the threshold or add a query."));
+      }
+      if(p.near_misses && p.near_misses.length){
+        box.append(el("h3",null,"Near misses ",el("span",{class:"tiny muted"},"— scored close but under the threshold")));
+        const g2 = el("div",{class:"feedgrid"}); p.near_misses.forEach(e=>g2.append(listingCard(e,{showAlert:false})));
+        box.append(g2);
+        box.append(el("p",{class:"help",style:"margin-top:10px"},"If these look right, lower the score threshold on the Filters step. If they're junk, add an exclude word."));
+      }
+      box.append(el("div",{style:"margin-top:18px"},
+        el("button",{class:"btn",onclick:runPreview},"Run again")));
+    }
+    v.append(box);
+    v.append(el("div",{class:"wizfoot"},
+      el("button",{class:"btn",onclick:()=>{W.step=2;render();}},"← Back"),
+      el("button",{class:"btn primary",onclick:()=>{W.step=4;render();}}, W.preview?"Next →":"Skip preview →")));
+  }
+
+  async function runPreview(){
+    if(!requireToken()) return;
+    W.busy=true; W.preview=null; W.previewMsg="Starting the preview on GitHub Actions…"; render();
+    const id = rid();
+    try{
+      await dispatch(WF_PREVIEW, {request_id:id, payload: JSON.stringify({alert: draftToAlert()})});
+      W.previewMsg="Querying Mercari and scoring the results…"; render();
+      const res = await pollResult("previews", id, {onTick:(i)=>{
+        W.previewMsg = `Querying Mercari and scoring the results… (${(i+1)*5}s)`;
+        const s=$(".card p"); if(s) s.lastChild.textContent = " "+W.previewMsg; }});
+      if(res.status!=="ok") throw new Error(res.error||"The preview failed.");
+      W.preview = res;
+    }catch(e){ toast(e.message,"err"); }
+    W.busy=false; render();
+  }
+
+  /* ---- step 4: delivery + save ---- */
+  function step4(v){
+    const box = el("div",{class:"card"});
+    box.append(el("label",{class:"toggle"},
+      el("input",{type:"checkbox", ...(W.notify_email?{checked:"checked"}:{}), onchange:e=>W.notify_email=e.target.checked}),
+      "Email me when this alert matches something new"));
+    box.append(el("p",{class:"help",style:"margin-top:8px"},
+      "Email goes to whatever ALERT_TO is set to in your repository secrets. Turn this off to keep an alert feed-only."));
+
+    box.append(el("h3",null,"Summary"));
+    const a = draftToAlert();
+    box.append(el("div",{class:"tablewrap"},el("table",null,el("tbody",null,
+      row("Name", a.name), row("Display name", a.label),
+      row("Queries", (a.queries||[]).join("   ·   ")),
+      row("Price", [a.price_min?`min ¥${a.price_min}`:null, a.price_max?`max ¥${a.price_max}`:null,
+                    a.target_price?`target ¥${a.target_price}`:null].filter(Boolean).join(", ")||"any"),
+      row("Excludes", (a.match.exclude||[]).join(", ")||"defaults only"),
+      row("Threshold", String(a.match.min_score)),
+      row("Reads descriptions", a.match.scope==="full"?"yes":"no"),
+      row("Email", a.notify_email?"on":"off")))));
+
+    box.append(el("p",{class:"help",style:"margin-top:14px"},
+      W.editing ? "Saving commits the change to alerts.json."
+        : "Saving commits it to alerts.json. On its first check the alert records what's already listed without emailing you, so you don't get flooded — those listings still show in the feed, tagged as pre-existing."));
+
+    box.append(el("div",{style:"margin-top:18px"},
+      el("button",{class:"btn primary", disabled:W.busy, onclick:doSave},
+        W.busy?[el("span",{class:"spinner"})," Saving…"]:(W.editing?"Save changes":"Create alert"))));
+    v.append(box);
+    v.append(el("div",{class:"wizfoot"},
+      el("button",{class:"btn",onclick:()=>{W.step=3;render();}},"← Back"), el("span")));
+
+    function row(k,val){ return el("tr",null,el("td",{class:"muted",style:"width:180px"},k),el("td",null,val||"—")); }
+  }
+
+  function draftToAlert(){
+    const num = x => (x===""||x==null) ? undefined : Number(x);
+    const base = W.match ? JSON.parse(JSON.stringify(W.match)) : null;
+    const match = base || {require:[], signals:{}, exclude:[], min_score:3, scope:W.scope};
+    match.exclude = [...W.exclude];
+    match.scope = W.scope;
+    if(!base){
+      // Manual mode. Queries are alternatives, so the bar is "everything in
+      // the SHORTEST query matched" - that way any one query satisfies it.
+      // Tokens, not whole phrases: matching ignores spacing, so a phrase
+      // signal would miss a listing that writes the same words in a
+      // different order.
+      const toks = q => [...new Set(q.split(/\s+/).filter(Boolean))];
+      const all = [...new Set(W.queries.flatMap(toks))];
+      match.signals = Object.fromEntries(all.map(t=>[t,2]));
+      const minLen = Math.min(...W.queries.map(q=>toks(q).length || 1));
+      match.min_score = Math.max(2, Math.round(minLen*2*0.9*10)/10);
+      // Anything present in every query is a safe hard requirement.
+      const common = all.filter(t => W.queries.every(q=>toks(q).includes(t)));
+      match.require = common.length ? [common] : [];
+    }
+    const a = {
+      name:W.name, label:W.label||W.name, queries:[...W.queries],
+      match, presets:[...W.presets], notify_email:W.notify_email,
+      suppress_relists:W.suppress_relists,
+      per_query_limit: num(W.per_query_limit) || 30,
+      created_at: W.editing ? undefined : new Date().toISOString()
+    };
+    const pn=num(W.price_min), px=num(W.price_max), tp=num(W.target_price), mi=num(W.min_interval_minutes);
+    if(pn!=null&&!isNaN(pn)) a.price_min=pn;
+    if(px!=null&&!isNaN(px)) a.price_max=px;
+    if(tp!=null&&!isNaN(tp)) a.target_price=tp;
+    if(mi!=null&&!isNaN(mi)) a.min_interval_minutes=mi;
+    if(W.learned&&W.learned.alert&&W.learned.alert.learned_from) a.learned_from=W.learned.alert.learned_from;
+    Object.keys(a).forEach(k=>a[k]===undefined&&delete a[k]);
+    return a;
+  }
+
+  async function doSave(){
+    if(!requireToken()) return;
+    const a = draftToAlert();
+    if(!a.name || !a.queries.length){ toast("Needs a name and at least one query","err"); return; }
+    const clash = state.alerts.some(x=>x.name===a.name && x.name!==W.editing);
+    if(clash){ toast(`An alert named "${a.name}" already exists.`,"err"); return; }
+    W.busy=true; render();
+    try{
+      const next = W.editing
+        ? state.alerts.map(x=> x.name===W.editing ? {...x, ...a} : x)
+        : [...state.alerts, a];
+      await saveAlerts(next, W.editing?`Update alert ${a.name}`:`Add alert ${a.name}`);
+      toast(W.editing?"Saved":"Alert created — it starts on the next scheduled check","ok");
+      W = null; await refresh(); location.hash="#/alerts";
+    }catch(e){ toast(e.message,"err"); W.busy=false; render(); }
+  }
+}
+
+function field(label, help, control){
+  return el("div",{class:"field"}, el("label",null,label), control, help && el("span",{class:"help"},help));
+}
+function selectEl(opts, value, onchange){
+  return el("select",{onchange:e=>onchange(e.target.value)},
+    ...Object.entries(opts).map(([k,v])=>el("option",{value:k, ...(k===value?{selected:"selected"}:{})}, v)));
+}
+
+/* ---------- Settings ---------- */
+function viewSettings(){
+  const v = $("#view"); v.innerHTML="";
+  v.append(el("h2",{class:"page"},"Settings"),
+           el("p",{class:"sub"},"Stored in this browser only — nothing here is committed to your repo."));
+
+  const box = el("div",{class:"card"});
+  box.append(el("h3",{style:"margin-top:0"},"Repository"));
+  box.append(el("div",{class:"grid2"},
+    field("Owner","", el("input",{type:"text",value:S.owner,placeholder:"branavann",oninput:e=>S.owner=e.target.value.trim()})),
+    field("Repo","", el("input",{type:"text",value:S.repo,placeholder:"mercari-alerts",oninput:e=>S.repo=e.target.value.trim()})),
+    field("Branch","", el("input",{type:"text",value:S.branch,oninput:e=>S.branch=e.target.value.trim()||"main"}))));
+
+  box.append(el("h3",null,"GitHub token"));
+  box.append(el("p",{class:"help",style:"margin:-4px 0 10px"},
+    "Needed to save alerts and to run previews. Reading the feed works without one."));
+  box.append(el("input",{type:"password",value:S.token,placeholder:"github_pat_… or ghp_…",oninput:e=>S.token=e.target.value.trim()}));
+  box.append(el("details",{style:"margin-top:10px"},
+    el("summary",{class:"tiny muted",style:"cursor:pointer"},"How to make one"),
+    el("div",{class:"help",style:"margin-top:8px;line-height:1.7"},
+      el("div",null,"1. github.com/settings/personal-access-tokens → Generate new token (fine-grained)"),
+      el("div",null,"2. Repository access → Only select repositories → this repo"),
+      el("div",null,"3. Permissions → Repository → Contents: Read and write, Actions: Read and write"),
+      el("div",null,"4. Generate, copy, paste above."),
+      el("div",{style:"margin-top:8px;color:var(--warn)"},
+        "The token stays in this browser's localStorage. Anyone with access to this browser profile can read it. Never commit it to the repo — and if this repo is public, never paste it into an issue or a file."))));
+
+  box.append(el("h3",null,"Display"));
+  box.append(el("div",{class:"grid2"},
+    field("Yen per US dollar","Only used for the approximate $ figures.",
+      el("input",{type:"number",value:S.jpy,oninput:e=>S.jpy=Number(e.target.value)||150})),
+    field("Email for translation quota","Optional. Raises MyMemory's free limit from 5k to 50k characters a day.",
+      el("input",{type:"text",value:S.mmEmail,placeholder:"you@example.com",oninput:e=>S.mmEmail=e.target.value.trim()}))));
+  box.append(el("label",{class:"toggle"},
+    el("input",{type:"checkbox", ...(S.autoTranslate?{checked:"checked"}:{}), onchange:e=>S.autoTranslate=e.target.checked}),
+    "Suggest Japanese translations while typing search terms"));
+
+  box.append(el("div",{class:"row",style:"margin-top:20px"},
+    el("button",{class:"btn primary",onclick:async()=>{ save(); toast("Saved","ok"); await testConn(); await refresh(); route(); }},"Save"),
+    el("button",{class:"btn",onclick:testConn},"Test connection")));
+  v.append(box);
+
+  const box2 = el("div",{class:"card",style:"margin-top:18px"});
+  box2.append(el("h3",{style:"margin-top:0"},"How this works"));
+  box2.append(el("div",{class:"help",style:"line-height:1.8"},
+    el("div",null,"• A GitHub Actions workflow checks Mercari on a schedule and commits what it finds to ui/data/feed.json — that's what the Feed page reads."),
+    el("div",null,"• This page can't query Mercari itself (browsers are blocked by CORS, and the API needs request signing), so Preview and Learn dispatch a workflow and wait for its result."),
+    el("div",null,"• Alerts you create are saved to alerts.json. Alerts in alerts.yaml still run but are hand-edited."),
+    el("div",null,"• Everything runs on GitHub's free tier.")));
+  v.append(box2);
+}
+async function testConn(){
+  if(!haveToken()){ toast("Fill in owner, repo and token first","err"); return; }
+  try{
+    const r = await gh(repoPath(""));
+    if(!r) throw new Error("Repository not found, or the token can't see it.");
+    toast(`Connected to ${r.full_name}${r.private?" (private)":""}`,"ok");
+  }catch(e){ toast(e.message,"err"); }
+}
+
+/* ---------- router ---------- */
+function route(){
+  const h = location.hash || "#/feed";
+  [...$("#nav").children].forEach(a=>a.classList.toggle("on", h.startsWith(a.getAttribute("href"))));
+  const edit = h.match(/^#\/edit\/(.+)$/);
+  try{
+    if(edit) viewWizard(decodeURIComponent(edit[1]));
+    else if(h.startsWith("#/alerts")) viewAlerts();
+    else if(h.startsWith("#/new")) viewWizard(null);
+    else if(h.startsWith("#/settings")) viewSettings();
+    else viewFeed();
+  }catch(e){
+    console.error(e);
+    $("#view").innerHTML = "";
+    $("#view").append(el("div",{class:"empty"},el("h3",null,"Something broke rendering this page"),
+      el("p",{class:"mono tiny"}, String(e && e.message || e))));
+  }
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+
+(async function boot(){
+  $("#view").innerHTML = '<div class="empty"><span class="spinner"></span> Loading…</div>';
+  try{ await refresh(); }catch(e){ toast(e.message,"err"); }
+  route();
+  if(!haveRepo()) toast("Set your repo and token in Settings to enable saving and previews.");
+  // Quietly pick up new feed data while the tab is open.
+  setInterval(async()=>{
+    if(document.hidden) return;
+    if(location.hash.startsWith("#/new")||location.hash.startsWith("#/edit")) return;
+    try{ await refresh(); if(location.hash.startsWith("#/feed")||location.hash==="") route(); }catch(e){}
+  }, 180000);
+})();
+</script>
+</body>
+</html>

@@ -24,13 +24,17 @@ from pathlib import Path
 
 from mlert import notify
 from mlert.config import load_alerts
+from mlert.feed import FeedWriter, make_entry, write_status
 from mlert.mercari import MercariClient, item_url, summary_fields
 from mlert.rules import evaluate
 from mlert.state import State
 
 ROOT = Path(__file__).resolve().parent
 ALERTS_FILE = ROOT / "alerts.yaml"
+ALERTS_JSON = ROOT / "alerts.json"
 STATE_FILE = ROOT / "seen_state.json"
+FEED_FILE = ROOT / "ui" / "data" / "feed.json"
+STATUS_FILE = ROOT / "ui" / "data" / "status.json"
 
 # Fetching a description is one API call. We only ever do it for listings we
 # have never evaluated before, so in steady state this stays small.
@@ -108,7 +112,7 @@ async def evaluate_candidates(client, alert, candidates, budget, explain=False):
 
 
 async def run(args):
-    alerts = load_alerts(ALERTS_FILE)
+    alerts = load_alerts(ALERTS_FILE, ALERTS_JSON)
     if args.only:
         alerts = [a for a in alerts if a.name == args.only]
         if not alerts:
@@ -119,6 +123,7 @@ async def run(args):
         return 0
 
     state = State(STATE_FILE)
+    feed = FeedWriter(FEED_FILE)
     client = MercariClient(cache_path=ROOT / ".term_counts.json")
 
     sections, borderline_sections, stats = {}, {}, {}
@@ -146,12 +151,9 @@ async def run(args):
         fresh = {k: v for k, v in candidates.items() if k not in already}
         print(f"  {len(candidates)} candidates, {len(fresh)} not seen before")
 
-        if first_run and not args.dry_run:
-            state.record_seen(alert.name, list(candidates.keys()))
-            print(f"  first run — baselined {len(candidates)} listings, no email")
-            continue
-
-        to_check = fresh if not args.dry_run else candidates
+        # On a first run we still SCORE everything, so the web UI immediately
+        # shows what this alert matches - we just don't email any of it.
+        to_check = candidates if (args.dry_run or first_run) else fresh
         matches, borderlines, used = await evaluate_candidates(
             client, alert, to_check, detail_budget, explain=args.explain
         )
@@ -159,6 +161,20 @@ async def run(args):
         if detail_budget <= 0:
             print("  note: hit the per-run description-fetch budget; "
                   "remaining listings deferred to the next run", file=sys.stderr)
+
+        if first_run:
+            if not args.dry_run:
+                for m in matches:
+                    state.record_price(alert.name, m.get("price"))
+                    state.record_fingerprint(
+                        State.fingerprint(m["name"], m.get("price"), m.get("seller_id")),
+                        m["id"],
+                    )
+                feed.add([make_entry(alert, m, "baseline") for m in matches])
+                state.record_seen(alert.name, list(candidates.keys()))
+            print(f"  first run — baselined {len(candidates)} listings "
+                  f"({len(matches)} already matching), no email")
+            continue
 
         # relist detection + price stats
         median = state.median_price(alert.name)
@@ -175,10 +191,14 @@ async def run(args):
                 m["deal"] = m["price"] <= median * 0.75
             kept.append(m)
 
-        if kept:
+        if not args.dry_run:
+            feed.add([make_entry(alert, m, "match") for m in kept])
+            feed.add([make_entry(alert, b, "borderline") for b in borderlines[:8]])
+
+        if kept and alert.notify_email:
             sections[alert.label] = kept
             stats[alert.label] = {"median": median}
-        if borderlines:
+        if borderlines and alert.notify_email:
             borderline_sections[alert.label] = borderlines[:8]
 
         print(f"  -> {len(kept)} match, {len(borderlines)} borderline")
@@ -193,6 +213,8 @@ async def run(args):
         return 0
 
     state.save()
+    feed.save()
+    write_status(STATUS_FILE, alerts, state, feed)
 
     if sections or borderline_sections:
         subject, text, html_body = notify.compose(sections, borderline_sections, stats)

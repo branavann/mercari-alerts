@@ -50,8 +50,11 @@ class Example:
         self.description = description or ""
         self.item_id = item_id
         self.price = price
-        self.title_t = tu.tight(self.name)
-        self.text_t = tu.tight(self.name) + "\x00" + tu.tight(self.description)
+        self.title_t = tu.prep(self.name)
+        self.text_t = tu.Prepped()
+        d = tu.prep(self.description)
+        self.text_t.t = self.title_t.t + "\x00" + d.t
+        self.text_t.s = self.title_t.s + "\x00" + d.s
 
     def has(self, term):
         return tu.contains(term, self.text_t)

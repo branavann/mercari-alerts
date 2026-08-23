@@ -65,6 +65,16 @@ def test_script_run_segmentation():
         assert expected in terms, f"missing {expected} in {sorted(terms)}"
 
 
+def test_adjacent_latin_words_keep_their_boundaries():
+    # tight() strips spaces, so "ONE PIECE" becomes "onepiece". The word
+    # "ONE" must still match it, while "F626" must still not match "AF6261".
+    p = tu.prep("ワンダースワン ONE PIECE めざせ海賊王")
+    assert tu.contains("ONE", p) and tu.contains("PIECE", p)
+    assert tu.contains("ワンダースワン", p)
+    assert not tu.contains("F626", tu.prep("型番 AF6261 の商品"))
+    assert tu.contains("CE2", tu.prep("カード C-E2 です")), "code variants must still fold"
+
+
 def test_boilerplate_is_stopped():
     assert tu.is_stopword("発送") and tu.is_stopword("神経質") and tu.is_stopword("綺麗")
     assert not tu.is_stopword("ハイパーバトル")

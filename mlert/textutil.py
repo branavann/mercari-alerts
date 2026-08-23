@@ -91,23 +91,68 @@ def _boundary_ok(term_t: str, text_t: str, idx: int) -> bool:
     )
 
 
-def contains(term: str, text_t: str) -> bool:
-    """Does the (raw) term occur in an already-tightened text?"""
+class Prepped:
+    """
+    A piece of text in both normalised forms.
+
+    Both are needed. The tight form is what makes "C-E2" match a listing
+    that writes "CE2" - separators are gone on both sides. But that same
+    space-stripping turns "ONE PIECE" into "onepiece", which would hide the
+    word "ONE" behind the boundary guard below. The spaced form keeps
+    separators as spaces so ordinary word matching still works.
+    """
+    __slots__ = ("t", "s")
+
+    def __init__(self, text=""):
+        self.t = tight(text)
+        self.s = " " + spaced(text) + " "
+
+    def __repr__(self):
+        return f"Prepped({self.t[:40]!r})"
+
+
+def prep(text) -> "Prepped":
+    return text if isinstance(text, Prepped) else Prepped(text)
+
+
+_WORD_RE = {}
+
+
+def _spaced_hit(term_t: str, spaced_text: str) -> bool:
+    r = _WORD_RE.get(term_t)
+    if r is None:
+        r = _WORD_RE[term_t] = re.compile(
+            r"(?<![0-9a-z])" + re.escape(term_t) + r"(?![0-9a-z])")
+    return bool(r.search(spaced_text))
+
+
+def contains(term: str, text) -> bool:
+    """
+    Is `term` present in `text`? `text` may be a Prepped object or, for
+    convenience, an already-tightened string (tight form only).
+    """
     t = tight(term)
     if not t:
         return False
-    idx = text_t.find(t)
+    tight_text = text.t if isinstance(text, Prepped) else text
+
+    idx = tight_text.find(t)
     while idx != -1:
-        if _boundary_ok(t, text_t, idx):
+        if _boundary_ok(t, tight_text, idx):
             return True
-        idx = text_t.find(t, idx + 1)
+        idx = tight_text.find(t, idx + 1)
+
+    # A short latin term rejected above may still be a real word that simply
+    # sits next to another latin word ("ONE" in "ONE PIECE").
+    if isinstance(text, Prepped) and _ALNUM_ONLY.match(t) and len(t) <= 6:
+        return _spaced_hit(t, text.s)
     return False
 
 
-def contains_any(terms, text_t: str):
-    """Return the first term from `terms` found in text_t, else None."""
+def contains_any(terms, text):
+    """Return the first term from `terms` found in text, else None."""
     for term in terms:
-        if contains(term, text_t):
+        if contains(term, text):
             return term
     return None
 

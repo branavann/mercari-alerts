@@ -113,8 +113,10 @@ API calls once, at learn time. It's why `ワンピース` ends up at weight 0.38
 
 ## Setup
 
-**1. Put this folder in a GitHub repo.** Private is recommended — your alert
-keywords are in it.
+**1. Put this folder in a GitHub repo.** Public if you want the free hosted
+control panel (see below) — note that makes your alert keywords and feed
+history visible to anyone. Private works too; run the panel locally with
+`python serve_ui.py`. Either way your Gmail secrets stay encrypted.
 
 **2. Gmail app password.** Turn on 2-Step Verification, then go to
 https://myaccount.google.com/apppasswords and create one. Copy the 16
@@ -128,8 +130,8 @@ characters, no spaces.
 | `GMAIL_APP_PASSWORD` | the app password from step 2 |
 | `ALERT_TO` | where alerts go — same address, or a comma-separated list |
 
-**4. Create your alerts** with `learn_alert.py` as above, or edit
-`alerts.yaml` directly (every field is documented in that file).
+**4. Create your alerts** in the control panel, with `learn_alert.py`, or by
+editing `alerts.yaml` by hand.
 
 **5. Test before going live:**
 
@@ -144,7 +146,8 @@ why it passed or failed. Iterate here until you like what you see — this is
 much faster than waiting for scheduled runs.
 
 **6. Enable the workflow.** Actions tab → "Mercari Alerts" → Run workflow.
-Check the log, then leave it to its schedule.
+Check the log, then leave it to its schedule. Public repos get unlimited
+free Actions minutes, so you can raise the frequency if you want.
 
 The first run of any alert **baselines silently** — it records what's already
 listed and emails nothing, so adding an alert doesn't flood you. You get
@@ -192,9 +195,104 @@ bundles — `no_junk`, `no_bulk`, `no_graded`, `no_parts` — cover the rest.
 **Per-alert pacing.** `min_interval_minutes` lets narrow alerts run every 15
 minutes while broad ones check hourly, without splitting the workflow.
 
-**Tests that run before every check.** The workflow runs 33 offline tests
+**Tests that run before every check.** The workflow runs 45 offline tests
 against real listing fixtures first. If the matching engine breaks, you find
 out from a red run rather than from months of quiet inboxes.
+
+---
+
+## The control panel
+
+A web UI for managing all of this, styled after the paid services but running
+entirely on GitHub's free tier.
+
+**Feed** — every match, newest first, with price in ¥ and approximate $, how
+long after listing it was spotted, why it matched, and badges for
+below-median / at-your-target / relisted. Filter by alert, by confidence, or
+by title.
+
+**Alerts** — pause, resume, edit, delete. Shows 24 h match count, median
+price and last check time per alert.
+
+**New alert** — a four-step wizard: Search → Filters → Preview → Delivery.
+
+The wizard's first step is the important one. It offers two modes:
+
+- **Learn from example listings** — paste 2-4 past listings of the item and
+  it derives the whole strategy: the query fan-out, weighted signals, the
+  score threshold, and a coverage report proving each example is reachable.
+  This is the same engine `learn_alert.py` uses, just driven from a browser.
+- **Type search terms** — enter keywords yourself, with a Japanese
+  translation suggested as you type.
+
+**Preview** answers "what would this actually catch?" before you commit —
+it runs your queries against live Mercari, scores everything they return,
+and shows the matches, the per-query breakdown, and the near-misses.
+
+### Publishing it
+
+The repo needs to be **public** for free GitHub Pages. Then:
+
+Settings → Pages → Source: **Deploy from a branch** → `main` → `/ (root)` → Save.
+
+Your panel is at `https://<you>.github.io/<repo>/ui/` within a minute or two.
+It republishes automatically every time the checker commits new results.
+
+Prefer to keep it private? `python serve_ui.py` serves the identical UI at
+`localhost:8765` — every feature works the same.
+
+### Connecting it
+
+Reading the feed needs nothing. Saving alerts and running previews need a
+token, since those write to your repo:
+
+1. github.com/settings/personal-access-tokens → **Generate new token (fine-grained)**
+2. Repository access → **Only select repositories** → this repo
+3. Permissions → Repository → **Contents: Read and write**, **Actions: Read and write**
+4. Paste it into the panel's Settings page.
+
+The token lives in your browser's localStorage and is sent only to
+api.github.com. **Never commit it** — on a public repo that would expose it
+to everyone. Your Gmail secrets are unaffected: repository secrets stay
+encrypted and invisible even on a public repo.
+
+### How a static page runs live searches
+
+It can't, directly — browsers are blocked by CORS and Mercari's API needs
+request signing. So the page dispatches a workflow and polls for its result:
+
+```
+  browser ──dispatch──▶ ui_preview.yml ──▶ queries Mercari, scores results
+     ▲                                              │
+     └──────── polls ui/data/previews/<id>.json ◀───┘ commits result
+```
+
+`ui_learn.yml` works the same way for learning from examples. Each takes
+roughly 40-90 seconds. The scheduled checker writes `ui/data/feed.json`,
+which is what the Feed page reads — no database, and the feed has history
+because it's in git.
+
+### Translation
+
+English search terms are translated two ways. A built-in dictionary handles
+collectible vocabulary that general machine translation gets wrong —
+platform names, card and magazine terms, One Piece character names,
+condition words. Anything it doesn't know falls through to
+[MyMemory](https://mymemory.translated.net/), which is free and needs no key
+(5,000 characters a day, or 50,000 if you put an email in Settings).
+
+Treat both as suggestions. The most accurate Japanese comes from the
+learn-from-examples flow, because it extracts the words sellers actually
+used.
+
+### Where alerts live
+
+| File | Owner | Notes |
+|---|---|---|
+| `alerts.json` | the web UI | machine-written, safe to rewrite |
+| `alerts.yaml` | you | hand-editable, keeps comments |
+
+Both load, both run; names must be unique across the two.
 
 ---
 
@@ -207,7 +305,7 @@ out from a red run rather than from months of quiet inboxes.
 | right item keeps landing in "possible matches" | lower `min_score` |
 | one word keeps ruining results | add it to `match.exclude` |
 | alert is too slow / too chatty | `min_interval_minutes`, `price_min` / `price_max` |
-| no idea why something matched | `--explain` |
+| no idea why something matched | `--explain`, or the Preview step in the UI |
 
 Adding an exclude is the bluntest tool available — a wrong one silently kills
 real hits forever. Prefer raising `min_score` first.
@@ -244,16 +342,27 @@ under a minute. Gmail sending is free at this volume.
 
 ```
 mercari_alert.py     the scheduled runner
-learn_alert.py       build an alert from example listings
+learn_alert.py       build an alert from example listings (CLI)
 comps.py             sold-price statistics for an alert
-alerts.yaml          your alerts (fully commented)
+serve_ui.py          serve the control panel locally
+alerts.json          alerts owned by the web UI
+alerts.yaml          hand-written alerts
+ui/
+  index.html         the whole control panel, one file, no build step
+  data/              feed.json, status.json, preview + learn results
+tools/ui_task.py     the preview / learn jobs the UI dispatches
 mlert/
   textutil.py        Japanese normalisation + term extraction
   rules.py           scoring engine
   learn.py           learning from examples
   mercari.py         the only file that touches the network
   state.py           seen-items, price history, relist fingerprints
+  feed.py            the JSON files the UI reads
   notify.py          email composition + Gmail SMTP
-  config.py          alerts.yaml loading
+  config.py          alerts.json + alerts.yaml loading
 tests/               offline tests against real listing fixtures
+.github/workflows/
+  check_alerts.yml   scheduled checker
+  ui_preview.yml     dispatched by the UI
+  ui_learn.yml       dispatched by the UI
 ```
