@@ -1,6 +1,33 @@
 {
- "generated_at": "2026-08-24T08:06:29+00:00",
+ "generated_at": "2026-08-24T09:06:56+00:00",
  "entries": [
+  {
+   "id": "m15150559161",
+   "url": "https://jp.mercari.com/item/m15150559161",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【美品】ワンピース　ナミルフィ海賊団（No.S01） 「海賊の宴」",
+   "price": 49800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m15150559161_1.jpg?1787559701",
+   "seller_id": "661091972",
+   "condition": "Good",
+   "listed_at": "2026-08-24T08:21:41+09:00",
+   "detected_at": "2026-08-24T09:06:40+00:00",
+   "lag_seconds": 35099,
+   "score": 22.76,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m38732338402",
    "url": "https://jp.mercari.com/item/m38732338402",
