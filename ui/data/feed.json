@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-08-24T14:12:42+00:00",
+ "generated_at": "2026-08-24T15:04:10+00:00",
  "entries": [
+  {
+   "id": "m28563349175",
+   "url": "https://jp.mercari.com/item/m28563349175",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース 麦わら航海記 カード 3枚セット",
+   "price": 30000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m28563349175_1.jpg?1787583002",
+   "seller_id": "544190666",
+   "condition": "Worn",
+   "listed_at": "2026-08-24T14:50:02+09:00",
+   "detected_at": "2026-08-24T15:03:50+00:00",
+   "lag_seconds": 33228,
+   "score": 16.39,
+   "hits": [
+    "ルフィ海賊団",
+    "出航",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m13926707035",
+   "url": "https://jp.mercari.com/item/m13926707035",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピースカードハイパーバトルバギー財宝への執念",
+   "price": 39900,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m13926707035_1.jpg?1787583503",
+   "seller_id": "836411431",
+   "condition": "Good",
+   "listed_at": "2026-08-24T14:58:23+09:00",
+   "detected_at": "2026-08-24T15:03:50+00:00",
+   "lag_seconds": 32727,
+   "score": 17.76,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m89677767026",
    "url": "https://jp.mercari.com/item/m89677767026",
