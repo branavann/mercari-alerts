@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-24T17:35:11+00:00",
+   "last_checked": "2026-08-24T18:14:15+00:00",
    "prices": [
     299999,
     140000,
@@ -178,7 +178,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-24T17:34:59+00:00",
+   "last_checked": "2026-08-24T18:14:05+00:00",
    "prices": [
     24000,
     4700,
@@ -274,6 +274,7 @@
     "m35034076298",
     "2JVpPn5UjT8xp2NZZkSHMM",
     "2JVp6ZkEfQZVz8n9D6em7D",
+    "rswrbAUHbjTRDyvQqscQWL",
     "2JG7CWeqCNkaLEkffuBNAn",
     "2JTmbJUnYJGhiJvhuzjdSP",
     "2JTd5B8TfLd5zk3gXUAGf3",
@@ -301,7 +302,6 @@
     "K9L7i3EgeBhcBKRH995vu3",
     "2JVB2oWyqnvWadkYidoZhM",
     "2JVAFCouCReQmLpFNPZuVe",
-    "2JUGei75KWid3ut4yP7Gqo",
     "m77545879981",
     "m76854740831",
     "m75176450292",
@@ -332,6 +332,10 @@
     "m38732338402",
     "m99353755271",
     "m54256010214",
+    "m75081855133",
+    "m51113466494",
+    "m17655631248",
+    "m62325712441",
     "m75047600182",
     "m38532067314",
     "m43881802953",
@@ -353,6 +357,7 @@
     "m60721290395",
     "m68837078404",
     "m47895360039",
+    "2JUGei75KWid3ut4yP7Gqo",
     "m51518425295",
     "m64512853766",
     "m92978975967",
@@ -379,7 +384,6 @@
     "m32489842232",
     "2JS3JcQbuVU2kQJE4QjJQZ",
     "m64066191467",
-    "m51113466494",
     "m81593085474",
     "2JRNBsVvag7WxHvJHvYuQ2",
     "m17267500267",
@@ -387,7 +391,6 @@
     "2JRCapmXAD9VbiirXXfE65",
     "m70446065456",
     "m68463051600",
-    "rswrbAUHbjTRDyvQqscQWL",
     "TyrsUjt9xKKhSxsZN7JWgT",
     "m61013976839",
     "m23319330895",
@@ -838,10 +841,7 @@
     "m46043457753",
     "m84481061774",
     "m51174914665",
-    "m34450963489",
-    "m92593215520",
-    "m69290787444",
-    "m91381101586"
+    "m34450963489"
    ]
   }
  },
