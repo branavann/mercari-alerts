@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-24T18:14:15+00:00",
+   "last_checked": "2026-08-24T19:04:53+00:00",
    "prices": [
     299999,
     140000,
@@ -39,6 +39,7 @@
     "m27655659267",
     "m45450533595",
     "m15150559161",
+    "m21678642890",
     "m65318940132",
     "m43019972239",
     "m16999385239",
@@ -68,7 +69,6 @@
     "m28904301358",
     "m84448550411",
     "m31859770187",
-    "m45932703099",
     "m48463087799",
     "m82689805572",
     "m53599278872",
@@ -84,6 +84,7 @@
     "m13519080959",
     "3iXv6AxQjezihDTaiqWmEJ",
     "m38573100046",
+    "m45932703099",
     "m21880403131",
     "m92207447105",
     "m48236843604",
@@ -178,7 +179,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-24T18:14:05+00:00",
+   "last_checked": "2026-08-24T19:04:41+00:00",
    "prices": [
     24000,
     4700,
@@ -275,6 +276,7 @@
     "2JVpPn5UjT8xp2NZZkSHMM",
     "2JVp6ZkEfQZVz8n9D6em7D",
     "rswrbAUHbjTRDyvQqscQWL",
+    "TyrsUjt9xKKhSxsZN7JWgT",
     "2JG7CWeqCNkaLEkffuBNAn",
     "2JTmbJUnYJGhiJvhuzjdSP",
     "2JTd5B8TfLd5zk3gXUAGf3",
@@ -301,7 +303,6 @@
     "2JVGL7K37qytg6mvxnx4TQ",
     "K9L7i3EgeBhcBKRH995vu3",
     "2JVB2oWyqnvWadkYidoZhM",
-    "2JVAFCouCReQmLpFNPZuVe",
     "m77545879981",
     "m76854740831",
     "m75176450292",
@@ -357,6 +358,7 @@
     "m60721290395",
     "m68837078404",
     "m47895360039",
+    "2JVAFCouCReQmLpFNPZuVe",
     "2JUGei75KWid3ut4yP7Gqo",
     "m51518425295",
     "m64512853766",
@@ -391,7 +393,6 @@
     "2JRCapmXAD9VbiirXXfE65",
     "m70446065456",
     "m68463051600",
-    "TyrsUjt9xKKhSxsZN7JWgT",
     "m61013976839",
     "m23319330895",
     "m81274439654",
