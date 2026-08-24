@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-08-24T05:03:37+00:00",
+ "generated_at": "2026-08-24T05:55:35+00:00",
  "entries": [
+  {
+   "id": "2JVodRxShUTmADVqdru8Cq",
+   "url": "https://jp.mercari.com/item/2JVodRxShUTmADVqdru8Cq",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "バンダイ 超合金 ワンピース ゴーイングメリー号 初回特典タコバルーン入り",
+   "price": 33990,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JVodRwafuorBDfKPqzBEC.jpg@webp",
+   "seller_id": "0",
+   "condition": "Fair",
+   "listed_at": "2026-08-24T05:41:24+09:00",
+   "detected_at": "2026-08-24T05:55:13+00:00",
+   "lag_seconds": 33229,
+   "score": 17.21,
+   "hits": [
+    "ゴーイング・メリー号",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m92978975967",
+   "url": "https://jp.mercari.com/item/m92978975967",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【美品】ワンピース　ナミ（No.S05/ホロ仕様） 「海賊専門の泥棒」",
+   "price": 39800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m92978975967_1.jpg?1787549747",
+   "seller_id": "661091972",
+   "condition": "Good",
+   "listed_at": "2026-08-24T05:35:47+09:00",
+   "detected_at": "2026-08-24T05:55:13+00:00",
+   "lag_seconds": 33566,
+   "score": 18.04,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m13859334607",
    "url": "https://jp.mercari.com/item/m13859334607",
