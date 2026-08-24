@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-24T04:07:49+00:00",
+ "generated_at": "2026-08-24T05:03:37+00:00",
  "entries": [
+  {
+   "id": "m13859334607",
+   "url": "https://jp.mercari.com/item/m13859334607",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【希少】ワンピース カードダス ハイパーバトル 「ルフィ海賊団 三人の大海賊」",
+   "price": 79999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m13859334607_1.jpg?1786507770",
+   "seller_id": "446654777",
+   "condition": "Fair",
+   "listed_at": "2026-08-04T01:30:48+09:00",
+   "detected_at": "2026-08-24T05:03:25+00:00",
+   "lag_seconds": 1773157,
+   "score": 19.75,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m47441467450",
    "url": "https://jp.mercari.com/item/m47441467450",
