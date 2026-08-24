@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-08-24T05:55:35+00:00",
+ "generated_at": "2026-08-24T07:08:17+00:00",
  "entries": [
+  {
+   "id": "2JVGidBmgNGLvAL8C2jukx",
+   "url": "https://jp.mercari.com/item/2JVGidBmgNGLvAL8C2jukx",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "フィギュア 超合金 ゴーイング・メリー号 「ワンピース」【10日以内発送】",
+   "price": 39062,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JVomofF6izerJsr86jDKD.jpg@webp",
+   "seller_id": "228071917",
+   "condition": "Good",
+   "listed_at": "2026-08-12T07:11:16+09:00",
+   "detected_at": "2026-08-24T07:07:47+00:00",
+   "lag_seconds": 1068991,
+   "score": 17.21,
+   "hits": [
+    "ゴーイング・メリー号",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m47895360039",
+   "url": "https://jp.mercari.com/item/m47895360039",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "赤マルジャンプ2001　チョッパー　名医　カードダスハイパーバトル　紙袋あり",
+   "price": 40000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m47895360039_1.jpg?1787554118",
+   "seller_id": "205584162",
+   "condition": "Worn",
+   "listed_at": "2026-08-24T06:48:38+09:00",
+   "detected_at": "2026-08-24T07:07:47+00:00",
+   "lag_seconds": 33549,
+   "score": 19.95,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "2JVodRxShUTmADVqdru8Cq",
    "url": "https://jp.mercari.com/item/2JVodRxShUTmADVqdru8Cq",
