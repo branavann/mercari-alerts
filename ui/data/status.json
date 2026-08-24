@@ -1,11 +1,11 @@
 {
- "last_run": "2026-08-24T12:03:50+00:00",
+ "last_run": "2026-08-24T13:16:33+00:00",
  "alerts": {
   "op-hyperbattle-ce2": {
    "label": "One Piece Hyper Battle C-E2",
    "paused": false,
    "queries": 5,
-   "last_checked": "2026-08-24T12:03:32+00:00",
+   "last_checked": "2026-08-24T13:15:46+00:00",
    "known_listings": 600,
    "median_price": 7350.0,
    "matches_24h": 21,
@@ -15,8 +15,8 @@
    "label": "One Piece C-J1",
    "paused": false,
    "queries": 5,
-   "last_checked": "2026-08-24T12:03:50+00:00",
-   "known_listings": 128,
+   "last_checked": "2026-08-24T13:16:33+00:00",
+   "known_listings": 140,
    "median_price": 117500.0,
    "matches_24h": 0,
    "matches_7d": 0
