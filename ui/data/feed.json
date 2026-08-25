@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-25T09:02:30+00:00",
+ "generated_at": "2026-08-25T09:53:01+00:00",
  "entries": [
+  {
+   "id": "m21677096675",
+   "url": "https://jp.mercari.com/item/m21677096675",
+   "marketplace": "mercari",
+   "alert": "c-j1",
+   "alert_label": "One Piece C-J1",
+   "name": "【美品　希少　絶版】ワンピース ハイパーバトル カードダス S57 ルフィ海賊団",
+   "price": 12500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m21677096675_1.jpg?1769093653",
+   "seller_id": "420606661",
+   "condition": "Good",
+   "listed_at": "2026-01-22T14:54:13+09:00",
+   "detected_at": "2026-08-25T09:53:01+00:00",
+   "lag_seconds": 18590328,
+   "score": 10.72,
+   "hits": [
+    "ルフィ海賊団",
+    "カードダス",
+    "ハイパーバトル",
+    "ONEPIECE"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m78779449736",
    "url": "https://jp.mercari.com/item/m78779449736",

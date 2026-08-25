@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-25T09:02:30+00:00",
+   "last_checked": "2026-08-25T09:53:01+00:00",
    "prices": [
     180000,
     299999,
@@ -11,6 +11,8 @@
     95000
    ],
    "seen_ids": [
+    "m24603446731",
+    "m21677096675",
     "m37421297515",
     "m82689805572",
     "m23939813592",
@@ -39,8 +41,7 @@
     "m91304446948",
     "m77545879981",
     "2JVpkNQc2eWWEiCFH9PSx5",
-    "m37646864627",
-    "m75176450292",
+    "m52590225603",
     "m23009569995",
     "2JVrZXajxcJaESmBJRNExc",
     "m83728232624",
@@ -69,7 +70,6 @@
     "2JVqvrsJUmXhNtPqh4nxQw",
     "2JVqvh4Nog3baEoXgJLepu",
     "2JVqvgSqruzMfaStdyu62C",
-    "2JVqvfwjJBkQ7gjN3zZ5Nc",
     "m48463087799",
     "m53599278872",
     "m30682188493",
@@ -84,6 +84,9 @@
     "m13519080959",
     "3iXv6AxQjezihDTaiqWmEJ",
     "m38573100046",
+    "m37646864627",
+    "m75176450292",
+    "2JVqvfwjJBkQ7gjN3zZ5Nc",
     "m48691441834",
     "m28563349175",
     "m20952873851",
@@ -263,7 +266,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-25T09:01:46+00:00",
+   "last_checked": "2026-08-25T09:52:45+00:00",
    "prices": [
     24000,
     4700,
