@@ -1,6 +1,58 @@
 {
- "generated_at": "2026-08-25T00:00:26+00:00",
+ "generated_at": "2026-08-25T01:48:43+00:00",
  "entries": [
+  {
+   "id": "m52162510160",
+   "url": "https://jp.mercari.com/item/m52162510160",
+   "marketplace": "mercari",
+   "alert": "c-j1",
+   "alert_label": "One Piece C-J1",
+   "name": "ジャンプフェスタ2000 未はがしONE PIECE ルフィ海賊団 冒険を求めて",
+   "price": 180000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m52162510160_1.jpg?1787622309",
+   "seller_id": "669356630",
+   "condition": "New",
+   "listed_at": "2026-08-25T01:28:58+09:00",
+   "detected_at": "2026-08-25T01:48:43+00:00",
+   "lag_seconds": 33585,
+   "score": 19.21,
+   "hits": [
+    "ルフィ海賊団",
+    "冒険を求めて",
+    "ジャンプフェスタ2000",
+    "ONEPIECE"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m33080962189",
+   "url": "https://jp.mercari.com/item/m33080962189",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【希少】ワンピース カードダス ハイパーバトル まとめ売り 初期 レトロ ルフィ",
+   "price": 179999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m33080962189_1.jpg?1786593082",
+   "seller_id": "742406815",
+   "condition": "Fair",
+   "listed_at": "2026-08-13T03:51:22+09:00",
+   "detected_at": "2026-08-25T01:47:42+00:00",
+   "lag_seconds": 1061780,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m42777179224",
    "url": "https://jp.mercari.com/item/m42777179224",
