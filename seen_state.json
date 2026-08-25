@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-25T17:58:14+00:00",
+   "last_checked": "2026-08-25T18:51:37+00:00",
    "prices": [
     180000,
     299999,
@@ -40,6 +40,7 @@
     "m25536064467",
     "m52397241077",
     "m87626874276",
+    "m32655866015",
     "m86673711072",
     "m81890848222",
     "m85976366124",
@@ -67,7 +68,6 @@
     "2JVrng6UiCzRDhzF8YGNab",
     "2JVrnfYRoi4WKuyxCZX9QJ",
     "2JVrneZH6oQxh8yniabozN",
-    "2JVrirrPg5PCHZ9mcAgsJM",
     "m80410691407",
     "m44360739865",
     "m48463087799",
@@ -84,6 +84,7 @@
     "m13519080959",
     "3iXv6AxQjezihDTaiqWmEJ",
     "m38573100046",
+    "2JVrirrPg5PCHZ9mcAgsJM",
     "m52590225603",
     "m98752405980",
     "m23009569995",
@@ -304,7 +305,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-25T17:58:02+00:00",
+   "last_checked": "2026-08-25T18:51:25+00:00",
    "prices": [
     24000,
     4700,
