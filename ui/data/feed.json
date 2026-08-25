@@ -1,6 +1,33 @@
 {
- "generated_at": "2026-08-25T06:05:29+00:00",
+ "generated_at": "2026-08-25T07:10:33+00:00",
  "entries": [
+  {
+   "id": "m52397241077",
+   "url": "https://jp.mercari.com/item/m52397241077",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピースカードダスEX スターターキット　未開封　アラバスタ王国の決戦 凹有り",
+   "price": 33000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m52397241077_1.jpg?1787044732",
+   "seller_id": "867693301",
+   "condition": "New",
+   "listed_at": "2026-08-18T09:18:52+09:00",
+   "detected_at": "2026-08-25T07:10:11+00:00",
+   "lag_seconds": 629479,
+   "score": 22.36,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m30427138046",
    "url": "https://jp.mercari.com/item/m30427138046",
