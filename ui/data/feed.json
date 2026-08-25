@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-25T03:07:30+00:00",
+ "generated_at": "2026-08-25T04:02:18+00:00",
  "entries": [
+  {
+   "id": "m30427138046",
+   "url": "https://jp.mercari.com/item/m30427138046",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【初期S01】カードダス ワンピース ハイパーバトル ルフィ海賊団 旧カード",
+   "price": 44000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m30427138046_1.jpg?1785031133",
+   "seller_id": "401083749",
+   "condition": "Fair",
+   "listed_at": "2026-07-26T01:58:53+09:00",
+   "detected_at": "2026-08-25T04:01:33+00:00",
+   "lag_seconds": 2631760,
+   "score": 19.75,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m92301400269",
    "url": "https://jp.mercari.com/item/m92301400269",
