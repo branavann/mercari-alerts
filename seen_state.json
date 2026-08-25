@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-25T04:56:08+00:00",
+   "last_checked": "2026-08-25T05:36:10+00:00",
    "prices": [
     180000,
     299999,
@@ -246,7 +246,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-25T04:55:21+00:00",
+   "last_checked": "2026-08-25T05:36:00+00:00",
    "prices": [
     24000,
     4700,
