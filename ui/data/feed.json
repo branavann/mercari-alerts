@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-25T22:47:11+00:00",
+ "generated_at": "2026-08-25T23:29:15+00:00",
  "entries": [
+  {
+   "id": "m75526655897",
+   "url": "https://jp.mercari.com/item/m75526655897",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードダス ハイパーバトル ルフィ 未来の海賊王 C01 おまけつき",
+   "price": 148100,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m75526655897_1.jpg?1787205540",
+   "seller_id": "803140883",
+   "condition": "Worn",
+   "listed_at": "2026-08-20T05:59:00+09:00",
+   "detected_at": "2026-08-25T23:29:03+00:00",
+   "lag_seconds": 527403,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m54804657663",
    "url": "https://jp.mercari.com/item/m54804657663",
