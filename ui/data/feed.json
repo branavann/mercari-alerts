@@ -1,6 +1,57 @@
 {
- "generated_at": "2026-08-25T14:52:14+00:00",
+ "generated_at": "2026-08-25T15:48:58+00:00",
  "entries": [
+  {
+   "id": "m54804657663",
+   "url": "https://jp.mercari.com/item/m54804657663",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "2000 ワンピース ハイパーバトル ルフィ海賊団 進水式 PSA9 最高評価",
+   "price": 74800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m54804657663_1.jpg?1787165899",
+   "seller_id": "587669669",
+   "condition": "Like new",
+   "listed_at": "2026-08-19T18:58:19+09:00",
+   "detected_at": "2026-08-25T15:48:42+00:00",
+   "lag_seconds": 539423,
+   "score": 17.01,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m48147313305",
+   "url": "https://jp.mercari.com/item/m48147313305",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【希少】ワンピース カードダス 初期 「ナミ 海賊専門の泥棒 S05」",
+   "price": 47300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m48147313305_1.jpg?1781534971",
+   "seller_id": "825920959",
+   "condition": "Good",
+   "listed_at": "2026-06-15T14:49:31+09:00",
+   "detected_at": "2026-08-25T15:48:42+00:00",
+   "lag_seconds": 6170351,
+   "score": 18.58,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m71654020107",
    "url": "https://jp.mercari.com/item/m71654020107",
