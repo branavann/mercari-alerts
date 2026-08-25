@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-25T13:55:12+00:00",
+ "generated_at": "2026-08-25T14:52:14+00:00",
  "entries": [
+  {
+   "id": "m71654020107",
+   "url": "https://jp.mercari.com/item/m71654020107",
+   "marketplace": "mercari",
+   "alert": "c-j1",
+   "alert_label": "One Piece C-J1",
+   "name": "ワンピース カードダス ルフィ海賊団 花火見物S101",
+   "price": 11500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m71654020107_1.jpg?1787666436",
+   "seller_id": "447205353",
+   "condition": "Fair",
+   "listed_at": "2026-08-25T13:58:09+09:00",
+   "detected_at": "2026-08-25T14:52:14+00:00",
+   "lag_seconds": 35645,
+   "score": 9.22,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピースカード",
+    "カードダス",
+    "ONEPIECE"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m73670134604",
    "url": "https://jp.mercari.com/item/m73670134604",
