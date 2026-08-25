@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-25T09:53:01+00:00",
+   "last_checked": "2026-08-25T10:38:15+00:00",
    "prices": [
     180000,
     299999,
@@ -11,9 +11,10 @@
     95000
    ],
    "seen_ids": [
+    "m18810999054",
+    "m58561383839",
     "m24603446731",
     "m21677096675",
-    "m37421297515",
     "m82689805572",
     "m23939813592",
     "m78779449736",
@@ -40,7 +41,7 @@
     "m54256010214",
     "m91304446948",
     "m77545879981",
-    "2JVpkNQc2eWWEiCFH9PSx5",
+    "2JVrirrPg5PCHZ9mcAgsJM",
     "m52590225603",
     "m23009569995",
     "2JVrZXajxcJaESmBJRNExc",
@@ -61,7 +62,6 @@
     "2JVr8MGRYmCuweiNukEB9r",
     "2JVr8MGHKMD2c3LfmWUDgg",
     "m78590497169",
-    "m95720894990",
     "m21619244784",
     "m80540774940",
     "2JVqxXe9TBXtGogDepp7Hj",
@@ -84,6 +84,9 @@
     "m13519080959",
     "3iXv6AxQjezihDTaiqWmEJ",
     "m38573100046",
+    "m37421297515",
+    "2JVpkNQc2eWWEiCFH9PSx5",
+    "m95720894990",
     "m37646864627",
     "m75176450292",
     "2JVqvfwjJBkQ7gjN3zZ5Nc",
@@ -266,7 +269,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-25T09:52:45+00:00",
+   "last_checked": "2026-08-25T10:37:53+00:00",
    "prices": [
     24000,
     4700,
@@ -360,12 +363,12 @@
     "2JTs6XcFV73ByyQCwML2rd",
     "2JMGzpoaa3NpBuCwdtggJL",
     "m35034076298",
+    "TyrsUjt9xKKhSxsZN7JWgT",
     "2JTtx2h9pLqhyw5JFw3PdA",
     "2JVpPn5UjT8xp2NZZkSHMM",
     "2JRCapmXAD9VbiirXXfE65",
     "2JVp6ZkEfQZVz8n9D6em7D",
     "rswrbAUHbjTRDyvQqscQWL",
-    "TyrsUjt9xKKhSxsZN7JWgT",
     "2JTmbJUnYJGhiJvhuzjdSP",
     "2JTd5B8TfLd5zk3gXUAGf3",
     "2JVVoXAeC3XVi7mKTqGBiJ",
@@ -390,7 +393,7 @@
     "2JVGZd5J9MXHgVTk2P2Zcg",
     "2JVGL7K37qytg6mvxnx4TQ",
     "K9L7i3EgeBhcBKRH995vu3",
-    "m37421297515",
+    "m58561383839",
     "m82689805572",
     "m52397241077",
     "m87626874276",
@@ -420,8 +423,9 @@
     "m46227607221",
     "m66049899269",
     "m52677877351",
+    "m63053069172",
+    "m12916926622",
     "m24544612392",
-    "m22085160145",
     "m98841815002",
     "m78106444517",
     "m68463051600",
@@ -442,6 +446,8 @@
     "m84300704896",
     "m41443983245",
     "m75081855133",
+    "m37421297515",
+    "m22085160145",
     "2JG7CWeqCNkaLEkffuBNAn",
     "m22216916699",
     "m11729890113",
@@ -926,10 +932,7 @@
     "m44091561981",
     "m76281287330",
     "m20869332122",
-    "m99697466118",
-    "m69732157068",
-    "m14378446946",
-    "m70200773162"
+    "m99697466118"
    ]
   }
  },
