@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-25T04:02:18+00:00",
+   "last_checked": "2026-08-25T04:56:08+00:00",
    "prices": [
     180000,
     299999,
@@ -11,6 +11,8 @@
     95000
    ],
    "seen_ids": [
+    "m37600736902",
+    "m29587410476",
     "m30427138046",
     "m48791539275",
     "m11064601299",
@@ -38,8 +40,13 @@
     "m84864283932",
     "m11056466129",
     "m97548510884",
-    "m51669543545",
-    "m76279780765",
+    "m58322967652",
+    "2JVr8MJZL7npwyYfRaVEi3",
+    "2JVr8MGRYmCuweiNukEB9r",
+    "2JVr8MGHKMD2c3LfmWUDgg",
+    "m78590497169",
+    "m95720894990",
+    "m21619244784",
     "m80540774940",
     "2JVqxXe9TBXtGogDepp7Hj",
     "2JVqwyTZtttELwsZ7uUoJr",
@@ -63,13 +70,6 @@
     "2JVqrrG29LDPsaNySEjhVt",
     "2JVqrrJbFEM8Gq4bosLfRQ",
     "2JVqrrDgauJNibhT3tvLpd",
-    "2JVqrr7cCfzX2QAna5Hk3f",
-    "2JVqrqywbSyWviHQhDXUeG",
-    "2JVqrqve4tBcZwUKoSZ8qo",
-    "2JVqrJi5dFcMBvZBiUKefA",
-    "2JVqrJDxgGjmgcciDb84Jp",
-    "2JVqqnNBY8vBgh83efnUG9",
-    "2JVqqaQu7UBhKAfeHTMvHZ",
     "m48463087799",
     "m82689805572",
     "m53599278872",
@@ -85,6 +85,15 @@
     "m13519080959",
     "3iXv6AxQjezihDTaiqWmEJ",
     "m38573100046",
+    "m51669543545",
+    "m76279780765",
+    "2JVqrr7cCfzX2QAna5Hk3f",
+    "2JVqrqywbSyWviHQhDXUeG",
+    "2JVqrqve4tBcZwUKoSZ8qo",
+    "2JVqrJi5dFcMBvZBiUKefA",
+    "2JVqrJDxgGjmgcciDb84Jp",
+    "2JVqqnNBY8vBgh83efnUG9",
+    "2JVqqaQu7UBhKAfeHTMvHZ",
     "m35412598219",
     "2JVpQ8HoCmTnKFpyZixEeL",
     "2JVqpUm8GGpkQGBxhDNdAA",
@@ -237,7 +246,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-25T04:01:33+00:00",
+   "last_checked": "2026-08-25T04:55:21+00:00",
    "prices": [
     24000,
     4700,
@@ -361,6 +370,7 @@
     "2JVGZd5J9MXHgVTk2P2Zcg",
     "2JVGL7K37qytg6mvxnx4TQ",
     "K9L7i3EgeBhcBKRH995vu3",
+    "m29587410476",
     "m30427138046",
     "m11064601299",
     "m20382483824",
@@ -390,7 +400,6 @@
     "m22216916699",
     "m11729890113",
     "m66991342643",
-    "m79852320527",
     "m44811614098",
     "m89677767026",
     "m37509040097",
@@ -414,6 +423,7 @@
     "m43881802953",
     "m53426982524",
     "m87445056925",
+    "m79852320527",
     "m36847791806",
     "m38732338402",
     "m88977103719",
@@ -899,8 +909,7 @@
     "m89232425676",
     "m50244839727",
     "m55530690568",
-    "m80600602467",
-    "m48267625802"
+    "m80600602467"
    ]
   }
  },
