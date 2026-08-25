@@ -1,6 +1,82 @@
 {
- "generated_at": "2026-08-25T08:01:00+00:00",
+ "generated_at": "2026-08-25T09:02:30+00:00",
  "entries": [
+  {
+   "id": "m78779449736",
+   "url": "https://jp.mercari.com/item/m78779449736",
+   "marketplace": "mercari",
+   "alert": "c-j1",
+   "alert_label": "One Piece C-J1",
+   "name": "ONE PIECE カードダス 虹の島伝説 ルフィ海賊団 S-W1",
+   "price": 15999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m78779449736_1.jpg?1787644913",
+   "seller_id": "122825039",
+   "condition": "Fair",
+   "listed_at": "2026-08-25T08:01:53+09:00",
+   "detected_at": "2026-08-25T09:02:30+00:00",
+   "lag_seconds": 36037,
+   "score": 8.47,
+   "hits": [
+    "ルフィ海賊団",
+    "カードダス",
+    "ONEPIECE"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m37421297515",
+   "url": "https://jp.mercari.com/item/m37421297515",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードダス ハイパーバトル ルフィ海賊団 海賊の宴 キラ カード",
+   "price": 149999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m37421297515_1.jpg?1787647113",
+   "seller_id": "558004707",
+   "condition": "Like new",
+   "listed_at": "2026-08-25T08:38:33+09:00",
+   "detected_at": "2026-08-25T09:01:46+00:00",
+   "lag_seconds": 33793,
+   "score": 19.75,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m98841815002",
+   "url": "https://jp.mercari.com/item/m98841815002",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "非売品 ワンピース ハイパーバトル グランドバトル2 初回特典カード 全4枚",
+   "price": 43333,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m98841815002_1.jpg?1786279431",
+   "seller_id": "827867051",
+   "condition": "Like new",
+   "listed_at": "2026-08-09T12:43:51+09:00",
+   "detected_at": "2026-08-25T09:01:46+00:00",
+   "lag_seconds": 1401475,
+   "score": 17.76,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m52397241077",
    "url": "https://jp.mercari.com/item/m52397241077",
