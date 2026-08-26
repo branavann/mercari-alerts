@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-08-26T05:39:03+00:00",
+ "generated_at": "2026-08-26T06:19:30+00:00",
  "entries": [
+  {
+   "id": "m66377183823",
+   "url": "https://jp.mercari.com/item/m66377183823",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "電影少女 ポスター 桂正和 週刊少年ジャンプ 1991年　　　　　19",
+   "price": 3999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m66377183823_1.jpg?1787724510",
+   "seller_id": "744708390",
+   "condition": "Fair",
+   "listed_at": "2026-08-26T06:08:30+09:00",
+   "detected_at": "2026-08-26T06:19:30+00:00",
+   "lag_seconds": 33060,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m93138165303",
    "url": "https://jp.mercari.com/item/m93138165303",
