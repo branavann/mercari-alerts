@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-26T11:34:58+00:00",
+ "generated_at": "2026-08-26T12:06:21+00:00",
  "entries": [
+  {
+   "id": "m45904234467",
+   "url": "https://jp.mercari.com/item/m45904234467",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カード ゲーム ハイパーバトル まとめ メルカリ便",
+   "price": 41111,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m45904234467_1.jpg?1786634591",
+   "seller_id": "443736175",
+   "condition": "Good",
+   "listed_at": "2026-08-13T15:23:11+09:00",
+   "detected_at": "2026-08-26T12:05:58+00:00",
+   "lag_seconds": 1143767,
+   "score": 25.94,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "出航",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m86976661784",
    "url": "https://jp.mercari.com/item/m86976661784",
