@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-26T07:27:49+00:00",
+ "generated_at": "2026-08-26T08:11:25+00:00",
  "entries": [
+  {
+   "id": "m86976661784",
+   "url": "https://jp.mercari.com/item/m86976661784",
+   "marketplace": "mercari",
+   "alert": "c-j1",
+   "alert_label": "One Piece C-J1",
+   "name": "ワンピース ハイパーバトル カードS101 ルフィ海賊団 花火見物",
+   "price": 24999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m86976661784_1.jpg?1787731473",
+   "seller_id": "336747836",
+   "condition": "Good",
+   "listed_at": "2026-08-26T08:04:33+09:00",
+   "detected_at": "2026-08-26T08:11:17+00:00",
+   "lag_seconds": 32804,
+   "score": 10.22,
+   "hits": [
+    "ルフィ海賊団",
+    "カードダス",
+    "ハイパーバトル",
+    "ONEPIECE"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m47142419901",
    "url": "https://jp.mercari.com/item/m47142419901",

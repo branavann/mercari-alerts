@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-08-26T07:27:39+00:00",
+   "last_checked": "2026-08-26T08:11:17+00:00",
    "prices": [
     180000,
     299999,
@@ -11,6 +11,7 @@
     95000
    ],
    "seen_ids": [
+    "m86976661784",
     "m16840493569",
     "m45038858221",
     "m45450533595",
@@ -37,7 +38,7 @@
     "m87626874276",
     "m29587410476",
     "m30427138046",
-    "m20382483824",
+    "2JVfhycxCvfVo8tuPJRAv3",
     "m86598668135",
     "m21378660359",
     "m34654958794",
@@ -67,7 +68,6 @@
     "2JVtUnZX2wDQ2sYzvNZQEa",
     "2JVtTPxsEquJSmBhKD59JB",
     "2JVtTPvFHuEbvJzG6VjRqT",
-    "2JVtTNTWPYg8ThUwuVLAKd",
     "m44360739865",
     "m48463087799",
     "m53599278872",
@@ -80,6 +80,8 @@
     "m24697829193",
     "m69259784672",
     "m38573100046",
+    "m20382483824",
+    "2JVtTNTWPYg8ThUwuVLAKd",
     "m80410691407",
     "2JVtTMzDZtNgeUpP3C4WsV",
     "2JVtR9hFHu2cr6yo9mYNV5",
@@ -357,7 +359,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-08-26T07:27:25+00:00",
+   "last_checked": "2026-08-26T08:10:57+00:00",
    "prices": [
     24000,
     4700,
@@ -451,9 +453,9 @@
     "2JTs6XcFV73ByyQCwML2rd",
     "2JMGzpoaa3NpBuCwdtggJL",
     "m35034076298",
+    "rswrbAUHbjTRDyvQqscQWL",
     "2JVtwuxzpUVJGMYzWjpF6D",
     "2JTd5B8TfLd5zk3gXUAGf3",
-    "rswrbAUHbjTRDyvQqscQWL",
     "TyrsUjt9xKKhSxsZN7JWgT",
     "2JG7CWeqCNkaLEkffuBNAn",
     "9s5MXLzG4LrvX3p8Lgva9R",
@@ -511,6 +513,7 @@
     "m77545879981",
     "m75176450292",
     "m76279780765",
+    "m13835900997",
     "m22486773551",
     "m35171660515",
     "m53004799236",
@@ -522,7 +525,6 @@
     "m13704810803",
     "m93514260925",
     "m85392170686",
-    "m13835900997",
     "m25012170089",
     "m84253074849",
     "m65020509186",
@@ -1025,7 +1027,7 @@
   },
   "wsj-1991-issue-5": {
    "initialized": true,
-   "last_checked": "2026-08-26T07:27:49+00:00",
+   "last_checked": "2026-08-26T08:11:25+00:00",
    "prices": [
     2880,
     2780,
