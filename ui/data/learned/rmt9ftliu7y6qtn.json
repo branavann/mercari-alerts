@@ -1,0 +1,103 @@
+{
+ "status": "ok",
+ "kind": "learn",
+ "alert": {
+  "name": "wsj-1991-issue-5",
+  "label": "WSJ 1991 Issue 5",
+  "queries": [
+   "ジャンプ1991",
+   "1991年 週刊少年ジャンプ",
+   "ジャンプ1991 1991年",
+   "ジャンプ1991 週刊少年ジャンプ"
+  ],
+  "match": {
+   "require": [
+    [
+     "ジャンプ1991",
+     "1991年",
+     "週刊少年ジャンプ"
+    ]
+   ],
+   "signals": {
+    "ジャンプ1991": 8.8,
+    "1991年": 6.94,
+    "週刊少年ジャンプ": 6.31,
+    "年5": 2.0,
+    "5号": 2.0,
+    "ター": 1.0
+   },
+   "exclude": [],
+   "min_score": 11.8,
+   "scope": "full"
+  },
+  "learned_from": [
+   "m93246512949",
+   "m66327995934",
+   "m72898077491",
+   "m16753763755",
+   "m22138908427",
+   "m89107006028",
+   "m19530886995",
+   "m38277803319"
+  ]
+ },
+ "report": "QUERY FAN-OUT\n  - ジャンプ1991    (rare term, 1,162 listings)\n  - 1991年 週刊少年ジャンプ    (title of example 1)\n  - ジャンプ1991 1991年    (title of example 3)\n  - ジャンプ1991 週刊少年ジャンプ    (shared terms)\n\nRETRIEVAL COVERAGE   T = query matches the title alone,  d = only via description\n  ex1  [TTTT]  週刊少年ジャンプ　1991年5号　表紙:漫画家オールスター\n  ex2  [TTTT]  d*7様 週刊少年ジャンプ 1991年 5号\n  ex3  [TTTT]  週刊少年ジャンプ1991年5号ドラゴンボール孫悟空復活スラムダンク幽遊白書\n  ex4  [TTTT]  貴重！当時モノ　週刊少年ジャンプ　1991年　5号　袋とじ未開封\n  ex5  [TTTT]  週刊少年ジャンプ 1991年5号 巻頭カラー ろくでなしBLUES　袋とじ開封済\n  ex6  [TTTT]  週刊少年ジャンプ　1991年1月21日号　No5　新年特大号　人気作家顔出し\n  ex7  [TTTT]  日*9様 週刊少年ジャンプ 1991年5号 表紙・マンガ家の顔写真\n  ex8  [TTTT]  週刊少年ジャンプ1991年5号(袋とじ開封済)　F1\n\n  OK  every example is reachable by title alone (the safe case).\n\nTERM SPECIFICITY  (live Mercari result counts)\n      1,162 listings   ジャンプ1991               weight 8.8\n      4,857 listings   1991年                  weight 6.94\n      7,878 listings   週刊少年ジャンプ               weight 6.31\n\nSCORING   threshold = 11.8\n  ex1   score   33.81   PASS\n  ex2   score   32.56   PASS\n  ex3   score   33.56   PASS\n  ex4   score   33.56   PASS\n  ex5   score   33.56   PASS\n  ex6   score   27.56   PASS\n  ex7   score   32.56   PASS\n  ex8   score   33.56   PASS",
+ "term_counts": {
+  "ジャンプ1991": 1162,
+  "週刊少年ジャンプ": 7878,
+  "1991年": 4857
+ },
+ "examples": [
+  {
+   "id": "m93246512949",
+   "name": "週刊少年ジャンプ　1991年5号　表紙:漫画家オールスター",
+   "price": 2500,
+   "url": "https://jp.mercari.com/item/m93246512949"
+  },
+  {
+   "id": "m66327995934",
+   "name": "d*7様 週刊少年ジャンプ 1991年 5号",
+   "price": 4000,
+   "url": "https://jp.mercari.com/item/m66327995934"
+  },
+  {
+   "id": "m72898077491",
+   "name": "週刊少年ジャンプ1991年5号ドラゴンボール孫悟空復活スラムダンク幽遊白書",
+   "price": 3980,
+   "url": "https://jp.mercari.com/item/m72898077491"
+  },
+  {
+   "id": "m16753763755",
+   "name": "貴重！当時モノ　週刊少年ジャンプ　1991年　5号　袋とじ未開封",
+   "price": 7000,
+   "url": "https://jp.mercari.com/item/m16753763755"
+  },
+  {
+   "id": "m22138908427",
+   "name": "週刊少年ジャンプ 1991年5号 巻頭カラー ろくでなしBLUES　袋とじ開封済",
+   "price": 3280,
+   "url": "https://jp.mercari.com/item/m22138908427"
+  },
+  {
+   "id": "m89107006028",
+   "name": "週刊少年ジャンプ　1991年1月21日号　No5　新年特大号　人気作家顔出し",
+   "price": 1700,
+   "url": "https://jp.mercari.com/item/m89107006028"
+  },
+  {
+   "id": "m19530886995",
+   "name": "日*9様 週刊少年ジャンプ 1991年5号 表紙・マンガ家の顔写真",
+   "price": 600,
+   "url": "https://jp.mercari.com/item/m19530886995"
+  },
+  {
+   "id": "m38277803319",
+   "name": "週刊少年ジャンプ1991年5号(袋とじ開封済)　F1",
+   "price": 1800,
+   "url": "https://jp.mercari.com/item/m38277803319"
+  }
+ ],
+ "negatives": [],
+ "request_id": "rmt9ftliu7y6qtn",
+ "finished_at": "2026-08-26T01:51:39+00:00"
+}
