@@ -1,6 +1,29 @@
 {
- "generated_at": "2026-08-26T13:18:58+00:00",
+ "generated_at": "2026-08-26T14:13:28+00:00",
  "entries": [
+  {
+   "id": "m55086683660",
+   "url": "https://jp.mercari.com/item/m55086683660",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 創刊50周年記念復刻ドラゴンボール1991北斗の拳パック3",
+   "price": 17000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55086683660_1.jpg?1779598062",
+   "seller_id": "861605807",
+   "condition": "Like new",
+   "listed_at": "2026-05-24T04:47:42+09:00",
+   "detected_at": "2026-08-26T14:13:28+00:00",
+   "lag_seconds": 8187946,
+   "score": 7.89,
+   "hits": [
+    "週刊少年ジャンプ"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m97053490763",
    "url": "https://jp.mercari.com/item/m97053490763",
