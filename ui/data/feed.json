@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-08-25T23:53:20+00:00",
+ "generated_at": "2026-08-26T01:40:28+00:00",
  "entries": [
+  {
+   "id": "m93138165303",
+   "url": "https://jp.mercari.com/item/m93138165303",
+   "marketplace": "mercari",
+   "alert": "c-j1",
+   "alert_label": "One Piece C-J1",
+   "name": "ワンピース カードゲーム ルフィ海賊団 ねじまき島の攻防 プロモ カードダス",
+   "price": 15999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93138165303_1.jpg?1787707980",
+   "seller_id": "336747836",
+   "condition": "Good",
+   "listed_at": "2026-08-26T01:33:00+09:00",
+   "detected_at": "2026-08-26T01:40:28+00:00",
+   "lag_seconds": 32848,
+   "score": 9.22,
+   "hits": [
+    "ルフィ海賊団",
+    "ワンピースカード",
+    "カードダス",
+    "ONEPIECE"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m75526655897",
    "url": "https://jp.mercari.com/item/m75526655897",
