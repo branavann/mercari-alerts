@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-08-26T12:06:21+00:00",
+ "generated_at": "2026-08-26T13:18:58+00:00",
  "entries": [
+  {
+   "id": "m97053490763",
+   "url": "https://jp.mercari.com/item/m97053490763",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "『35年前の週刊少年ジャンプ 』第13号【1991年３月】",
+   "price": 1800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m97053490763_1.jpg?1773670010",
+   "seller_id": "430101638",
+   "condition": "Fair",
+   "listed_at": "2026-03-16T14:06:50+09:00",
+   "detected_at": "2026-08-26T13:18:58+00:00",
+   "lag_seconds": 14112728,
+   "score": 16.56,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m45904234467",
    "url": "https://jp.mercari.com/item/m45904234467",
