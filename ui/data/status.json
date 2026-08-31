@@ -1,11 +1,11 @@
 {
- "last_run": "2026-08-31T07:09:59+00:00",
+ "last_run": "2026-08-31T15:10:22+00:00",
  "alerts": {
   "op-hyperbattle-ce2": {
    "label": "One Piece Hyper Battle C-E2",
    "paused": false,
    "queries": 5,
-   "last_checked": "2026-08-31T07:08:29+00:00",
+   "last_checked": "2026-08-31T15:09:05+00:00",
    "known_listings": 600,
    "median_price": 7350.0,
    "matches_24h": 0,
@@ -15,8 +15,8 @@
    "label": "One Piece C-J1",
    "paused": false,
    "queries": 5,
-   "last_checked": "2026-08-31T07:09:51+00:00",
-   "known_listings": 588,
+   "last_checked": "2026-08-31T15:09:57+00:00",
+   "known_listings": 600,
    "median_price": 160000.0,
    "matches_24h": 0,
    "matches_7d": 1
@@ -25,11 +25,11 @@
    "label": "WSJ 1991 Issue 5",
    "paused": false,
    "queries": 4,
-   "last_checked": "2026-08-31T07:09:59+00:00",
-   "known_listings": 120,
-   "median_price": 4049.5,
+   "last_checked": "2026-08-31T15:10:22+00:00",
+   "known_listings": 128,
+   "median_price": 3999,
    "matches_24h": 8,
-   "matches_7d": 38
+   "matches_7d": 41
   },
   "example-retro-game": {
    "label": "EXAMPLE: SFC game, boxed",
