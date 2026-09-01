@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-08-31T20:52:29+00:00",
+ "generated_at": "2026-09-01T00:30:26+00:00",
  "entries": [
+  {
+   "id": "2JWAdyss9RK366bMrG2UJo",
+   "url": "https://jp.mercari.com/item/2JWAdyss9RK366bMrG2UJo",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【 鑑定品 ARS10+ 】　極美品　世界2枚　ゴーイング・メリー号　FP7 2000年　ルフィ海賊団　ルフィ　ゾロ　ナミ　ウソップ　サンジ",
+   "price": 450000,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JWAdiB6JJQ2ak2tPzUBz4.jpg@webp",
+   "seller_id": "0",
+   "condition": "Like new",
+   "listed_at": "2026-08-31T23:09:59+09:00",
+   "detected_at": "2026-09-01T00:29:45+00:00",
+   "lag_seconds": 37186,
+   "score": 19.2,
+   "hits": [
+    "ゴーイング・メリー号",
+    "ルフィ海賊団"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "2JTRNmkUSgjYik89cFhtTP",
    "url": "https://jp.mercari.com/item/2JTRNmkUSgjYik89cFhtTP",
@@ -10032,31 +10056,6 @@
     "ルフィ海賊団",
     "カードゲーム",
     "プロモ",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m10707127149",
-   "url": "https://jp.mercari.com/item/m10707127149",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ONEPIECE カードダス ハイパーバトル チョッパー C497 キラ レア",
-   "price": 7700,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m10707127149_1.jpg?1787463060",
-   "seller_id": "184606277",
-   "condition": "Good",
-   "listed_at": "2026-08-23T05:31:00+09:00",
-   "detected_at": "2026-08-23T05:34:41+00:00",
-   "lag_seconds": 32621,
-   "score": 14.32,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
     "ワンピース"
    ],
    "status": "borderline",
