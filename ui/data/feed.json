@@ -1,6 +1,33 @@
 {
- "generated_at": "2026-09-01T23:30:04+00:00",
+ "generated_at": "2026-09-02T01:20:14+00:00",
  "entries": [
+  {
+   "id": "m37734561229",
+   "url": "https://jp.mercari.com/item/m37734561229",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【PSA9】旧ワンピースカード ハイパーバトル S01 ルフィ海賊団 1999",
+   "price": 350000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m37734561229_1.jpg?1784619270",
+   "seller_id": "264194352",
+   "condition": "Like new",
+   "listed_at": "2026-07-21T07:34:30+09:00",
+   "detected_at": "2026-09-02T01:19:54+00:00",
+   "lag_seconds": 3725124,
+   "score": 24.67,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "2JWBy5HLX4LGTnmz9sMuVD",
    "url": "https://jp.mercari.com/item/2JWBy5HLX4LGTnmz9sMuVD",
@@ -10039,31 +10066,6 @@
    "listed_at": "2026-08-15T17:11:50+09:00",
    "detected_at": "2026-08-23T06:04:16+00:00",
    "lag_seconds": 683546,
-   "score": 13.21,
-   "hits": [
-    "ハイパーバトル",
-    "カードゲーム",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m27554466811",
-   "url": "https://jp.mercari.com/item/m27554466811",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "✨美品✨ワンピース　ハイパーバトル　カードゲーム　RK-C01ルフィ大海賊　初期",
-   "price": 12300,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m27554466811_1.jpg?1786793004",
-   "seller_id": "252462885",
-   "condition": "Like new",
-   "listed_at": "2026-08-15T11:23:24+09:00",
-   "detected_at": "2026-08-23T06:04:16+00:00",
-   "lag_seconds": 704452,
    "score": 13.21,
    "hits": [
     "ハイパーバトル",
