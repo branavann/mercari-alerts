@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-02T15:20:20+00:00",
+ "generated_at": "2026-09-02T18:53:06+00:00",
  "entries": [
+  {
+   "id": "m10429739996",
+   "url": "https://jp.mercari.com/item/m10429739996",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ONE PIECE カードダス ハイパーバトル　4枚セット",
+   "price": 47500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m10429739996_1.jpg?1788364029",
+   "seller_id": "400006084",
+   "condition": "Good",
+   "listed_at": "2026-09-02T15:47:09+09:00",
+   "detected_at": "2026-09-02T18:52:42+00:00",
+   "lag_seconds": 43533,
+   "score": 18.26,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m49396101425",
    "url": "https://jp.mercari.com/item/m49396101425",
@@ -10044,33 +10070,6 @@
    "hits": [
     "ハイパーバトル",
     "カードダス",
-    "プロモ",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m16971457688",
-   "url": "https://jp.mercari.com/item/m16971457688",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ONE PIECE ハイパーバトル C357 ベアキング",
-   "price": 799,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m16971457688_1.jpg?1787468338",
-   "seller_id": "969533805",
-   "condition": "Good",
-   "listed_at": "2026-08-23T06:58:58+09:00",
-   "detected_at": "2026-08-23T07:04:18+00:00",
-   "lag_seconds": 32720,
-   "score": 16.04,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "カードゲーム",
     "プロモ",
     "ワンピース"
    ],
