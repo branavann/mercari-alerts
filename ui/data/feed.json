@@ -1,6 +1,57 @@
 {
- "generated_at": "2026-09-03T06:27:34+00:00",
+ "generated_at": "2026-09-03T11:37:38+00:00",
  "entries": [
+  {
+   "id": "m74673811867",
+   "url": "https://jp.mercari.com/item/m74673811867",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【希少】週刊少年ジャンプ 1991年29号 ジョジョの奇妙な冒険 コレクター必見",
+   "price": 9300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m74673811867_1.jpg?1785899746",
+   "seller_id": "107927456",
+   "condition": "Fair",
+   "listed_at": "2026-08-04T09:25:13+09:00",
+   "detected_at": "2026-09-03T11:37:38+00:00",
+   "lag_seconds": 2632345,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m82125294892",
+   "url": "https://jp.mercari.com/item/m82125294892",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【初期当時物】ワンピース カードダス ハイパーバトル 14枚ルフィ シャンクス他",
+   "price": 112100,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m82125294892_1.jpg?1788428399",
+   "seller_id": "498917568",
+   "condition": "Fair",
+   "listed_at": "2026-09-03T09:39:59+09:00",
+   "detected_at": "2026-09-03T11:36:51+00:00",
+   "lag_seconds": 39412,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m81275728496",
    "url": "https://jp.mercari.com/item/m81275728496",
@@ -10023,56 +10074,6 @@
    "hits": [
     "ルフィ海賊団",
     "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m70446065456",
-   "url": "https://jp.mercari.com/item/m70446065456",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードダス ルフィ海賊団 ワンダースワンプロモ　完品美品６枚",
-   "price": 220000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m70446065456_1.jpg?1787468429",
-   "seller_id": "234382866",
-   "condition": "Good",
-   "listed_at": "2026-08-23T07:00:29+09:00",
-   "detected_at": "2026-08-23T07:04:18+00:00",
-   "lag_seconds": 32629,
-   "score": 18.9,
-   "hits": [
-    "ルフィ海賊団",
-    "カードダス",
-    "プロモ",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m41440372692",
-   "url": "https://jp.mercari.com/item/m41440372692",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピースカード　エルバフ　ルフィ海賊団デッキパーツ",
-   "price": 1011,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m41440372692_1.jpg?1787356801",
-   "seller_id": "246704521",
-   "condition": "Good",
-   "listed_at": "2026-08-22T00:00:01+09:00",
-   "detected_at": "2026-08-23T07:04:18+00:00",
-   "lag_seconds": 144257,
-   "score": 14.93,
-   "hits": [
-    "ルフィ海賊団",
     "ワンピース"
    ],
    "status": "borderline",
