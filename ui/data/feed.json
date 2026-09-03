@@ -1,6 +1,58 @@
 {
- "generated_at": "2026-09-03T01:29:10+00:00",
+ "generated_at": "2026-09-03T06:27:34+00:00",
  "entries": [
+  {
+   "id": "m81275728496",
+   "url": "https://jp.mercari.com/item/m81275728496",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードダス 「ルフィ海賊団 海賊の宴 S01」 ハイパーバトル",
+   "price": 64800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m81275728496_1.jpg?1788415691",
+   "seller_id": "474469849",
+   "condition": "Good",
+   "listed_at": "2026-09-03T06:08:11+09:00",
+   "detected_at": "2026-09-03T06:27:01+00:00",
+   "lag_seconds": 33530,
+   "score": 19.75,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "2JWGYNRcDdFCbVddZZ3sfT",
+   "url": "https://jp.mercari.com/item/2JWGYNRcDdFCbVddZZ3sfT",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【中古】【当時品】S01 ルフィ海賊団[海賊の宴 レア] ワンピース ONE PIECE カードダス ハイパーバトル[95]",
+   "price": 133000,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JWGYNQG2NquEXAxrhtNr8.jpg@webp",
+   "seller_id": "0",
+   "condition": "Worn",
+   "listed_at": "2026-09-03T05:52:04+09:00",
+   "detected_at": "2026-09-03T06:27:01+00:00",
+   "lag_seconds": 34497,
+   "score": 19.75,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m10429739996",
    "url": "https://jp.mercari.com/item/m10429739996",
@@ -10021,56 +10073,6 @@
    "score": 14.93,
    "hits": [
     "ルフィ海賊団",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m84465290250",
-   "url": "https://jp.mercari.com/item/m84465290250",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カード ハイパーバトル ２枚セット C390 C391",
-   "price": 1500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m84465290250_1.jpg?1787468457",
-   "seller_id": "645596034",
-   "condition": "Good",
-   "listed_at": "2026-08-23T07:00:57+09:00",
-   "detected_at": "2026-08-23T07:04:18+00:00",
-   "lag_seconds": 32601,
-   "score": 11.9,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m18390816720",
-   "url": "https://jp.mercari.com/item/m18390816720",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "2枚 ワンピース カードダス ハイパーバトル サンジ 最上のコック C-W5",
-   "price": 25000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m18390816720_1.jpg?1787468452",
-   "seller_id": "794125053",
-   "condition": "Good",
-   "listed_at": "2026-08-23T07:00:52+09:00",
-   "detected_at": "2026-08-23T07:04:18+00:00",
-   "lag_seconds": 32606,
-   "score": 15.58,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "プロモ",
     "ワンピース"
    ],
    "status": "borderline",
