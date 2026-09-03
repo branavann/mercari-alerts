@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-03T18:44:29+00:00",
+ "generated_at": "2026-09-03T21:24:50+00:00",
  "entries": [
+  {
+   "id": "m17012736748",
+   "url": "https://jp.mercari.com/item/m17012736748",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【大特価】スラムダンク SLAMDANK ❶巻　井上雄彦　週刊少年ジャンプ",
+   "price": 2000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m17012736748_1.jpg?1784610238",
+   "seller_id": "302692061",
+   "condition": "Fair",
+   "listed_at": "2026-07-21T05:00:31+09:00",
+   "detected_at": "2026-09-03T21:24:50+00:00",
+   "lag_seconds": 3893059,
+   "score": 16.83,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ",
+    "年5"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m31106087695",
    "url": "https://jp.mercari.com/item/m31106087695",
@@ -10056,32 +10081,6 @@
     "ワンピース"
    ],
    "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m39613398716",
-   "url": "https://jp.mercari.com/item/m39613398716",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードダス ハイパーバトル S101 ルフィ海賊団 花火見物 ホロ",
-   "price": 15000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m39613398716_1.jpg?1787470314",
-   "seller_id": "794125053",
-   "condition": "Good",
-   "listed_at": "2026-08-23T07:31:54+09:00",
-   "detected_at": "2026-08-23T07:50:19+00:00",
-   "lag_seconds": 33505,
-   "score": 28.86,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "match",
    "deal": false,
    "relist": false,
    "target_hit": false

@@ -2,7 +2,7 @@
  "alerts": {
   "c-j1": {
    "initialized": true,
-   "last_checked": "2026-09-03T18:44:21+00:00",
+   "last_checked": "2026-09-03T21:24:39+00:00",
    "prices": [
     189000,
     180000,
@@ -616,7 +616,7 @@
   },
   "op-hyperbattle-ce2": {
    "initialized": true,
-   "last_checked": "2026-09-03T18:44:07+00:00",
+   "last_checked": "2026-09-03T21:24:29+00:00",
    "prices": [
     24000,
     4700,
@@ -717,7 +717,6 @@
     "2JWEhHmSjDgiCNu5F4ePu7",
     "2JWEQqxVPNyts87vtNCmV3",
     "TyrsUjt9xKKhSxsZN7JWgT",
-    "rswrbAUHbjTRDyvQqscQWL",
     "2JWEGASrTvucH7ZAc7Fq7d",
     "2JWEDbAZma4aHxyTamCdpF",
     "2JWDqVpdsFEsWUCwFnJPtf",
@@ -740,6 +739,7 @@
     "m40914483771",
     "2JVtwuxzpUVJGMYzWjpF6D",
     "2JVp6ZkEfQZVz8n9D6em7D",
+    "2JVnSycAvxJT2gd7igUWh6",
     "m31106087695",
     "m96997551030",
     "m24668833894",
@@ -795,6 +795,7 @@
     "m94563621006",
     "m52922531003",
     "m73013626802",
+    "rswrbAUHbjTRDyvQqscQWL",
     "m27079759006",
     "2JWGZbfhouR82DLLNfsoet",
     "2JWGZbckCPUD2EqDsitmT3",
@@ -830,7 +831,6 @@
     "m97287573273",
     "m31758930486",
     "m82415207332",
-    "2JVnSycAvxJT2gd7igUWh6",
     "2JWEiWvLcJwFvMkyiF9NfX",
     "m37678165771",
     "m34229418462",
@@ -1284,8 +1284,9 @@
   },
   "wsj-1991-issue-5": {
    "initialized": true,
-   "last_checked": "2026-09-03T18:44:29+00:00",
+   "last_checked": "2026-09-03T21:24:50+00:00",
    "prices": [
+    2000,
     9300,
     2100,
     3700,
@@ -1336,6 +1337,7 @@
     3999
    ],
    "seen_ids": [
+    "m17012736748",
     "m45440815386",
     "m26555563035",
     "m62549228922",
@@ -1362,7 +1364,6 @@
     "m84725866564",
     "m30266284219",
     "m65764156305",
-    "m58410662056",
     "m71814479618",
     "m54968899838",
     "m46222514064",
@@ -1374,8 +1375,9 @@
     "m50258440832",
     "m24282940260",
     "m16685927063",
-    "m25359469701",
+    "m58410662056",
     "m10054632026",
+    "m25359469701",
     "m68398502106",
     "m11684479954",
     "m78936352140",
@@ -1732,6 +1734,10 @@
   "7dd70f09469cd4dc": {
    "id": "m56884333496",
    "t": "2026-08-28T11:31:32+00:00"
+  },
+  "8038cd86759ed746": {
+   "id": "m17012736748",
+   "t": "2026-09-03T21:24:50+00:00"
   },
   "80e0889c19cfc831": {
    "id": "m49809969542",
