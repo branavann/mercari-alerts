@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-04T11:38:27+00:00",
+ "generated_at": "2026-09-04T15:08:26+00:00",
  "entries": [
+  {
+   "id": "m32081593711",
+   "url": "https://jp.mercari.com/item/m32081593711",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "未開封カードダスEX ハイパーバトル ワンピース グランドボックス スターター",
+   "price": 70100,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m32081593711_1.jpg?1788530673",
+   "seller_id": "338795674",
+   "condition": "New",
+   "listed_at": "2026-09-04T14:04:33+09:00",
+   "detected_at": "2026-09-04T15:07:47+00:00",
+   "lag_seconds": 36194,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m72165339362",
    "url": "https://jp.mercari.com/item/m72165339362",
@@ -10059,31 +10085,6 @@
    "score": 12.67,
    "hits": [
     "ゴーイング・メリー号"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m93379569215",
-   "url": "https://jp.mercari.com/item/m93379569215",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードゲーム ルフィ 海の王を目指す者 PA-C01",
-   "price": 7222,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93379569215_1.jpg?1787470858",
-   "seller_id": "583052570",
-   "condition": "Good",
-   "listed_at": "2026-08-23T07:40:58+09:00",
-   "detected_at": "2026-08-23T07:50:19+00:00",
-   "lag_seconds": 32961,
-   "score": 13.35,
-   "hits": [
-    "ルフィ海賊団",
-    "カードゲーム",
-    "ワンピース"
    ],
    "status": "borderline",
    "deal": false,
