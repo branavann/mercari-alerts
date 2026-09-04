@@ -1,6 +1,58 @@
 {
- "generated_at": "2026-09-04T15:08:26+00:00",
+ "generated_at": "2026-09-04T18:29:28+00:00",
  "entries": [
+  {
+   "id": "m67733246485",
+   "url": "https://jp.mercari.com/item/m67733246485",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "絶版　ワンピース ハイパーバトル S01 ルフィ海賊団 海賊の宴1999 初期",
+   "price": 95000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m67733246485_1.jpg?1783592862",
+   "seller_id": "376341818",
+   "condition": "Fair",
+   "listed_at": "2026-07-09T10:27:42+09:00",
+   "detected_at": "2026-09-04T18:28:18+00:00",
+   "lag_seconds": 4986036,
+   "score": 19.2,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m28639334494",
+   "url": "https://jp.mercari.com/item/m28639334494",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【美品】ワンピース カードゲーム 電伝虫 カードダス　初期　C352",
+   "price": 500000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m28639334494_1.jpg?1788534994",
+   "seller_id": "352522857",
+   "condition": "Like new",
+   "listed_at": "2026-09-04T15:16:34+09:00",
+   "detected_at": "2026-09-04T18:28:18+00:00",
+   "lag_seconds": 43904,
+   "score": 18.58,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m32081593711",
    "url": "https://jp.mercari.com/item/m32081593711",
@@ -10040,53 +10092,6 @@
     "ワンピース"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m36567941834",
-   "url": "https://jp.mercari.com/item/m36567941834",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース ゴーイングメリー号 キーホルダー",
-   "price": 500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m36567941834_1.jpg?1786577888",
-   "seller_id": "781182369",
-   "condition": "Good",
-   "listed_at": "2026-08-12T23:37:26+09:00",
-   "detected_at": "2026-08-23T07:50:19+00:00",
-   "lag_seconds": 925973,
-   "score": 16.31,
-   "hits": [
-    "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m59381357784",
-   "url": "https://jp.mercari.com/item/m59381357784",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "QUIKSILVER ONE PIECE Tシャツ XL",
-   "price": 2000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m59381357784_1.jpg?1787469236",
-   "seller_id": "220064991",
-   "condition": "Good",
-   "listed_at": "2026-08-23T07:13:56+09:00",
-   "detected_at": "2026-08-23T07:50:19+00:00",
-   "lag_seconds": 34583,
-   "score": 12.67,
-   "hits": [
-    "ゴーイング・メリー号"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
