@@ -1,6 +1,58 @@
 {
- "generated_at": "2026-09-05T05:28:14+00:00",
+ "generated_at": "2026-09-05T09:17:18+00:00",
  "entries": [
+  {
+   "id": "m40468885157",
+   "url": "https://jp.mercari.com/item/m40468885157",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "旧ワンピース ハイパーバトル カードダス 一部セミコンプ まとめ売り",
+   "price": 222222,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m40468885157_1.jpg?1788595298",
+   "seller_id": "669510740",
+   "condition": "Like new",
+   "listed_at": "2026-09-05T08:01:38+09:00",
+   "detected_at": "2026-09-05T09:16:38+00:00",
+   "lag_seconds": 36900,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m60471380435",
+   "url": "https://jp.mercari.com/item/m60471380435",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードダス 220枚以上 大量セット まとめ売り 初期 レア",
+   "price": 140000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m60471380435_1.jpg?1788596777",
+   "seller_id": "396709689",
+   "condition": "Fair",
+   "listed_at": "2026-09-05T08:26:17+09:00",
+   "detected_at": "2026-09-05T09:16:38+00:00",
+   "lag_seconds": 35421,
+   "score": 18.58,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m14646432722",
    "url": "https://jp.mercari.com/item/m14646432722",
@@ -10030,54 +10082,6 @@
    "detected_at": "2026-08-23T08:36:54+00:00",
    "lag_seconds": 32794,
    "score": 13.14,
-   "hits": [
-    "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m91912523152",
-   "url": "https://jp.mercari.com/item/m91912523152",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース スーパーシップコレクション ベスト 6種セット(シークレット有り)",
-   "price": 4580,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m91912523152_1.jpg?1784449485",
-   "seller_id": "234836648",
-   "condition": "Like new",
-   "listed_at": "2026-07-19T08:24:45+09:00",
-   "detected_at": "2026-08-23T08:36:54+00:00",
-   "lag_seconds": 3057129,
-   "score": 13.14,
-   "hits": [
-    "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m11553858382",
-   "url": "https://jp.mercari.com/item/m11553858382",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース　めちゃもふぐっとぬいぐるみ　ゴーイング・メリー号船首",
-   "price": 1499,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m11553858382_1.jpg?1782956125",
-   "seller_id": "877079613",
-   "condition": "New",
-   "listed_at": "2026-07-02T01:35:25+09:00",
-   "detected_at": "2026-08-23T08:36:54+00:00",
-   "lag_seconds": 4550489,
-   "score": 16.31,
    "hits": [
     "ゴーイング・メリー号",
     "ワンピース"
