@@ -1,6 +1,55 @@
 {
- "generated_at": "2026-09-05T12:58:29+00:00",
+ "generated_at": "2026-09-05T15:57:09+00:00",
  "entries": [
+  {
+   "id": "m41301319348",
+   "url": "https://jp.mercari.com/item/m41301319348",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "JUMP WITH JOEY 　 SKA-BA 1991年　デビュー CD日本版",
+   "price": 1200,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m41301319348_1.jpg?1788614812",
+   "seller_id": "138275456",
+   "condition": "Good",
+   "listed_at": "2026-09-05T13:26:52+09:00",
+   "detected_at": "2026-09-05T15:57:09+00:00",
+   "lag_seconds": 41417,
+   "score": 8.68,
+   "hits": [
+    "1991年"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m76381588558",
+   "url": "https://jp.mercari.com/item/m76381588558",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ONE PIECE（ワンピース）ゾロ 鬼斬り カードダス ハイパーバト",
+   "price": 99999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m76381588558_1.jpg?1788618241",
+   "seller_id": "483197115",
+   "condition": "Worn",
+   "listed_at": "2026-09-05T14:24:01+09:00",
+   "detected_at": "2026-09-05T15:56:36+00:00",
+   "lag_seconds": 37955,
+   "score": 18.58,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m84064805714",
    "url": "https://jp.mercari.com/item/m84064805714",
@@ -10044,56 +10093,6 @@
    "score": 16.31,
    "hits": [
     "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m78265965170",
-   "url": "https://jp.mercari.com/item/m78265965170",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードダス ルフィ海賊団 進水式S57",
-   "price": 4100,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m78265965170_1.jpg?1784034171",
-   "seller_id": "515597193",
-   "condition": "Worn",
-   "listed_at": "2026-07-14T13:02:51+09:00",
-   "detected_at": "2026-08-23T09:06:05+00:00",
-   "lag_seconds": 3474194,
-   "score": 17.44,
-   "hits": [
-    "ルフィ海賊団",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m15926402116",
-   "url": "https://jp.mercari.com/item/m15926402116",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードダス ルフィ海賊団 花火見物 S101",
-   "price": 26100,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m15926402116_1.jpg?1785328472",
-   "seller_id": "515597193",
-   "condition": "Good",
-   "listed_at": "2026-07-29T12:34:32+09:00",
-   "detected_at": "2026-08-23T09:06:05+00:00",
-   "lag_seconds": 2179893,
-   "score": 17.44,
-   "hits": [
-    "ルフィ海賊団",
-    "カードダス",
     "ワンピース"
    ],
    "status": "borderline",
