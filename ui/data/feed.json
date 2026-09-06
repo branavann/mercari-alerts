@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-06T03:56:40+00:00",
+ "generated_at": "2026-09-06T08:34:46+00:00",
  "entries": [
+  {
+   "id": "m93869058950",
+   "url": "https://jp.mercari.com/item/m93869058950",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ展 幽遊白書 ICカードステッカー",
+   "price": 300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93869058950_1.jpg?1788677436",
+   "seller_id": "556414011",
+   "condition": "Good",
+   "listed_at": "2026-09-06T06:50:36+09:00",
+   "detected_at": "2026-09-06T08:34:46+00:00",
+   "lag_seconds": 38650,
+   "score": 23.63,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m65721061387",
    "url": "https://jp.mercari.com/item/m65721061387",
@@ -10066,31 +10091,6 @@
    "detected_at": "2026-08-23T09:46:00+00:00",
    "lag_seconds": 1848919,
    "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m89821644314",
-   "url": "https://jp.mercari.com/item/m89821644314",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードダス　ゴムゴムの実　S03",
-   "price": 2222,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m89821644314_1.jpg?1786803766",
-   "seller_id": "917140687",
-   "condition": "Fair",
-   "listed_at": "2026-08-15T14:22:46+09:00",
-   "detected_at": "2026-08-23T09:46:00+00:00",
-   "lag_seconds": 706994,
-   "score": 12.13,
    "hits": [
     "ハイパーバトル",
     "カードダス",
