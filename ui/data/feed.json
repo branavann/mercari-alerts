@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-07T12:41:43+00:00",
+ "generated_at": "2026-09-07T17:57:38+00:00",
  "entries": [
+  {
+   "id": "m49413899789",
+   "url": "https://jp.mercari.com/item/m49413899789",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース ねじまき島の攻防　ルフィ海賊団 C-T2",
+   "price": 31400,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m49413899789_1.jpg?1785330219",
+   "seller_id": "515597193",
+   "condition": "Good",
+   "listed_at": "2026-07-29T13:03:39+09:00",
+   "detected_at": "2026-09-07T17:56:59+00:00",
+   "lag_seconds": 3506000,
+   "score": 17.29,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m15713442543",
    "url": "https://jp.mercari.com/item/m15713442543",
@@ -10090,32 +10116,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m55530690568",
-   "url": "https://jp.mercari.com/item/m55530690568",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピースカードダス ハイパーバトル ルフィ海賊団 S120 集結！",
-   "price": 12000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55530690568_1.jpg?1787479954",
-   "seller_id": "851893122",
-   "condition": "Good",
-   "listed_at": "2026-08-23T10:12:34+09:00",
-   "detected_at": "2026-08-23T10:44:46+00:00",
-   "lag_seconds": 34332,
-   "score": 28.86,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
