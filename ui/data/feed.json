@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-08T21:43:07+00:00",
+ "generated_at": "2026-09-08T23:42:43+00:00",
  "entries": [
+  {
+   "id": "m92756689016",
+   "url": "https://jp.mercari.com/item/m92756689016",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【希少】 ワンピース ハイパーバトル カードダス 王者の財宝 KB-01 ルフィ",
+   "price": 30000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m92756689016_1.jpg?1788904461",
+   "seller_id": "609662137",
+   "condition": "Good",
+   "listed_at": "2026-09-08T21:54:21+09:00",
+   "detected_at": "2026-09-08T23:42:21+00:00",
+   "lag_seconds": 38880,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m94221170774",
    "url": "https://jp.mercari.com/item/m94221170774",
@@ -10083,32 +10109,6 @@
    "score": 15.98,
    "hits": [
     "ルフィ海賊団",
-    "カードゲーム",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m18800813387",
-   "url": "https://jp.mercari.com/item/m18800813387",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "旧裏　ワンピース カードダス　 ハイパーバトル　エース",
-   "price": 1200,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m18800813387_1.jpg?1787393912",
-   "seller_id": "699934503",
-   "condition": "Good",
-   "listed_at": "2026-08-22T10:18:32+09:00",
-   "detected_at": "2026-08-23T10:44:46+00:00",
-   "lag_seconds": 120374,
-   "score": 15.46,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
     "カードゲーム",
     "ワンピース"
    ],
