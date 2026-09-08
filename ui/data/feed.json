@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-09-08T11:43:08+00:00",
+ "generated_at": "2026-09-08T15:23:19+00:00",
  "entries": [
+  {
+   "id": "m93771274712",
+   "url": "https://jp.mercari.com/item/m93771274712",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年43号　スラムダンク表紙号 SLAM DUNK表紙号",
+   "price": 9999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93771274712_1.jpg?1788875646",
+   "seller_id": "314112935",
+   "condition": "Fair",
+   "listed_at": "2026-09-08T13:54:06+09:00",
+   "detected_at": "2026-09-08T15:23:19+00:00",
+   "lag_seconds": 37753,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m40089075966",
+   "url": "https://jp.mercari.com/item/m40089075966",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "✨美品✨ワンピース　ハイパーバトル　カードゲーム　初期　ルフィ海賊団　花火見物",
+   "price": 31000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m40089075966_1.jpg?1786786132",
+   "seller_id": "252462885",
+   "condition": "Like new",
+   "listed_at": "2026-08-15T09:28:52+09:00",
+   "detected_at": "2026-09-08T15:22:38+00:00",
+   "lag_seconds": 2127226,
+   "score": 17.01,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m98150881088",
    "url": "https://jp.mercari.com/item/m98150881088",
@@ -10059,55 +10109,6 @@
    "hits": [
     "ハイパーバトル",
     "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m14577659202",
-   "url": "https://jp.mercari.com/item/m14577659202",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピースハイパーバトルクリークS36",
-   "price": 4700,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m14577659202_1.jpg?1778562913",
-   "seller_id": "657747090",
-   "condition": "Good",
-   "listed_at": "2026-05-12T05:15:13+09:00",
-   "detected_at": "2026-08-23T10:44:46+00:00",
-   "lag_seconds": 8951373,
-   "score": 11.9,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m74409650799",
-   "url": "https://jp.mercari.com/item/m74409650799",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース ハイパーバトルカードルフィ 海賊の神髄",
-   "price": 1150,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m74409650799_1.jpg?1784654891",
-   "seller_id": "772885432",
-   "condition": "Good",
-   "listed_at": "2026-07-21T17:26:01+09:00",
-   "detected_at": "2026-08-23T10:44:46+00:00",
-   "lag_seconds": 2859525,
-   "score": 12.95,
-   "hits": [
-    "ハイパーバトル",
-    "カードゲーム",
     "ワンピース"
    ],
    "status": "borderline",
