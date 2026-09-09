@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-09T16:32:04+00:00",
+ "generated_at": "2026-09-09T19:30:54+00:00",
  "entries": [
+  {
+   "id": "m22227946160",
+   "url": "https://jp.mercari.com/item/m22227946160",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年44号",
+   "price": 1299,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m22227946160_1.jpg?1784469540",
+   "seller_id": "541470184",
+   "condition": "Poor",
+   "listed_at": "2026-07-19T13:59:00+09:00",
+   "detected_at": "2026-09-09T19:30:54+00:00",
+   "lag_seconds": 4545114,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m31613798314",
    "url": "https://jp.mercari.com/item/m31613798314",
@@ -10090,31 +10115,6 @@
    "score": 14.93,
    "hits": [
     "ルフィ海賊団",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m79113871863",
-   "url": "https://jp.mercari.com/item/m79113871863",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース　カードダス　ハイパーバトル　アラバスタ編まとめ売り",
-   "price": 6000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m79113871863_1.jpg?1787396884",
-   "seller_id": "799309624",
-   "condition": "Good",
-   "listed_at": "2026-08-22T11:08:04+09:00",
-   "detected_at": "2026-08-23T11:03:30+00:00",
-   "lag_seconds": 118526,
-   "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
     "ワンピース"
    ],
    "status": "borderline",
