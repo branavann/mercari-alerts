@@ -1,6 +1,33 @@
 {
- "generated_at": "2026-09-11T22:37:04+00:00",
+ "generated_at": "2026-09-12T00:41:54+00:00",
  "entries": [
+  {
+   "id": "m81129948541",
+   "url": "https://jp.mercari.com/item/m81129948541",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース 旧 カードゲーム C-E1 大会限定 ルフィ 海賊団　F677",
+   "price": 99800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m81129948541_1.jpg?1789169328",
+   "seller_id": "139481312",
+   "condition": "Good",
+   "listed_at": "2026-09-11T23:28:48+09:00",
+   "detected_at": "2026-09-12T00:41:32+00:00",
+   "lag_seconds": 36764,
+   "score": 22.76,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m78876708293",
    "url": "https://jp.mercari.com/item/m78876708293",
@@ -10107,31 +10134,6 @@
    "listed_at": "2026-08-14T08:52:06+09:00",
    "detected_at": "2026-08-23T13:40:41+00:00",
    "lag_seconds": 827315,
-   "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m89736891025",
-   "url": "https://jp.mercari.com/item/m89736891025",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "超美品。初期ワンピースカードダス ハイパーバトル クリスマス3枚セット",
-   "price": 14000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m89736891025_1.jpg?1786632723",
-   "seller_id": "369594389",
-   "condition": "Like new",
-   "listed_at": "2026-08-13T14:52:03+09:00",
-   "detected_at": "2026-08-23T13:40:41+00:00",
-   "lag_seconds": 892118,
    "score": 14.41,
    "hits": [
     "ハイパーバトル",
