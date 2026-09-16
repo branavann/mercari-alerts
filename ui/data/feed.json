@@ -1,6 +1,58 @@
 {
- "generated_at": "2026-09-16T05:21:48+00:00",
+ "generated_at": "2026-09-16T10:18:53+00:00",
  "entries": [
+  {
+   "id": "m84154707774",
+   "url": "https://jp.mercari.com/item/m84154707774",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードダス ハイパーバトル ルフィ海賊団 S01",
+   "price": 50000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m84154707774_1.jpg?1789545035",
+   "seller_id": "716210322",
+   "condition": "Good",
+   "listed_at": "2026-09-16T07:50:35+09:00",
+   "detected_at": "2026-09-16T10:14:35+00:00",
+   "lag_seconds": 41040,
+   "score": 19.75,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m17213221062",
+   "url": "https://jp.mercari.com/item/m17213221062",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードダス ハイパーバトル ルフィ C01",
+   "price": 300000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m17213221062_1.jpg?1789545006",
+   "seller_id": "716210322",
+   "condition": "Fair",
+   "listed_at": "2026-09-16T07:50:06+09:00",
+   "detected_at": "2026-09-16T10:14:35+00:00",
+   "lag_seconds": 41069,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m15305399043",
    "url": "https://jp.mercari.com/item/m15305399043",
@@ -10118,56 +10170,6 @@
    "score": 16.22,
    "hits": [
     "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m64066191467",
-   "url": "https://jp.mercari.com/item/m64066191467",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "PSA10 ワンピース カードダス ロビン CCG ハイパーバトル 鑑定",
-   "price": 30000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m64066191467_1.jpg?1787260295",
-   "seller_id": "168550015",
-   "condition": "Good",
-   "listed_at": "2026-08-20T21:11:35+09:00",
-   "detected_at": "2026-08-23T17:36:52+00:00",
-   "lag_seconds": 278717,
-   "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m23184659648",
-   "url": "https://jp.mercari.com/item/m23184659648",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "PSA10 ワンピース ハイパーバトル カードダス チュウ カード 鑑定品",
-   "price": 15000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m23184659648_1.jpg?1787143209",
-   "seller_id": "168550015",
-   "condition": "Good",
-   "listed_at": "2026-08-19T12:35:50+09:00",
-   "detected_at": "2026-08-23T17:36:52+00:00",
-   "lag_seconds": 396062,
-   "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
     "ワンピース"
    ],
    "status": "borderline",
