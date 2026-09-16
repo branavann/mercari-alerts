@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-15T22:15:52+00:00",
+ "generated_at": "2026-09-16T00:42:48+00:00",
  "entries": [
+  {
+   "id": "m59434602966",
+   "url": "https://jp.mercari.com/item/m59434602966",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "【良品:未剥がし】ワンピース ルフィ海賊団 カードダス　冒険の始まり② S75",
+   "price": 36980,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m59434602966_1.jpg?1789515207",
+   "seller_id": "447913423",
+   "condition": "Good",
+   "listed_at": "2026-09-15T23:33:27+09:00",
+   "detected_at": "2026-09-16T00:42:28+00:00",
+   "lag_seconds": 36541,
+   "score": 17.84,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m53728278122",
    "url": "https://jp.mercari.com/item/m53728278122",
@@ -10137,31 +10163,6 @@
    "score": 11.56,
    "hits": [
     "ルフィ海賊団"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m81593085474",
-   "url": "https://jp.mercari.com/item/m81593085474",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "PSA10 ナミ ワンピース カードダス ハイパーバトル 王国の復興",
-   "price": 52000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m81593085474_1.jpg?1787137495",
-   "seller_id": "168550015",
-   "condition": "Good",
-   "listed_at": "2026-07-30T14:03:19+09:00",
-   "detected_at": "2026-08-23T17:02:53+00:00",
-   "lag_seconds": 2116774,
-   "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
    ],
    "status": "borderline",
    "deal": false,
