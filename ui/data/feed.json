@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-17T15:04:11+00:00",
+ "generated_at": "2026-09-17T19:04:31+00:00",
  "entries": [
+  {
+   "id": "m62435774757",
+   "url": "https://jp.mercari.com/item/m62435774757",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "カードダスEX ハイパーバトル ワンピース グランドボックス",
+   "price": 120000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m62435774757_1.jpg?1789657283",
+   "seller_id": "463541711",
+   "condition": "Like new",
+   "listed_at": "2026-09-17T15:01:23+09:00",
+   "detected_at": "2026-09-17T19:04:23+00:00",
+   "lag_seconds": 46980,
+   "score": 20.49,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m96499074353",
    "url": "https://jp.mercari.com/item/m96499074353",
@@ -10156,32 +10182,6 @@
    "listed_at": "2026-08-22T09:14:36+09:00",
    "detected_at": "2026-08-23T21:37:54+00:00",
    "lag_seconds": 163398,
-   "score": 15.46,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "カードゲーム",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m72822932380",
-   "url": "https://jp.mercari.com/item/m72822932380",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードダス　ハイパーバトル 旧裏　20枚セット",
-   "price": 4300,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m72822932380_1.jpg?1787197258",
-   "seller_id": "673210521",
-   "condition": "Good",
-   "listed_at": "2026-08-20T03:40:58+09:00",
-   "detected_at": "2026-08-23T21:37:54+00:00",
-   "lag_seconds": 356216,
    "score": 15.46,
    "hits": [
     "ハイパーバトル",
