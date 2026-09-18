@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-18T20:00:25+00:00",
+ "generated_at": "2026-09-18T22:32:16+00:00",
  "entries": [
+  {
+   "id": "m77144063737",
+   "url": "https://jp.mercari.com/item/m77144063737",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース ハイパーバトル ミホーク 一刀両断 PSA7 4TH STAGE",
+   "price": 48000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m77144063737_1.jpg?1789770080",
+   "seller_id": "782290332",
+   "condition": "Like new",
+   "listed_at": "2026-09-18T22:21:20+09:00",
+   "detected_at": "2026-09-18T22:32:08+00:00",
+   "lag_seconds": 33048,
+   "score": 19.95,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m29905882002",
    "url": "https://jp.mercari.com/item/m29905882002",
@@ -10161,31 +10187,6 @@
    "detected_at": "2026-08-23T22:33:01+00:00",
    "lag_seconds": 3801563,
    "score": 14.41,
-   "hits": [
-    "ハイパーバトル",
-    "カードダス",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m59961078353",
-   "url": "https://jp.mercari.com/item/m59961078353",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "超美品。ワンピース カードダス 6枚セット",
-   "price": 12000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m59961078353_1.jpg?1787414941",
-   "seller_id": "369594389",
-   "condition": "New",
-   "listed_at": "2026-08-22T16:09:01+09:00",
-   "detected_at": "2026-08-23T22:33:01+00:00",
-   "lag_seconds": 141840,
-   "score": 12.13,
    "hits": [
     "ハイパーバトル",
     "カードダス",
