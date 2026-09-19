@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-19T13:28:55+00:00",
+ "generated_at": "2026-09-19T16:45:42+00:00",
  "entries": [
+  {
+   "id": "m64532050986",
+   "url": "https://jp.mercari.com/item/m64532050986",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年24号 表紙:幽遊白書",
+   "price": 5000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m64532050986_1.jpg?1789831765",
+   "seller_id": "701934906",
+   "condition": "Fair",
+   "listed_at": "2026-09-19T15:29:25+09:00",
+   "detected_at": "2026-09-19T16:45:42+00:00",
+   "lag_seconds": 36977,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m98923325611",
    "url": "https://jp.mercari.com/item/m98923325611",
@@ -10164,33 +10189,6 @@
    "hits": [
     "ルフィ海賊団",
     "冒険を求めて",
-    "カードダス",
-    "ハイパーバトル"
-   ],
-   "status": "baseline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m39225854920",
-   "url": "https://jp.mercari.com/item/m39225854920",
-   "marketplace": "mercari",
-   "alert": "c-j1",
-   "alert_label": "One Piece C-J1",
-   "name": "ワンピースカードダス　ハイパーバトル　まとめ300枚　ルフィ海賊団　冒険を求めて",
-   "price": 299999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m39225854920_1.jpg?1786350583",
-   "seller_id": "689891620",
-   "condition": "Fair",
-   "listed_at": "2026-08-03T06:57:30+09:00",
-   "detected_at": "2026-08-23T23:03:07+00:00",
-   "lag_seconds": 1818337,
-   "score": 21.46,
-   "hits": [
-    "ルフィ海賊団",
-    "冒険を求めて",
-    "ワンピースカード",
     "カードダス",
     "ハイパーバトル"
    ],
