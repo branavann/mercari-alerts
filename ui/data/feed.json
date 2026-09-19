@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-19T18:59:50+00:00",
+ "generated_at": "2026-09-19T21:26:16+00:00",
  "entries": [
+  {
+   "id": "m65424790830",
+   "url": "https://jp.mercari.com/item/m65424790830",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース ハイパーバトル　ナミ 9枚まとめ売り",
+   "price": 40000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m65424790830_1.jpg?1789853059",
+   "seller_id": "315611187",
+   "condition": "Poor",
+   "listed_at": "2026-09-19T21:24:19+09:00",
+   "detected_at": "2026-09-19T21:26:07+00:00",
+   "lag_seconds": 32508,
+   "score": 19.95,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m64532050986",
    "url": "https://jp.mercari.com/item/m64532050986",
@@ -10165,32 +10191,6 @@
     "ワンピースカード",
     "ハイパーバトル",
     "CJ1"
-   ],
-   "status": "baseline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m41475097666",
-   "url": "https://jp.mercari.com/item/m41475097666",
-   "marketplace": "mercari",
-   "alert": "c-j1",
-   "alert_label": "One Piece C-J1",
-   "name": "【限定品】ワンピース ハイパーバトル カードダス ルフィ海賊団 冒険を求めて",
-   "price": 140000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m41475097666_1.jpg?1786283733",
-   "seller_id": "602897996",
-   "condition": "Fair",
-   "listed_at": "2026-08-09T13:55:33+09:00",
-   "detected_at": "2026-08-23T23:03:07+00:00",
-   "lag_seconds": 1274854,
-   "score": 20.46,
-   "hits": [
-    "ルフィ海賊団",
-    "冒険を求めて",
-    "カードダス",
-    "ハイパーバトル"
    ],
    "status": "baseline",
    "deal": false,
