@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-20T12:10:22+00:00",
+ "generated_at": "2026-09-20T16:11:08+00:00",
  "entries": [
+  {
+   "id": "m66661166722",
+   "url": "https://jp.mercari.com/item/m66661166722",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年26号 燃える！お兄さん",
+   "price": 1222,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m66661166722_1.jpg?1786712531",
+   "seller_id": "495041784",
+   "condition": "Good",
+   "listed_at": "2026-08-14T13:02:11+09:00",
+   "detected_at": "2026-09-20T16:11:08+00:00",
+   "lag_seconds": 3240537,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m43694696661",
    "url": "https://jp.mercari.com/item/m43694696661",
@@ -10171,30 +10196,6 @@
    "seller_id": "737499243",
    "condition": "Fair",
    "listed_at": "2025-04-09T13:14:55+09:00",
-   "detected_at": "2026-08-24T01:57:55+00:00",
-   "lag_seconds": null,
-   "score": 17.21,
-   "hits": [
-    "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "yjm9ppHw74MEpHqUwPK9nV",
-   "url": "https://jp.mercari.com/item/yjm9ppHw74MEpHqUwPK9nV",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【中古】「非常に良い」一番くじ ワンピース~Change of Generation~ ラストワン賞 ゴーイング・メリー号フィギュア 限定カラーver.[単品]",
-   "price": 38970,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JRPqSLjfDp7T6xcNPcDb7.jpg@webp",
-   "seller_id": "737499243",
-   "condition": "Good",
-   "listed_at": "2025-04-24T17:35:12+09:00",
    "detected_at": "2026-08-24T01:57:55+00:00",
    "lag_seconds": null,
    "score": 17.21,
