@@ -1,6 +1,59 @@
 {
- "generated_at": "2026-09-20T01:30:25+00:00",
+ "generated_at": "2026-09-20T06:55:37+00:00",
  "entries": [
+  {
+   "id": "m44013399922",
+   "url": "https://jp.mercari.com/item/m44013399922",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース　カードダス　2000年春東映アニメフェア　プロモ　旧 前売り　来場者",
+   "price": 66000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m44013399922_1.jpg?1789869655",
+   "seller_id": "959985216",
+   "condition": "New",
+   "listed_at": "2026-09-20T02:00:55+09:00",
+   "detected_at": "2026-09-20T06:55:25+00:00",
+   "lag_seconds": 50070,
+   "score": 22.36,
+   "hits": [
+    "ルフィ海賊団",
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m97044429200",
+   "url": "https://jp.mercari.com/item/m97044429200",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース ハイパーバトル PSA10 C05 ルフィの帽子 麦わら帽子",
+   "price": 900000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m97044429200_1.jpg?1789875430",
+   "seller_id": "782290332",
+   "condition": "Like new",
+   "listed_at": "2026-09-20T03:34:48+09:00",
+   "detected_at": "2026-09-20T06:55:25+00:00",
+   "lag_seconds": 44437,
+   "score": 19.95,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m76549459698",
    "url": "https://jp.mercari.com/item/m76549459698",
@@ -10143,55 +10196,6 @@
    "score": 11.56,
    "hits": [
     "ルフィ海賊団"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m55018185712",
-   "url": "https://jp.mercari.com/item/m55018185712",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース ハイパーバトル ルフィ 未来の海賊王",
-   "price": 179999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55018185712_1.jpg?1786348473",
-   "seller_id": "415527179",
-   "condition": "Fair",
-   "listed_at": "2026-08-10T07:54:33+09:00",
-   "detected_at": "2026-08-23T23:31:22+00:00",
-   "lag_seconds": 1211809,
-   "score": 11.9,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m32051194457",
-   "url": "https://jp.mercari.com/item/m32051194457",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2 (Going Merry)",
-   "name": "ワンピース カードゲーム ナミ 2枚セット",
-   "price": 4700,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m32051194457_1.jpg?1787312819",
-   "seller_id": "672385162",
-   "condition": "Good",
-   "listed_at": "2026-08-21T11:46:59+09:00",
-   "detected_at": "2026-08-23T23:31:22+00:00",
-   "lag_seconds": 247463,
-   "score": 10.93,
-   "hits": [
-    "ハイパーバトル",
-    "カードゲーム",
-    "ワンピース"
    ],
    "status": "borderline",
    "deal": false,
