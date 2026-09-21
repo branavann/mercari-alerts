@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-21T19:17:35+00:00",
+ "generated_at": "2026-09-21T22:46:10+00:00",
  "entries": [
+  {
+   "id": "m30771266475",
+   "url": "https://jp.mercari.com/item/m30771266475",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース ナミ 海賊専門の泥棒 カード BANDAI　ハイパーバトル　旧裏",
+   "price": 90000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m30771266475_1.jpg?1790023014",
+   "seller_id": "466460676",
+   "condition": "New",
+   "listed_at": "2026-09-21T20:36:54+09:00",
+   "detected_at": "2026-09-21T22:46:02+00:00",
+   "lag_seconds": 40148,
+   "score": 19.95,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m79172719567",
    "url": "https://jp.mercari.com/item/m79172719567",
@@ -10183,33 +10209,6 @@
    "lag_seconds": 41572,
    "score": 18.04,
    "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m15150559161",
-   "url": "https://jp.mercari.com/item/m15150559161",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【美品】ワンピース　ナミルフィ海賊団（No.S01） 「海賊の宴」",
-   "price": 49800,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m15150559161_1.jpg?1787559701",
-   "seller_id": "661091972",
-   "condition": "Good",
-   "listed_at": "2026-08-24T08:21:41+09:00",
-   "detected_at": "2026-08-24T09:06:40+00:00",
-   "lag_seconds": 35099,
-   "score": 22.76,
-   "hits": [
-    "ルフィ海賊団",
     "ハイパーバトル",
     "ワンピース",
     "カードダス",
