@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-20T23:23:46+00:00",
+ "generated_at": "2026-09-21T01:27:23+00:00",
  "entries": [
+  {
+   "id": "m78456068699",
+   "url": "https://jp.mercari.com/item/m78456068699",
+   "marketplace": "mercari",
+   "alert": "op-hyperbattle-ce2",
+   "alert_label": "One Piece Hyper Battle C-E2",
+   "name": "ワンピース カードゲーム 限定パック",
+   "price": 350000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m78456068699_1.jpg?1789951314",
+   "seller_id": "618674340",
+   "condition": "Good",
+   "listed_at": "2026-09-21T00:41:54+09:00",
+   "detected_at": "2026-09-21T01:27:14+00:00",
+   "lag_seconds": 35120,
+   "score": 18.04,
+   "hits": [
+    "ハイパーバトル",
+    "ワンピース",
+    "カードダス",
+    "神経質な方"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m84702699894",
    "url": "https://jp.mercari.com/item/m84702699894",
@@ -10178,30 +10204,6 @@
    "listed_at": "2026-08-15T14:51:20+09:00",
    "detected_at": "2026-08-24T01:57:55+00:00",
    "lag_seconds": 763595,
-   "score": 17.21,
-   "hits": [
-    "ゴーイング・メリー号",
-    "ワンピース"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JVAC6aSumu2rLBQqRKLiH",
-   "url": "https://jp.mercari.com/item/2JVAC6aSumu2rLBQqRKLiH",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "フィギュア 超合金 ゴーイング・メリー号 -ONE PIECE アニメ25周年 Memorial edition- 「ワンピース」【10日以内発送】",
-   "price": 37523,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JVZo4jqXnRgthTV4q9Eeb.jpg@webp",
-   "seller_id": "228071917",
-   "condition": "Good",
-   "listed_at": "2026-08-09T18:36:23+09:00",
-   "detected_at": "2026-08-24T01:57:55+00:00",
-   "lag_seconds": 1268492,
    "score": 17.21,
    "hits": [
     "ゴーイング・メリー号",
