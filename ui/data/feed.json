@@ -1,6 +1,29 @@
 {
- "generated_at": "2026-09-22T06:49:11+00:00",
+ "generated_at": "2026-09-22T12:29:47+00:00",
  "entries": [
+  {
+   "id": "m55617815062",
+   "url": "https://jp.mercari.com/item/m55617815062",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "1991年少年ジャンプ増刊WinterSpecial 岩泉舞 岸大武郎バスタード",
+   "price": 3480,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55617815062_1.jpg?1782132577",
+   "seller_id": "504966508",
+   "condition": "Good",
+   "listed_at": "2026-06-22T12:49:37+09:00",
+   "detected_at": "2026-09-22T12:29:47+00:00",
+   "lag_seconds": 7980010,
+   "score": 8.68,
+   "hits": [
+    "1991年"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m16418693546",
    "url": "https://jp.mercari.com/item/m16418693546",
@@ -10189,31 +10212,6 @@
     "ゴーイング・メリー号",
     "ワンピース",
     "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m28563349175",
-   "url": "https://jp.mercari.com/item/m28563349175",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース 麦わら航海記 カード 3枚セット",
-   "price": 30000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m28563349175_1.jpg?1787583002",
-   "seller_id": "544190666",
-   "condition": "Worn",
-   "listed_at": "2026-08-24T14:50:02+09:00",
-   "detected_at": "2026-08-24T15:03:50+00:00",
-   "lag_seconds": 33228,
-   "score": 16.39,
-   "hits": [
-    "ルフィ海賊団",
-    "出航",
-    "ワンピース"
    ],
    "status": "borderline",
    "deal": false,
