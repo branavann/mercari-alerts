@@ -44,7 +44,8 @@
       "presets": [],
       "suppress_relists": false,
       "per_query_limit": 30,
-      "price_min": 30000
+      "price_min": 30000,
+      "paused": true
     },
     {
       "name": "c-j1",
