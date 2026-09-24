@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-23T23:11:53+00:00",
+ "generated_at": "2026-09-24T01:28:16+00:00",
  "entries": [
+  {
+   "id": "m21907544522",
+   "url": "https://jp.mercari.com/item/m21907544522",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年19号　表紙:DRAGON QUEST ダイの大冒険",
+   "price": 3000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m21907544522_1.jpg?1790210467",
+   "seller_id": "627870769",
+   "condition": "Fair",
+   "listed_at": "2026-09-24T00:41:07+09:00",
+   "detected_at": "2026-09-24T01:28:16+00:00",
+   "lag_seconds": 35229,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m53376787439",
    "url": "https://jp.mercari.com/item/m53376787439",
@@ -10174,31 +10199,6 @@
     "ルフィ海賊団",
     "カードダス",
     "ハイパーバトル",
-    "ONEPIECE"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m78779449736",
-   "url": "https://jp.mercari.com/item/m78779449736",
-   "marketplace": "mercari",
-   "alert": "c-j1",
-   "alert_label": "One Piece C-J1",
-   "name": "ONE PIECE カードダス 虹の島伝説 ルフィ海賊団 S-W1",
-   "price": 15999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m78779449736_1.jpg?1787644913",
-   "seller_id": "122825039",
-   "condition": "Fair",
-   "listed_at": "2026-08-25T08:01:53+09:00",
-   "detected_at": "2026-08-25T09:02:30+00:00",
-   "lag_seconds": 36037,
-   "score": 8.47,
-   "hits": [
-    "ルフィ海賊団",
-    "カードダス",
     "ONEPIECE"
    ],
    "status": "borderline",
