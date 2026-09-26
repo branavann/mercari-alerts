@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-26T00:03:28+00:00",
+ "generated_at": "2026-09-26T05:02:09+00:00",
  "entries": [
+  {
+   "id": "m65476061678",
+   "url": "https://jp.mercari.com/item/m65476061678",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年47号 表紙幽遊白書",
+   "price": 5999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m65476061678_1.jpg?1790384153",
+   "seller_id": "314112935",
+   "condition": "Worn",
+   "listed_at": "2026-09-26T00:55:53+09:00",
+   "detected_at": "2026-09-26T05:02:09+00:00",
+   "lag_seconds": 47176,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m66243383973",
    "url": "https://jp.mercari.com/item/m66243383973",
@@ -10160,31 +10185,6 @@
    "listed_at": "2026-08-26T07:24:06+09:00",
    "detected_at": "2026-08-26T07:27:49+00:00",
    "lag_seconds": 32623,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m96893994342",
-   "url": "https://jp.mercari.com/item/m96893994342",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 20号 ろくでなしBLUES 表紙 銀剥がしあり",
-   "price": 10900,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m96893994342_1.jpg?1787728962",
-   "seller_id": "389828751",
-   "condition": "Fair",
-   "listed_at": "2026-08-26T07:22:42+09:00",
-   "detected_at": "2026-08-26T07:27:49+00:00",
-   "lag_seconds": 32707,
    "score": 27.56,
    "hits": [
     "ジャンプ1991",
