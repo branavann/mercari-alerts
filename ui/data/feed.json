@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-09-28T18:41:52+00:00",
+ "generated_at": "2026-09-28T23:33:11+00:00",
  "entries": [
+  {
+   "id": "m44579481474",
+   "url": "https://jp.mercari.com/item/m44579481474",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年51号　【新連載】アウターゾーン/ 光原伸",
+   "price": 1980,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m44579481474_1.jpg?1790636985",
+   "seller_id": "627870769",
+   "condition": "Fair",
+   "listed_at": "2026-09-28T23:09:45+09:00",
+   "detected_at": "2026-09-28T23:33:11+00:00",
+   "lag_seconds": 33806,
+   "score": 30.06,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ",
+    "年5"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m76465490342",
    "url": "https://jp.mercari.com/item/m76465490342",
@@ -10154,33 +10180,6 @@
     "5号"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m11374477868",
-   "url": "https://jp.mercari.com/item/m11374477868",
-   "marketplace": "mercari",
-   "alert": "c-j1",
-   "alert_label": "One Piece C-J1",
-   "name": "美品ONE PIECE カードダス アラバスタ王国の決戦 スターターキット",
-   "price": 33000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m11374477868_1.jpg?1786767345",
-   "seller_id": "857117199",
-   "condition": "Good",
-   "listed_at": "2026-08-15T04:15:45+09:00",
-   "detected_at": "2026-08-27T14:34:06+00:00",
-   "lag_seconds": 1106301,
-   "score": 10.33,
-   "hits": [
-    "ルフィ海賊団",
-    "ワンピースカード",
-    "カードダス",
-    "ハイパーバトル",
-    "ONEPIECE"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
