@@ -1,6 +1,55 @@
 {
- "generated_at": "2026-09-28T23:33:11+00:00",
+ "generated_at": "2026-09-29T02:45:50+00:00",
  "entries": [
+  {
+   "id": "m63014437595",
+   "url": "https://jp.mercari.com/item/m63014437595",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "NIKE Jordan 6 Retro Grapeナイキジョーダン6 25cm",
+   "price": 4500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m63014437595_1.jpg?1730962411",
+   "seller_id": "571173506",
+   "condition": "Worn",
+   "listed_at": "2024-11-07T03:17:08+09:00",
+   "detected_at": "2026-09-29T02:45:50+00:00",
+   "lag_seconds": null,
+   "score": 8.94,
+   "hits": [
+    "1991年",
+    "年5"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m14721902473",
+   "url": "https://jp.mercari.com/item/m14721902473",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年33号 表紙 ドラゴンボール",
+   "price": 25000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m14721902473_1.jpg?1786518557",
+   "seller_id": "701934906",
+   "condition": "Worn",
+   "listed_at": "2026-08-12T07:09:17+09:00",
+   "detected_at": "2026-09-29T02:45:50+00:00",
+   "lag_seconds": 4163793,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m44579481474",
    "url": "https://jp.mercari.com/item/m44579481474",
@@ -10127,57 +10176,6 @@
    "hits": [
     "1991年",
     "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m30623814892",
-   "url": "https://jp.mercari.com/item/m30623814892",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "Sumire様 リクエスト 2点 まとめ商品",
-   "price": 8500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m30623814892_1.jpg?1787814319",
-   "seller_id": "744708390",
-   "condition": "Fair",
-   "listed_at": "2026-08-27T07:05:19+09:00",
-   "detected_at": "2026-08-27T14:34:41+00:00",
-   "lag_seconds": 59362,
-   "score": 22.05,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m66613416132",
-   "url": "https://jp.mercari.com/item/m66613416132",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 15号 スーパーサイヤ人初登場 ドラゴンボール",
-   "price": 84999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m66613416132_1.jpg?1778164109",
-   "seller_id": "641920448",
-   "condition": "Worn",
-   "listed_at": "2026-05-07T14:28:29+09:00",
-   "detected_at": "2026-08-27T14:34:41+00:00",
-   "lag_seconds": 9709572,
-   "score": 30.06,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ",
-    "5号"
    ],
    "status": "match",
    "deal": false,
