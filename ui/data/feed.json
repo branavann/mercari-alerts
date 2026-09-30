@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-09-30T11:23:02+00:00",
+ "generated_at": "2026-09-30T16:56:48+00:00",
  "entries": [
+  {
+   "id": "m61424002359",
+   "url": "https://jp.mercari.com/item/m61424002359",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【ドラゴンボール】一番くじ ドラゴンボール 40th F賞 アクリルスタンド",
+   "price": 550,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m61424002359_1.jpg?1790779590",
+   "seller_id": "510629202",
+   "condition": "New",
+   "listed_at": "2026-09-30T14:46:30+09:00",
+   "detected_at": "2026-09-30T16:56:48+00:00",
+   "lag_seconds": 40218,
+   "score": 13.25,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m72453232245",
    "url": "https://jp.mercari.com/item/m72453232245",
@@ -10150,32 +10174,6 @@
     "カードダス",
     "ハイパーバトル",
     "ONEPIECE"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m42382140558",
-   "url": "https://jp.mercari.com/item/m42382140558",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【PSA9】2001 ワンピース ハイパーバトル ルフィ海賊団 #S127",
-   "price": 32222,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m42382140558_1.jpg?1778600731",
-   "seller_id": "643649907",
-   "condition": "Good",
-   "listed_at": "2026-05-12T15:45:31+09:00",
-   "detected_at": "2026-08-28T11:27:29+00:00",
-   "lag_seconds": 9348118,
-   "score": 19.2,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
    ],
    "status": "borderline",
    "deal": false,
