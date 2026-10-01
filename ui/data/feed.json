@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-01T14:30:16+00:00",
+ "generated_at": "2026-10-01T19:46:17+00:00",
  "entries": [
+  {
+   "id": "m13013175250",
+   "url": "https://jp.mercari.com/item/m13013175250",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "#205 週刊少年ジャンプ 1991年6号 スラムダンク表紙 ベジータ死す",
+   "price": 7300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m13013175250_1.jpg?1790865868",
+   "seller_id": "429800591",
+   "condition": "Worn",
+   "listed_at": "2026-10-01T14:44:28+09:00",
+   "detected_at": "2026-10-01T19:46:17+00:00",
+   "lag_seconds": 50509,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m17254878260",
    "url": "https://jp.mercari.com/item/m17254878260",
@@ -10146,31 +10171,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m56884333496",
-   "url": "https://jp.mercari.com/item/m56884333496",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 6号 スラムダンク ドラゴンボール",
-   "price": 8599,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m56884333496_1.jpg?1777777246",
-   "seller_id": "641920448",
-   "condition": "Fair",
-   "listed_at": "2026-05-03T03:00:46+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 10171846,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
