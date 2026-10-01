@@ -1,6 +1,55 @@
 {
- "generated_at": "2026-10-01T07:02:00+00:00",
+ "generated_at": "2026-10-01T14:30:16+00:00",
  "entries": [
+  {
+   "id": "m17254878260",
+   "url": "https://jp.mercari.com/item/m17254878260",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "キックオフ【初版全巻セット】 ちば拓 (ジャンプコミックセレクション版)",
+   "price": 4302,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m17254878260_1.jpg?1790208516",
+   "seller_id": "684481870",
+   "condition": "Fair",
+   "listed_at": "2026-07-08T22:51:28+09:00",
+   "detected_at": "2026-10-01T14:30:16+00:00",
+   "lag_seconds": 7346328,
+   "score": 13.25,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m80361345470",
+   "url": "https://jp.mercari.com/item/m80361345470",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【美品】週刊少年ジャンプ 1991年8号 シティーハンター表紙",
+   "price": 4000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m80361345470_1.jpg?1790848319",
+   "seller_id": "308016855",
+   "condition": "Fair",
+   "listed_at": "2026-10-01T09:51:59+09:00",
+   "detected_at": "2026-10-01T14:30:16+00:00",
+   "lag_seconds": 49097,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m59301759411",
    "url": "https://jp.mercari.com/item/m59301759411",
@@ -10114,56 +10163,6 @@
    "listed_at": "2026-05-03T03:00:46+09:00",
    "detected_at": "2026-08-28T11:31:32+00:00",
    "lag_seconds": 10171846,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m28958466657",
-   "url": "https://jp.mercari.com/item/m28958466657",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【美品】週刊少年ジャンプ展 魁!!男塾 カード",
-   "price": 2999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m28958466657_1.jpg?1787884219",
-   "seller_id": "993605068",
-   "condition": "Like new",
-   "listed_at": "2026-08-28T02:30:19+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 64873,
-   "score": 16.83,
-   "hits": [
-    "1991年",
-    "週刊少年ジャンプ",
-    "5号"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m85813966875",
-   "url": "https://jp.mercari.com/item/m85813966875",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 30号 創刊23周年記念号",
-   "price": 5100,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m85813966875_1.jpg?1786784493",
-   "seller_id": "639008796",
-   "condition": "Fair",
-   "listed_at": "2026-08-15T09:01:33+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 1164599,
    "score": 27.56,
    "hits": [
     "ジャンプ1991",
