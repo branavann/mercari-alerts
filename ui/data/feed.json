@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-09-30T21:22:18+00:00",
+ "generated_at": "2026-10-01T00:45:29+00:00",
  "entries": [
+  {
+   "id": "m34222343581",
+   "url": "https://jp.mercari.com/item/m34222343581",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【希少品】週刊少年ジャンプ 1991年44号 ドラゴンクエスト -ダイの大冒険-",
+   "price": 2222,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m34222343581_1.jpg?1790814050",
+   "seller_id": "501753621",
+   "condition": "Worn",
+   "listed_at": "2026-10-01T00:20:50+09:00",
+   "detected_at": "2026-10-01T00:45:29+00:00",
+   "lag_seconds": 33879,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m61424002359",
    "url": "https://jp.mercari.com/item/m61424002359",
@@ -10144,33 +10169,6 @@
    "score": 10.03,
    "hits": [
     "ルフィ海賊団",
-    "カードダス",
-    "ハイパーバトル",
-    "ONEPIECE"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m74594595848",
-   "url": "https://jp.mercari.com/item/m74594595848",
-   "marketplace": "mercari",
-   "alert": "c-j1",
-   "alert_label": "One Piece C-J1",
-   "name": "ワンピースカードダスハイパーバトル S57 ルフィ海賊団 進水式",
-   "price": 25000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m74594595848_1.jpg?1787884246",
-   "seller_id": "912230328",
-   "condition": "Like new",
-   "listed_at": "2026-08-28T02:30:46+09:00",
-   "detected_at": "2026-08-28T11:31:20+00:00",
-   "lag_seconds": 64834,
-   "score": 11.72,
-   "hits": [
-    "ルフィ海賊団",
-    "ワンピースカード",
     "カードダス",
     "ハイパーバトル",
     "ONEPIECE"
