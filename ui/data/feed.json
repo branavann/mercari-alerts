@@ -1,6 +1,29 @@
 {
- "generated_at": "2026-10-01T00:45:29+00:00",
+ "generated_at": "2026-10-01T07:02:00+00:00",
  "entries": [
+  {
+   "id": "m59301759411",
+   "url": "https://jp.mercari.com/item/m59301759411",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "ヤングジャンプ 増刊 ベアーズクラブ 1991年1月　レトロコミック",
+   "price": 800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m59301759411_1.jpg?1783001994",
+   "seller_id": "700601708",
+   "condition": "Fair",
+   "listed_at": "2026-07-02T14:19:54+09:00",
+   "detected_at": "2026-10-01T07:02:00+00:00",
+   "lag_seconds": 7868526,
+   "score": 8.68,
+   "hits": [
+    "1991年"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m34222343581",
    "url": "https://jp.mercari.com/item/m34222343581",
@@ -10148,32 +10171,6 @@
     "週刊少年ジャンプ"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m71793121353",
-   "url": "https://jp.mercari.com/item/m71793121353",
-   "marketplace": "mercari",
-   "alert": "c-j1",
-   "alert_label": "One Piece C-J1",
-   "name": "ONE PIECE カードダス ハイパーバトル 偉大なる航路への挑戦 ホロ",
-   "price": 30000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m71793121353_1.jpg?1787884330",
-   "seller_id": "912230328",
-   "condition": "Like new",
-   "listed_at": "2026-08-28T02:32:10+09:00",
-   "detected_at": "2026-08-28T11:31:20+00:00",
-   "lag_seconds": 64750,
-   "score": 10.03,
-   "hits": [
-    "ルフィ海賊団",
-    "カードダス",
-    "ハイパーバトル",
-    "ONEPIECE"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
