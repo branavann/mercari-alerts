@@ -1,6 +1,29 @@
 {
- "generated_at": "2026-10-02T11:01:08+00:00",
+ "generated_at": "2026-10-02T16:39:11+00:00",
  "entries": [
+  {
+   "id": "m80762794897",
+   "url": "https://jp.mercari.com/item/m80762794897",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【初版】SLAM DUNK 1巻 スラムダンク 井上雄彦 1991年 第1刷",
+   "price": 13000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m80762794897_1.jpg?1790941143",
+   "seller_id": "809855780",
+   "condition": "Poor",
+   "listed_at": "2026-10-02T11:39:03+09:00",
+   "detected_at": "2026-10-02T16:39:11+00:00",
+   "lag_seconds": 50408,
+   "score": 8.68,
+   "hits": [
+    "1991年"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m93274307538",
    "url": "https://jp.mercari.com/item/m93274307538",
@@ -10142,32 +10165,6 @@
     "ジャンプ1991",
     "1991年",
     "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m70720157001",
-   "url": "https://jp.mercari.com/item/m70720157001",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年35号 アイルトン・セナ表紙",
-   "price": 3999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m70720157001_1.jpg?1787909019",
-   "seller_id": "952935172",
-   "condition": "Good",
-   "listed_at": "2026-08-28T09:23:39+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 40073,
-   "score": 30.06,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ",
-    "5号"
    ],
    "status": "match",
    "deal": false,
