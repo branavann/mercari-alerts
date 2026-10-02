@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-02T16:39:11+00:00",
+ "generated_at": "2026-10-02T21:00:48+00:00",
  "entries": [
+  {
+   "id": "m86787883202",
+   "url": "https://jp.mercari.com/item/m86787883202",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ展 幽遊白書 ICカードステッカー",
+   "price": 1499,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m86787883202_1.jpg?1790971350",
+   "seller_id": "153069213",
+   "condition": "Fair",
+   "listed_at": "2026-10-02T20:02:30+09:00",
+   "detected_at": "2026-10-02T21:00:48+00:00",
+   "lag_seconds": 35898,
+   "score": 23.63,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m80762794897",
    "url": "https://jp.mercari.com/item/m80762794897",
@@ -10143,31 +10168,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m84725866564",
-   "url": "https://jp.mercari.com/item/m84725866564",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 全号セット",
-   "price": 522000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m84725866564_1.jpg?1782031519",
-   "seller_id": "122841316",
-   "condition": "Poor",
-   "listed_at": "2026-06-21T08:45:19+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 5917573,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
