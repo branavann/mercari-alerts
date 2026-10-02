@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-02T04:58:21+00:00",
+ "generated_at": "2026-10-02T11:01:08+00:00",
  "entries": [
+  {
+   "id": "m93274307538",
+   "url": "https://jp.mercari.com/item/m93274307538",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年 8号 シティハンター表紙",
+   "price": 4000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93274307538_1.jpg?1786785573",
+   "seller_id": "639008796",
+   "condition": "Fair",
+   "listed_at": "2026-08-15T09:19:33+09:00",
+   "detected_at": "2026-10-02T11:01:08+00:00",
+   "lag_seconds": 4185695,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m13013175250",
    "url": "https://jp.mercari.com/item/m13013175250",
@@ -10146,31 +10171,6 @@
    ],
    "status": "match",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m67953372876",
-   "url": "https://jp.mercari.com/item/m67953372876",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 41号",
-   "price": 900,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m67953372876_1.jpg?1787186026",
-   "seller_id": "879737386",
-   "condition": "Worn",
-   "listed_at": "2026-08-20T00:33:46+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 763066,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
