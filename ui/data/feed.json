@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-02T21:00:48+00:00",
+ "generated_at": "2026-10-03T00:31:29+00:00",
  "entries": [
+  {
+   "id": "m18898889986",
+   "url": "https://jp.mercari.com/item/m18898889986",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年39号",
+   "price": 700,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m18898889986_1.jpg?1790983403",
+   "seller_id": "914944714",
+   "condition": "Fair",
+   "listed_at": "2026-10-02T23:23:23+09:00",
+   "detected_at": "2026-10-03T00:31:29+00:00",
+   "lag_seconds": 36486,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m86787883202",
    "url": "https://jp.mercari.com/item/m86787883202",
@@ -10144,30 +10169,6 @@
    ],
    "status": "borderline",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m51518066664",
-   "url": "https://jp.mercari.com/item/m51518066664",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "月刊少年ジャンプ 1991年3月号 銀はがし未削り ふたば君チェンジ",
-   "price": 1500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m51518066664_1.jpg?1785988520",
-   "seller_id": "545918408",
-   "condition": "Fair",
-   "listed_at": "2026-08-06T03:55:20+09:00",
-   "detected_at": "2026-08-28T11:31:32+00:00",
-   "lag_seconds": 1960572,
-   "score": 19.68,
-   "hits": [
-    "ジャンプ1991",
-    "1991年"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
