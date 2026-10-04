@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-04T12:29:23+00:00",
+ "generated_at": "2026-10-04T16:57:50+00:00",
  "entries": [
+  {
+   "id": "m77316798965",
+   "url": "https://jp.mercari.com/item/m77316798965",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年29号 表紙 ジョジョの奇妙な冒険",
+   "price": 3200,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m77316798965_1.jpg?1791121915",
+   "seller_id": "701934906",
+   "condition": "Poor",
+   "listed_at": "2026-10-04T13:51:55+09:00",
+   "detected_at": "2026-10-04T16:57:50+00:00",
+   "lag_seconds": 43555,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m71239617372",
    "url": "https://jp.mercari.com/item/m71239617372",
@@ -10129,32 +10154,6 @@
    "detected_at": "2026-08-29T15:14:16+00:00",
    "lag_seconds": 6136094,
    "score": 16.35,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m72057465192",
-   "url": "https://jp.mercari.com/item/m72057465192",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース カードダス ハイパーバトル ルフィ海賊団　海賊の宴　S01",
-   "price": 44999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m72057465192_1.jpg?1788004804",
-   "seller_id": "484887707",
-   "condition": "Fair",
-   "listed_at": "2026-08-29T12:00:04+09:00",
-   "detected_at": "2026-08-29T15:14:16+00:00",
-   "lag_seconds": 44052,
-   "score": 19.75,
    "hits": [
     "ルフィ海賊団",
     "ハイパーバトル",
