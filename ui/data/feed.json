@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-05T02:03:35+00:00",
+ "generated_at": "2026-10-05T09:07:25+00:00",
  "entries": [
+  {
+   "id": "m68084577458",
+   "url": "https://jp.mercari.com/item/m68084577458",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年9号まじかるタルるートくん:表紙　ダイの大冒険:巻頭",
+   "price": 1999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m68084577458_1.jpg?1791178818",
+   "seller_id": "652842010",
+   "condition": "Fair",
+   "listed_at": "2026-10-05T05:40:18+09:00",
+   "detected_at": "2026-10-05T09:07:25+00:00",
+   "lag_seconds": 44827,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m46641495448",
    "url": "https://jp.mercari.com/item/m46641495448",
@@ -10129,32 +10154,6 @@
     "ワンピース",
     "カードダス",
     "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m83755582049",
-   "url": "https://jp.mercari.com/item/m83755582049",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【PSA10 】ルフィ海賊団 2001 ワンピース 雪見酒 ホロ【特別セール中】",
-   "price": 148888,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m83755582049_1.jpg?1787324365",
-   "seller_id": "729559379",
-   "condition": "Like new",
-   "listed_at": "2026-07-09T01:12:26+09:00",
-   "detected_at": "2026-08-29T23:32:32+00:00",
-   "lag_seconds": 4519206,
-   "score": 17.29,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
    ],
    "status": "borderline",
    "deal": false,
