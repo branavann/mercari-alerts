@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-10-07T02:25:08+00:00",
+ "generated_at": "2026-10-07T09:07:25+00:00",
  "entries": [
+  {
+   "id": "m32484477693",
+   "url": "https://jp.mercari.com/item/m32484477693",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "1991年 週刊少年ジャンプ第27号",
+   "price": 1250,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m32484477693_1.jpg?1791342911",
+   "seller_id": "984564752",
+   "condition": "Poor",
+   "listed_at": "2026-10-07T03:15:11+09:00",
+   "detected_at": "2026-10-07T09:07:25+00:00",
+   "lag_seconds": 53534,
+   "score": 16.56,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m77115620458",
    "url": "https://jp.mercari.com/item/m77115620458",
@@ -10121,32 +10145,6 @@
     "ハイパーバトル",
     "ワンピース",
     "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m95262578423",
-   "url": "https://jp.mercari.com/item/m95262578423",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【極美品】ワンピース カードダス ゾロ くいなセット",
-   "price": 50000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m95262578423_1.jpg?1788093552",
-   "seller_id": "450494337",
-   "condition": "Good",
-   "listed_at": "2026-08-30T12:39:12+09:00",
-   "detected_at": "2026-08-30T13:17:10+00:00",
-   "lag_seconds": 34678,
-   "score": 18.58,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
    ],
    "status": "borderline",
    "deal": false,
