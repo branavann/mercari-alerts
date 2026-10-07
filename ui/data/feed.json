@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-10-07T16:32:07+00:00",
+ "generated_at": "2026-10-07T21:36:47+00:00",
  "entries": [
+  {
+   "id": "m16890202970",
+   "url": "https://jp.mercari.com/item/m16890202970",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年7号ドラゴンボールポスタースラムダンク幽遊白書",
+   "price": 4980,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m16890202970_1.jpg?1791401072",
+   "seller_id": "481753663",
+   "condition": "Fair",
+   "listed_at": "2026-10-07T19:24:32+09:00",
+   "detected_at": "2026-10-07T21:36:47+00:00",
+   "lag_seconds": 40335,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m85049129705",
+   "url": "https://jp.mercari.com/item/m85049129705",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年19号幽遊白書飛影蔵馬初登場ドラゴンボールスラムダンク",
+   "price": 2480,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m85049129705_1.jpg?1791399551",
+   "seller_id": "481753663",
+   "condition": "Fair",
+   "listed_at": "2026-10-07T18:59:11+09:00",
+   "detected_at": "2026-10-07T21:36:47+00:00",
+   "lag_seconds": 41856,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m32484477693",
    "url": "https://jp.mercari.com/item/m32484477693",
@@ -10095,58 +10145,6 @@
     "週刊少年ジャンプ"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m88672729179",
-   "url": "https://jp.mercari.com/item/m88672729179",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース カードダス ハイパーバトル S101 ルフィ海賊団 8328",
-   "price": 48000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m88672729179_1.jpg?1788081201",
-   "seller_id": "642250730",
-   "condition": "Like new",
-   "listed_at": "2026-08-30T09:13:21+09:00",
-   "detected_at": "2026-08-30T13:17:10+00:00",
-   "lag_seconds": 47029,
-   "score": 19.75,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m24668833894",
-   "url": "https://jp.mercari.com/item/m24668833894",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース●カードダスハイパーバトル●グランドボックス2●フルコンプ60種セット",
-   "price": 140000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m24668833894_1.jpg?1786249844",
-   "seller_id": "387171175",
-   "condition": "Fair",
-   "listed_at": "2026-08-09T04:30:44+09:00",
-   "detected_at": "2026-08-30T13:17:10+00:00",
-   "lag_seconds": 1878386,
-   "score": 18.8,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
