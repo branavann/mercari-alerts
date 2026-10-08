@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-08T01:20:33+00:00",
+ "generated_at": "2026-10-08T07:53:56+00:00",
  "entries": [
+  {
+   "id": "m65681933476",
+   "url": "https://jp.mercari.com/item/m65681933476",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年24号幽遊白書表紙ドラゴンボールスラムダンク電影少女",
+   "price": 3380,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m65681933476_1.jpg?1791443716",
+   "seller_id": "481753663",
+   "condition": "Worn",
+   "listed_at": "2026-10-08T07:15:16+09:00",
+   "detected_at": "2026-10-08T07:53:56+00:00",
+   "lag_seconds": 34720,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m16890202970",
    "url": "https://jp.mercari.com/item/m16890202970",
@@ -10119,30 +10144,6 @@
     "1991年",
     "週刊少年ジャンプ",
     "5号"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m20120936446",
-   "url": "https://jp.mercari.com/item/m20120936446",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "C-1 希少 激レア 週刊少年ジャンプ F1クラブGP Jr. スロットカー",
-   "price": 5600,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m20120936446_1.jpg?1776407971",
-   "seller_id": "333139876",
-   "condition": "Fair",
-   "listed_at": "2026-04-17T06:39:31+09:00",
-   "detected_at": "2026-08-30T13:18:43+00:00",
-   "lag_seconds": 11720352,
-   "score": 14.83,
-   "hits": [
-    "1991年",
-    "週刊少年ジャンプ"
    ],
    "status": "match",
    "deal": false,
