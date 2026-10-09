@@ -1,6 +1,55 @@
 {
- "generated_at": "2026-10-09T19:49:10+00:00",
+ "generated_at": "2026-10-09T23:54:10+00:00",
  "entries": [
+  {
+   "id": "m99006631990",
+   "url": "https://jp.mercari.com/item/m99006631990",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年 7号",
+   "price": 4500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m99006631990_1.jpg?1786786046",
+   "seller_id": "639008796",
+   "condition": "Fair",
+   "listed_at": "2026-08-15T09:27:26+09:00",
+   "detected_at": "2026-10-09T23:54:10+00:00",
+   "lag_seconds": 4836404,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "2JXvUw3kzwR5Q8XVfXpFSn",
+   "url": "https://jp.mercari.com/item/2JXvUw3kzwR5Q8XVfXpFSn",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "1st Edition 幽遊白書 4巻 妖魔街からの挑戦状!! 冨樫義博 初版 1991年発行 集英社 ジャンプコミックス 週刊少年ジャンプ 黄金期名作バトル漫画 浦飯幽助 蔵馬 飛影 桑原和真 レトロ コレクション 610105",
+   "price": 2000,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JXvUZKcugwcJosKTKfsqw.jpg@webp",
+   "seller_id": "881643250",
+   "condition": "Fair",
+   "listed_at": "2026-10-09T21:53:25+09:00",
+   "detected_at": "2026-10-09T23:54:10+00:00",
+   "lag_seconds": 39645,
+   "score": 16.56,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m80893877753",
    "url": "https://jp.mercari.com/item/m80893877753",
@@ -10091,55 +10140,6 @@
     "神経質な方"
    ],
    "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m16685927063",
-   "url": "https://jp.mercari.com/item/m16685927063",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年14号 新ジャングルの王者ターちゃん",
-   "price": 5000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m16685927063_1.jpg?1788149407",
-   "seller_id": "765454235",
-   "condition": "Fair",
-   "listed_at": "2026-08-31T04:10:07+09:00",
-   "detected_at": "2026-08-31T07:09:59+00:00",
-   "lag_seconds": 43192,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m10054632026",
-   "url": "https://jp.mercari.com/item/m10054632026",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "スーパージャンプ 1991年1月号 集英社",
-   "price": 4999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m10054632026_1.jpg?1788149093",
-   "seller_id": "341738338",
-   "condition": "Poor",
-   "listed_at": "2026-08-31T04:04:53+09:00",
-   "detected_at": "2026-08-31T07:09:59+00:00",
-   "lag_seconds": 43506,
-   "score": 19.68,
-   "hits": [
-    "ジャンプ1991",
-    "1991年"
-   ],
-   "status": "match",
    "deal": false,
    "relist": false,
    "target_hit": false
