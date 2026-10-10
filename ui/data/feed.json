@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-10-10T20:14:51+00:00",
+ "generated_at": "2026-10-10T23:39:16+00:00",
  "entries": [
+  {
+   "id": "m10224585083",
+   "url": "https://jp.mercari.com/item/m10224585083",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "ジャンプ50周年 孫悟空 二次元彩色リペイント フィギュア",
+   "price": 80000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m10224585083_1.jpg?1791675313",
+   "seller_id": "122559362",
+   "condition": "Fair",
+   "listed_at": "2026-10-10T23:35:13+09:00",
+   "detected_at": "2026-10-10T23:39:16+00:00",
+   "lag_seconds": 32643,
+   "score": 13.25,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "2JTF3GhkTa8ioTMWKDLG9g",
    "url": "https://jp.mercari.com/item/2JTF3GhkTa8ioTMWKDLG9g",
@@ -10108,32 +10132,6 @@
     "ワンピース",
     "カードダス",
     "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m69110020432",
-   "url": "https://jp.mercari.com/item/m69110020432",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【希少】ワンピース カードダス ハイパーバトル 「ルフィ海賊団 三人の大海賊」",
-   "price": 89999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m69110020432_1.jpg?1786507807",
-   "seller_id": "446654777",
-   "condition": "Fair",
-   "listed_at": "2026-08-04T01:30:26+09:00",
-   "detected_at": "2026-08-31T15:09:05+00:00",
-   "lag_seconds": 2414319,
-   "score": 19.75,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
    ],
    "status": "borderline",
    "deal": false,
