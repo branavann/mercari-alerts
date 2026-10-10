@@ -1,6 +1,32 @@
 {
- "generated_at": "2026-10-10T05:13:47+00:00",
+ "generated_at": "2026-10-10T11:14:11+00:00",
  "entries": [
+  {
+   "id": "2JTF3GhkTa8ioTMWKDLG9g",
+   "url": "https://jp.mercari.com/item/2JTF3GhkTa8ioTMWKDLG9g",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年52号新連載アラビアンランプ・ランプ",
+   "price": 3600,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JTF3AimKPweKR67Eueknb.jpg@webp",
+   "seller_id": "0",
+   "condition": "Fair",
+   "listed_at": "2026-06-28T14:49:19+09:00",
+   "detected_at": "2026-10-10T11:14:11+00:00",
+   "lag_seconds": 9005092,
+   "score": 30.06,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ",
+    "年5"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m61378983083",
    "url": "https://jp.mercari.com/item/m61378983083",
@@ -10108,32 +10134,6 @@
     "ハイパーバトル",
     "ワンピース",
     "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m46658821540",
-   "url": "https://jp.mercari.com/item/m46658821540",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【美品】ワンピース カードダス 初期「ナミ 危険察知 C10」",
-   "price": 30000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m46658821540_1.jpg?1788185137",
-   "seller_id": "244565919",
-   "condition": "Like new",
-   "listed_at": "2026-08-31T14:05:37+09:00",
-   "detected_at": "2026-08-31T15:09:05+00:00",
-   "lag_seconds": 36208,
-   "score": 18.58,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
    ],
    "status": "borderline",
    "deal": false,
