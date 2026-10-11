@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-10-11T19:45:22+00:00",
+ "generated_at": "2026-10-11T23:13:30+00:00",
  "entries": [
+  {
+   "id": "m27446597536",
+   "url": "https://jp.mercari.com/item/m27446597536",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊ヤングジャンプ 1991年6月13日号 プロレス特集",
+   "price": 300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m27446597536_1.jpg?1791751415",
+   "seller_id": "767217337",
+   "condition": "Fair",
+   "listed_at": "2026-10-11T20:43:35+09:00",
+   "detected_at": "2026-10-11T23:13:30+00:00",
+   "lag_seconds": 41395,
+   "score": 19.68,
+   "hits": [
+    "ジャンプ1991",
+    "1991年"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m24167608936",
    "url": "https://jp.mercari.com/item/m24167608936",
@@ -10102,31 +10126,6 @@
    "listed_at": "2026-03-30T20:39:08+09:00",
    "detected_at": "2026-08-31T15:10:22+00:00",
    "lag_seconds": 13318274,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JKL6vxgdmbDg3voZRQATe",
-   "url": "https://jp.mercari.com/item/2JKL6vxgdmbDg3voZRQATe",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【中古】コミック雑誌 週刊少年ジャンプ 1991年12月2日号 No.50",
-   "price": 1600,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JKL6vwNfNPmEoBhQLqgan.webp@webp",
-   "seller_id": "0",
-   "condition": "Good",
-   "listed_at": "2026-01-05T10:58:52+09:00",
-   "detected_at": "2026-08-31T15:10:22+00:00",
-   "lag_seconds": 20610690,
    "score": 27.56,
    "hits": [
     "ジャンプ1991",
