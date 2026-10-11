@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-11T09:01:26+00:00",
+ "generated_at": "2026-10-11T15:44:02+00:00",
  "entries": [
+  {
+   "id": "m24167608936",
+   "url": "https://jp.mercari.com/item/m24167608936",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年12号 花の慶次表紙",
+   "price": 2500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m24167608936_1.jpg?1791715118",
+   "seller_id": "333857380",
+   "condition": "Fair",
+   "listed_at": "2026-10-11T10:38:38+09:00",
+   "detected_at": "2026-10-11T15:44:02+00:00",
+   "lag_seconds": 50724,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m37589575719",
    "url": "https://jp.mercari.com/item/m37589575719",
@@ -10110,31 +10135,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JMELqJnRmXE553XcU53gF",
-   "url": "https://jp.mercari.com/item/2JMELqJnRmXE553XcU53gF",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【中古】コミック雑誌 週刊少年ジャンプ 1991年8月12日号 No.34",
-   "price": 19000,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JMELqHVPuciFY6DpaKp6T.webp@webp",
-   "seller_id": "0",
-   "condition": "Good",
-   "listed_at": "2026-02-16T06:19:19+09:00",
-   "detected_at": "2026-08-31T15:10:22+00:00",
-   "lag_seconds": 16998663,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
