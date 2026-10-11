@@ -1,6 +1,33 @@
 {
- "generated_at": "2026-10-11T02:13:13+00:00",
+ "generated_at": "2026-10-11T09:01:26+00:00",
  "entries": [
+  {
+   "id": "m37589575719",
+   "url": "https://jp.mercari.com/item/m37589575719",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年 5号 1月21日特大号",
+   "price": 100000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m37589575719_1.jpg?1791685794",
+   "seller_id": "104142756",
+   "condition": "Fair",
+   "listed_at": "2026-10-11T02:29:54+09:00",
+   "detected_at": "2026-10-11T09:01:26+00:00",
+   "lag_seconds": 55892,
+   "score": 32.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ",
+    "年5",
+    "5号"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m10224585083",
    "url": "https://jp.mercari.com/item/m10224585083",
@@ -10107,33 +10134,6 @@
     "週刊少年ジャンプ"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m23651903649",
-   "url": "https://jp.mercari.com/item/m23651903649",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "1999　ワンピース　カードダス　ハイパーバトル　プロモ　C-J1 ルフィ海賊団",
-   "price": 77777,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m23651903649_1.jpg?1788188587",
-   "seller_id": "533674746",
-   "condition": "Like new",
-   "listed_at": "2026-08-31T15:03:07+09:00",
-   "detected_at": "2026-08-31T15:09:05+00:00",
-   "lag_seconds": 32758,
-   "score": 25.22,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
