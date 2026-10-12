@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-10-12T02:28:39+00:00",
+ "generated_at": "2026-10-12T09:41:24+00:00",
  "entries": [
+  {
+   "id": "m64044460487",
+   "url": "https://jp.mercari.com/item/m64044460487",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年13号　リベロの武田　美品",
+   "price": 1500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m64044460487_1.jpg?1781682660",
+   "seller_id": "462472768",
+   "condition": "Good",
+   "listed_at": "2026-06-17T07:51:00+09:00",
+   "detected_at": "2026-10-12T09:41:24+00:00",
+   "lag_seconds": 10147824,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m82740747250",
+   "url": "https://jp.mercari.com/item/m82740747250",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年 6号 表紙SLAM DUNK",
+   "price": 4999,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m82740747250_1.jpg?1791785078",
+   "seller_id": "104142756",
+   "condition": "Worn",
+   "listed_at": "2026-10-12T06:04:38+09:00",
+   "detected_at": "2026-10-12T09:41:24+00:00",
+   "lag_seconds": 45406,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m27446597536",
    "url": "https://jp.mercari.com/item/m27446597536",
@@ -10086,54 +10136,6 @@
    ],
    "status": "match",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JSMQZCtCq4pxeAhTWp7jG",
-   "url": "https://jp.mercari.com/item/2JSMQZCtCq4pxeAhTWp7jG",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "初版 絶版 (1991年3月15日 第1刷発行) 聖闘士星矢 27巻 (ジャンプコミックス) 車田正美 - Saint Seiya Manga vol.27 by Masami Kurumada",
-   "price": 4200,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JSMQN3vyxCB8FPXhJKc2d.jpg@webp",
-   "seller_id": "969407309",
-   "condition": "Fair",
-   "listed_at": "2026-06-09T01:33:06+09:00",
-   "detected_at": "2026-08-31T15:10:22+00:00",
-   "lag_seconds": 7252636,
-   "score": 8.68,
-   "hits": [
-    "1991年"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JPAdWccdxFeoFDLBosi7r",
-   "url": "https://jp.mercari.com/item/2JPAdWccdxFeoFDLBosi7r",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【中古】コミック雑誌 週刊少年ジャンプ 1991年6月24日号 No.27",
-   "price": 780,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JPAdWbWNWjhoZyk2bCLXd.webp@webp",
-   "seller_id": "0",
-   "condition": "Good",
-   "listed_at": "2026-03-30T20:39:08+09:00",
-   "detected_at": "2026-08-31T15:10:22+00:00",
-   "lag_seconds": 13318274,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
