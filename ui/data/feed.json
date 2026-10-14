@@ -1,6 +1,55 @@
 {
- "generated_at": "2026-10-14T10:31:27+00:00",
+ "generated_at": "2026-10-14T15:31:51+00:00",
  "entries": [
+  {
+   "id": "m63430609924",
+   "url": "https://jp.mercari.com/item/m63430609924",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年47号 表紙幽遊白書",
+   "price": 1799,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m63430609924_1.jpg?1791986136",
+   "seller_id": "314112935",
+   "condition": "Worn",
+   "listed_at": "2026-10-14T13:55:36+09:00",
+   "detected_at": "2026-10-14T15:31:51+00:00",
+   "lag_seconds": 38175,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m97973120405",
+   "url": "https://jp.mercari.com/item/m97973120405",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊ヤングジャンプ 1991年12号 1991年3月14日発行",
+   "price": 1300,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m97973120405_1.jpg?1791985274",
+   "seller_id": "273327708",
+   "condition": "Worn",
+   "listed_at": "2026-10-14T13:41:14+09:00",
+   "detected_at": "2026-10-14T15:31:51+00:00",
+   "lag_seconds": 39037,
+   "score": 19.68,
+   "hits": [
+    "ジャンプ1991",
+    "1991年"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m85298354662",
    "url": "https://jp.mercari.com/item/m85298354662",
@@ -10070,57 +10119,6 @@
    ],
    "status": "borderline",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m49396101425",
-   "url": "https://jp.mercari.com/item/m49396101425",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年24号 幽遊白書 当時物",
-   "price": 3700,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m49396101425_1.jpg?1786976750",
-   "seller_id": "333857380",
-   "condition": "Worn",
-   "listed_at": "2026-08-17T14:25:50+09:00",
-   "detected_at": "2026-09-02T15:20:20+00:00",
-   "lag_seconds": 1418070,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m33816026950",
-   "url": "https://jp.mercari.com/item/m33816026950",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年51号 アウターゾーン表紙 当時物",
-   "price": 2100,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m33816026950_1.jpg?1786628132",
-   "seller_id": "333857380",
-   "condition": "Poor",
-   "listed_at": "2026-08-13T13:35:32+09:00",
-   "detected_at": "2026-09-02T15:20:20+00:00",
-   "lag_seconds": 1766688,
-   "score": 30.06,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ",
-    "年5"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
