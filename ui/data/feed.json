@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-14T19:43:36+00:00",
+ "generated_at": "2026-10-14T22:42:07+00:00",
  "entries": [
+  {
+   "id": "m34498969532",
+   "url": "https://jp.mercari.com/item/m34498969532",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年47号 表紙幽遊白書",
+   "price": 1699,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m34498969532_1.jpg?1792012710",
+   "seller_id": "314112935",
+   "condition": "Worn",
+   "listed_at": "2026-10-14T21:18:30+09:00",
+   "detected_at": "2026-10-14T22:42:07+00:00",
+   "lag_seconds": 37417,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": true,
+   "target_hit": false
+  },
   {
    "id": "m63430609924",
    "url": "https://jp.mercari.com/item/m63430609924",
@@ -10085,32 +10110,6 @@
    "detected_at": "2026-09-03T06:27:01+00:00",
    "lag_seconds": 34497,
    "score": 19.75,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m10429739996",
-   "url": "https://jp.mercari.com/item/m10429739996",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ONE PIECE カードダス ハイパーバトル　4枚セット",
-   "price": 47500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m10429739996_1.jpg?1788364029",
-   "seller_id": "400006084",
-   "condition": "Good",
-   "listed_at": "2026-09-02T15:47:09+09:00",
-   "detected_at": "2026-09-02T18:52:42+00:00",
-   "lag_seconds": 43533,
-   "score": 18.26,
    "hits": [
     "ルフィ海賊団",
     "ハイパーバトル",
