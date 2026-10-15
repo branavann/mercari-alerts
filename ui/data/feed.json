@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-15T11:09:06+00:00",
+ "generated_at": "2026-10-15T15:36:42+00:00",
  "entries": [
+  {
+   "id": "m52654345048",
+   "url": "https://jp.mercari.com/item/m52654345048",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年43号 スラムダンク表紙",
+   "price": 38500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m52654345048_1.jpg?1792075501",
+   "seller_id": "514514956",
+   "condition": "Good",
+   "listed_at": "2026-10-15T14:45:01+09:00",
+   "detected_at": "2026-10-15T15:36:42+00:00",
+   "lag_seconds": 35501,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m34498969532",
    "url": "https://jp.mercari.com/item/m34498969532",
@@ -10083,32 +10108,6 @@
    "listed_at": "2026-09-03T06:08:11+09:00",
    "detected_at": "2026-09-03T06:27:01+00:00",
    "lag_seconds": 33530,
-   "score": 19.75,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JWGYNRcDdFCbVddZZ3sfT",
-   "url": "https://jp.mercari.com/item/2JWGYNRcDdFCbVddZZ3sfT",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【中古】【当時品】S01 ルフィ海賊団[海賊の宴 レア] ワンピース ONE PIECE カードダス ハイパーバトル[95]",
-   "price": 133000,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JWGYNQG2NquEXAxrhtNr8.jpg@webp",
-   "seller_id": "0",
-   "condition": "Worn",
-   "listed_at": "2026-09-03T05:52:04+09:00",
-   "detected_at": "2026-09-03T06:27:01+00:00",
-   "lag_seconds": 34497,
    "score": 19.75,
    "hits": [
     "ルフィ海賊団",
