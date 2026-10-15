@@ -1,6 +1,29 @@
 {
- "generated_at": "2026-10-15T19:25:29+00:00",
+ "generated_at": "2026-10-15T22:37:14+00:00",
  "entries": [
+  {
+   "id": "fGkogDNTUtBq8qohUsRJDa",
+   "url": "https://jp.mercari.com/item/fGkogDNTUtBq8qohUsRJDa",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "tricot COMME des GARCONS トリココムデギャルソン 1991年 日本製 オールインワン M ブラック ジャンプスーツ つなぎ TU-08001M レディース 古着",
+   "price": 22250,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JUbuED2K7NjfE4gDfFXMQ.jpg@webp",
+   "seller_id": "221858082",
+   "condition": "Good",
+   "listed_at": "2025-08-05T09:01:29+09:00",
+   "detected_at": "2026-10-15T22:37:14+00:00",
+   "lag_seconds": null,
+   "score": 8.68,
+   "hits": [
+    "1991年"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m52654345048",
    "url": "https://jp.mercari.com/item/m52654345048",
@@ -10088,32 +10111,6 @@
     "ワンピース",
     "カードダス",
     "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m81275728496",
-   "url": "https://jp.mercari.com/item/m81275728496",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース カードダス 「ルフィ海賊団 海賊の宴 S01」 ハイパーバトル",
-   "price": 64800,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m81275728496_1.jpg?1788415691",
-   "seller_id": "474469849",
-   "condition": "Good",
-   "listed_at": "2026-09-03T06:08:11+09:00",
-   "detected_at": "2026-09-03T06:27:01+00:00",
-   "lag_seconds": 33530,
-   "score": 19.75,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
    ],
    "status": "borderline",
    "deal": false,
