@@ -1,6 +1,29 @@
 {
- "generated_at": "2026-10-18T21:55:05+00:00",
+ "generated_at": "2026-10-19T00:01:30+00:00",
  "entries": [
+  {
+   "id": "m55086683660",
+   "url": "https://jp.mercari.com/item/m55086683660",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 創刊50周年記念復刻ドラゴンボール1991北斗の拳パック3",
+   "price": 13000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55086683660_1.jpg?1779598062",
+   "seller_id": "861605807",
+   "condition": "Like new",
+   "listed_at": "2026-05-24T04:47:42+09:00",
+   "detected_at": "2026-10-19T00:01:30+00:00",
+   "lag_seconds": 12802428,
+   "score": 7.89,
+   "hits": [
+    "週刊少年ジャンプ"
+   ],
+   "status": "borderline",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m36860264823",
    "url": "https://jp.mercari.com/item/m36860264823",
@@ -10068,32 +10091,6 @@
    "listed_at": "2026-09-05T00:20:52+09:00",
    "detected_at": "2026-09-05T12:57:55+00:00",
    "lag_seconds": 77823,
-   "score": 17.29,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m45628600625",
-   "url": "https://jp.mercari.com/item/m45628600625",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "確認用ワンピース カードゲーム ルフィ海賊団 S127",
-   "price": 99999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m45628600625_1.jpg?1788567138",
-   "seller_id": "657445510",
-   "condition": "Fair",
-   "listed_at": "2026-09-05T00:12:18+09:00",
-   "detected_at": "2026-09-05T12:57:55+00:00",
-   "lag_seconds": 78337,
    "score": 17.29,
    "hits": [
     "ルフィ海賊団",
