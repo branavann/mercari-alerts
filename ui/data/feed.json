@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T15:18:44+00:00",
+ "generated_at": "2026-10-20T19:30:56+00:00",
  "entries": [
   {
    "id": "m38344192471",
@@ -9906,82 +9906,6 @@
    "detected_at": "2026-09-06T03:55:59+00:00",
    "lag_seconds": 5964470,
    "score": 18.04,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m48914505726",
-   "url": "https://jp.mercari.com/item/m48914505726",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【PSA8】旧ワンピースカード ハイパーバトル S01 & S05 1999",
-   "price": 350000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m48914505726_1.jpg?1788626185",
-   "seller_id": "264194352",
-   "condition": "Like new",
-   "listed_at": "2026-09-05T16:36:25+09:00",
-   "detected_at": "2026-09-05T18:06:33+00:00",
-   "lag_seconds": 37808,
-   "score": 23.73,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m41301319348",
-   "url": "https://jp.mercari.com/item/m41301319348",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "JUMP WITH JOEY 　 SKA-BA 1991年　デビュー CD日本版",
-   "price": 1200,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m41301319348_1.jpg?1788614812",
-   "seller_id": "138275456",
-   "condition": "Good",
-   "listed_at": "2026-09-05T13:26:52+09:00",
-   "detected_at": "2026-09-05T15:57:09+00:00",
-   "lag_seconds": 41417,
-   "score": 8.68,
-   "hits": [
-    "1991年"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m76381588558",
-   "url": "https://jp.mercari.com/item/m76381588558",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ONE PIECE（ワンピース）ゾロ 鬼斬り カードダス ハイパーバト",
-   "price": 99999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m76381588558_1.jpg?1788618241",
-   "seller_id": "483197115",
-   "condition": "Worn",
-   "listed_at": "2026-09-05T14:24:01+09:00",
-   "detected_at": "2026-09-05T15:56:36+00:00",
-   "lag_seconds": 37955,
-   "score": 18.58,
    "hits": [
     "ハイパーバトル",
     "ワンピース",
