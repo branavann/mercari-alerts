@@ -1,6 +1,56 @@
 {
- "generated_at": "2026-10-21T06:04:04+00:00",
+ "generated_at": "2026-10-21T11:53:50+00:00",
  "entries": [
+  {
+   "id": "m68102359061",
+   "url": "https://jp.mercari.com/item/m68102359061",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年18号 珍遊記 ろくでなしBLUES",
+   "price": 2000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m68102359061_1.jpg?1792574001",
+   "seller_id": "553784348",
+   "condition": "Like new",
+   "listed_at": "2026-10-21T09:13:21+09:00",
+   "detected_at": "2026-10-21T11:53:50+00:00",
+   "lag_seconds": 42029,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m99443657288",
+   "url": "https://jp.mercari.com/item/m99443657288",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ91年39号(巻頭)ダイの大冒険(読切)コムコップ{岩泉舞}",
+   "price": 12000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m99443657288_1.jpg?1792573513",
+   "seller_id": "214341132",
+   "condition": "Worn",
+   "listed_at": "2026-10-21T09:05:13+09:00",
+   "detected_at": "2026-10-21T11:53:50+00:00",
+   "lag_seconds": 42517,
+   "score": 23.63,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m15919549707",
    "url": "https://jp.mercari.com/item/m15919549707",
@@ -9812,31 +9862,6 @@
    ],
    "status": "match",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m93869058950",
-   "url": "https://jp.mercari.com/item/m93869058950",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ展 幽遊白書 ICカードステッカー",
-   "price": 300,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93869058950_1.jpg?1788677436",
-   "seller_id": "556414011",
-   "condition": "Good",
-   "listed_at": "2026-09-06T06:50:36+09:00",
-   "detected_at": "2026-09-06T08:34:46+00:00",
-   "lag_seconds": 38650,
-   "score": 23.63,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
