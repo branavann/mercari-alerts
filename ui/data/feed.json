@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-21T23:35:15+00:00",
+ "generated_at": "2026-10-22T01:54:34+00:00",
  "entries": [
   {
    "id": "m33909058117",
@@ -9928,32 +9928,6 @@
    "listed_at": "2026-07-09T00:38:01+09:00",
    "detected_at": "2026-09-07T12:40:14+00:00",
    "lag_seconds": 5259733,
-   "score": 18.8,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m22332548726",
-   "url": "https://jp.mercari.com/item/m22332548726",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "グランドBOX DX ワンピース カードダスハイパーバトル グランドボックス 旧",
-   "price": 111111,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m22332548726_1.jpg?1788742722",
-   "seller_id": "159864292",
-   "condition": "New",
-   "listed_at": "2026-09-07T00:58:42+09:00",
-   "detected_at": "2026-09-07T01:14:31+00:00",
-   "lag_seconds": 33349,
    "score": 18.8,
    "hits": [
     "ルフィ海賊団",
