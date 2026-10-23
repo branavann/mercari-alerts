@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T14:47:44+00:00",
+ "generated_at": "2026-10-23T18:58:10+00:00",
  "entries": [
   {
    "id": "m54258213759",
@@ -9625,82 +9625,6 @@
     "ワンピース",
     "カードダス",
     "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m94221170774",
-   "url": "https://jp.mercari.com/item/m94221170774",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピースカード　ハイパーバトル　まとめ売り",
-   "price": 699000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m94221170774_1.jpg?1788882829",
-   "seller_id": "547207897",
-   "condition": "Fair",
-   "listed_at": "2026-09-08T15:53:49+09:00",
-   "detected_at": "2026-09-08T18:55:38+00:00",
-   "lag_seconds": 43309,
-   "score": 18.26,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m93771274712",
-   "url": "https://jp.mercari.com/item/m93771274712",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年43号　スラムダンク表紙号 SLAM DUNK表紙号",
-   "price": 9999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m93771274712_1.jpg?1788875646",
-   "seller_id": "314112935",
-   "condition": "Fair",
-   "listed_at": "2026-09-08T13:54:06+09:00",
-   "detected_at": "2026-09-08T15:23:19+00:00",
-   "lag_seconds": 37753,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m40089075966",
-   "url": "https://jp.mercari.com/item/m40089075966",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "✨美品✨ワンピース　ハイパーバトル　カードゲーム　初期　ルフィ海賊団　花火見物",
-   "price": 31000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m40089075966_1.jpg?1786786132",
-   "seller_id": "252462885",
-   "condition": "Like new",
-   "listed_at": "2026-08-15T09:28:52+09:00",
-   "detected_at": "2026-09-08T15:22:38+00:00",
-   "lag_seconds": 2127226,
-   "score": 17.01,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース"
    ],
    "status": "borderline",
    "deal": false,
