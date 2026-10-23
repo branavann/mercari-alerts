@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T04:54:30+00:00",
+ "generated_at": "2026-10-23T09:49:54+00:00",
  "entries": [
   {
    "id": "m54258213759",
@@ -9833,54 +9833,6 @@
     "神経質な方"
    ],
    "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JWVGBDAAtmKYTimkRVEh5",
-   "url": "https://jp.mercari.com/item/2JWVGBDAAtmKYTimkRVEh5",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【BGS鑑定品5.5 Altered】SLAM DUNK 1巻 初版 帯なし [1991年02月]｜ スラムダンク 井上雄彦 ジャンプコミックス 1st Printing",
-   "price": 28980,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JWVGBB78QGpePKZMLrGzs.png@webp",
-   "seller_id": "0",
-   "condition": "Good",
-   "listed_at": "2026-09-08T03:44:03+09:00",
-   "detected_at": "2026-09-08T06:30:48+00:00",
-   "lag_seconds": 42405,
-   "score": 8.68,
-   "hits": [
-    "1991年"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JWVFpovMrWX7dZ3CMS64B",
-   "url": "https://jp.mercari.com/item/2JWVFpovMrWX7dZ3CMS64B",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【BGS鑑定品6.0】週刊少年ジャンプ 1991年47号 幽☆遊☆白書 表紙 電影少女 巻頭カラー [1991年10月]｜ 冨樫義博 桂正和 集英社 雑誌 漫画",
-   "price": 33980,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JWVGCkGg57Ty2KFz8XxxJ.png@webp",
-   "seller_id": "0",
-   "condition": "Good",
-   "listed_at": "2026-09-08T03:40:44+09:00",
-   "detected_at": "2026-09-08T06:30:48+00:00",
-   "lag_seconds": 42604,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
    "deal": false,
    "relist": false,
    "target_hit": false
