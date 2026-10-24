@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T05:04:22+00:00",
+ "generated_at": "2026-10-24T09:34:23+00:00",
  "entries": [
   {
    "id": "m54258213759",
@@ -9551,56 +9551,6 @@
     "神経質な方"
    ],
    "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m41299118329",
-   "url": "https://jp.mercari.com/item/m41299118329",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年9号まじかるタルるートくん:表紙　ダイの大冒険:巻頭",
-   "price": 1400,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m41299118329_1.jpg?1782453397",
-   "seller_id": "825931639",
-   "condition": "Fair",
-   "listed_at": "2026-06-26T05:56:37+09:00",
-   "detected_at": "2026-09-09T06:48:30+00:00",
-   "lag_seconds": 6515513,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m60822487434",
-   "url": "https://jp.mercari.com/item/m60822487434",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年29号 ジョジョの奇妙な冒険　燃える！お兄さん2巻頭",
-   "price": 7700,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m60822487434_1.jpg?1781936392",
-   "seller_id": "825931639",
-   "condition": "Fair",
-   "listed_at": "2026-06-20T06:19:52+09:00",
-   "detected_at": "2026-09-09T06:48:30+00:00",
-   "lag_seconds": 7032518,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
    "deal": false,
    "relist": false,
    "target_hit": false
