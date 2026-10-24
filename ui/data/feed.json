@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-23T21:59:53+00:00",
+ "generated_at": "2026-10-24T00:32:08+00:00",
  "entries": [
   {
    "id": "m54258213759",
@@ -9601,32 +9601,6 @@
     "週刊少年ジャンプ"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m92756689016",
-   "url": "https://jp.mercari.com/item/m92756689016",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "【希少】 ワンピース ハイパーバトル カードダス 王者の財宝 KB-01 ルフィ",
-   "price": 30000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m92756689016_1.jpg?1788904461",
-   "seller_id": "609662137",
-   "condition": "Good",
-   "listed_at": "2026-09-08T21:54:21+09:00",
-   "detected_at": "2026-09-08T23:42:21+00:00",
-   "lag_seconds": 38880,
-   "score": 20.49,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
