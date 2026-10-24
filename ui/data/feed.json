@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T19:25:28+00:00",
+ "generated_at": "2026-10-24T21:47:47+00:00",
  "entries": [
   {
    "id": "m37658768977",
@@ -9449,31 +9449,6 @@
    ],
    "status": "borderline",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m22227946160",
-   "url": "https://jp.mercari.com/item/m22227946160",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年44号",
-   "price": 1299,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m22227946160_1.jpg?1784469540",
-   "seller_id": "541470184",
-   "condition": "Poor",
-   "listed_at": "2026-07-19T13:59:00+09:00",
-   "detected_at": "2026-09-09T19:30:54+00:00",
-   "lag_seconds": 4545114,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
