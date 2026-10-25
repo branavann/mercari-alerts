@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-25T19:58:51+00:00",
+ "generated_at": "2026-10-25T22:28:03+00:00",
  "entries": [
+  {
+   "id": "m24691341608",
+   "url": "https://jp.mercari.com/item/m24691341608",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年32号 アーノルド・シュワルツェネッガー 珍遊記",
+   "price": 3500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m24691341608_1.jpg?1792960077",
+   "seller_id": "697014703",
+   "condition": "Fair",
+   "listed_at": "2026-10-25T20:27:57+09:00",
+   "detected_at": "2026-10-25T22:28:03+00:00",
+   "lag_seconds": 39606,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m54637476151",
    "url": "https://jp.mercari.com/item/m54637476151",
