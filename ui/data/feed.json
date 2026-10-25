@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T04:45:31+00:00",
+ "generated_at": "2026-10-25T09:39:13+00:00",
  "entries": [
   {
    "id": "m91680595095",
@@ -9371,30 +9371,6 @@
     "神経質な方"
    ],
    "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m38609482571",
-   "url": "https://jp.mercari.com/item/m38609482571",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "電影少女 ポスター 桂正和 週刊少年ジャンプ　32",
-   "price": 4210,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m38609482571_1.jpg?1789014890",
-   "seller_id": "744708390",
-   "condition": "Fair",
-   "listed_at": "2026-09-10T04:34:50+09:00",
-   "detected_at": "2026-09-10T09:09:09+00:00",
-   "lag_seconds": 48859,
-   "score": 14.83,
-   "hits": [
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
    "deal": false,
    "relist": false,
    "target_hit": false
