@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-10-24T21:47:47+00:00",
+ "generated_at": "2026-10-25T00:07:46+00:00",
  "entries": [
+  {
+   "id": "m91680595095",
+   "url": "https://jp.mercari.com/item/m91680595095",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "「ジャンプノベル」創刊号　秋本治ビートたけし電影少女バスタード鳥山明荒木飛呂彦",
+   "price": 5980,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m91680595095_1.jpg?1792883579",
+   "seller_id": "504966508",
+   "condition": "Fair",
+   "listed_at": "2026-10-24T23:12:59+09:00",
+   "detected_at": "2026-10-25T00:07:46+00:00",
+   "lag_seconds": 35687,
+   "score": 13.25,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m37658768977",
    "url": "https://jp.mercari.com/item/m37658768977",
