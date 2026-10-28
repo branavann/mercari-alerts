@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T15:07:55+00:00",
+ "generated_at": "2026-10-28T20:17:28+00:00",
  "entries": [
   {
    "id": "m27566900404",
@@ -8135,31 +8135,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "2JJmxYh9cpKL2J6PuWkNdQ",
-   "url": "https://jp.mercari.com/item/2JJmxYh9cpKL2J6PuWkNdQ",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "【中古】コミック雑誌 週刊少年ジャンプ 1991年1月28日号 No.6",
-   "price": 18000,
-   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JJmxYfkqjHRhBmoGorWR4.webp@webp",
-   "seller_id": "0",
-   "condition": "Good",
-   "listed_at": "2025-12-24T10:25:55+09:00",
-   "detected_at": "2026-09-13T18:14:48+00:00",
-   "lag_seconds": 22783733,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
