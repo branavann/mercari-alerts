@@ -1,6 +1,57 @@
 {
- "generated_at": "2026-10-29T18:51:56+00:00",
+ "generated_at": "2026-10-29T23:09:57+00:00",
  "entries": [
+  {
+   "id": "m14862852345",
+   "url": "https://jp.mercari.com/item/m14862852345",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年34号スラムダンク表紙ドラゴンボール幽遊白書ジョジョ",
+   "price": 2800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m14862852345_1.jpg?1793314934",
+   "seller_id": "460123392",
+   "condition": "Poor",
+   "listed_at": "2026-10-29T23:02:14+09:00",
+   "detected_at": "2026-10-29T23:09:57+00:00",
+   "lag_seconds": 32863,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m12221442926",
+   "url": "https://jp.mercari.com/item/m12221442926",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年15号 ドラゴンボール スーパーサイヤ人初登場",
+   "price": 58000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m12221442926_1.jpg?1793314437",
+   "seller_id": "460123392",
+   "condition": "Fair",
+   "listed_at": "2026-10-29T22:53:57+09:00",
+   "detected_at": "2026-10-29T23:09:57+00:00",
+   "lag_seconds": 33360,
+   "score": 30.06,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ",
+    "5号"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m67398895403",
    "url": "https://jp.mercari.com/item/m67398895403",
