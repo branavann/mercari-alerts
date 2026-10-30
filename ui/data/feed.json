@@ -1,6 +1,31 @@
 {
- "generated_at": "2026-10-29T23:09:57+00:00",
+ "generated_at": "2026-10-30T02:38:09+00:00",
  "entries": [
+  {
+   "id": "m63159048628",
+   "url": "https://jp.mercari.com/item/m63159048628",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年26号　電影少女ポスター/ドラゴンボールフリーザ戦決着",
+   "price": 2200,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m63159048628_1.jpg?1793318565",
+   "seller_id": "627870769",
+   "condition": "Fair",
+   "listed_at": "2026-10-30T00:02:45+09:00",
+   "detected_at": "2026-10-30T02:38:09+00:00",
+   "lag_seconds": 41724,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m14862852345",
    "url": "https://jp.mercari.com/item/m14862852345",
