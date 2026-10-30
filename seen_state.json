@@ -1285,7 +1285,7 @@
   },
   "wsj-1991-issue-5": {
    "initialized": true,
-   "last_checked": "2026-10-30T15:57:31+00:00",
+   "last_checked": "2026-10-30T20:39:55+00:00",
    "prices": [
     1300,
     1300,
@@ -1349,6 +1349,7 @@
     120000
    ],
    "seen_ids": [
+    "m57511295930",
     "m96091902787",
     "m53114618725",
     "m59224567363",
@@ -1378,7 +1379,6 @@
     "2JYWCArLfYjuhuKXLeWnGC",
     "2JYVzVn8AoqrbYknqtTLxB",
     "m32295288238",
-    "2JYSNowWdyE9sxTyq2XbMG",
     "m37589575719",
     "m60822487434",
     "m23196193040",
@@ -1394,6 +1394,7 @@
     "m55948758157",
     "2JPAdVegWdJMUux7RAxYSa",
     "m67398895403",
+    "2JYSNowWdyE9sxTyq2XbMG",
     "2JYWfsGN3GBsfFMPVHmztt",
     "m62929052803",
     "m97973120405",
@@ -1471,7 +1472,6 @@
     "m97068369006",
     "m71724968580",
     "2JYTrs45ReSS3o7vQfyD4X",
-    "m57511295930",
     "2JYXAPNwmkxxhcrF5ms9su",
     "m68280358990",
     "m92804633964",
