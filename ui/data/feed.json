@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T16:41:15+00:00",
+ "generated_at": "2026-11-01T20:51:07+00:00",
  "entries": [
   {
    "id": "m55851466325",
@@ -7493,32 +7493,6 @@
    "listed_at": "2026-09-18T02:40:02+09:00",
    "detected_at": "2026-09-18T05:03:51+00:00",
    "lag_seconds": 41029,
-   "score": 20.49,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m62435774757",
-   "url": "https://jp.mercari.com/item/m62435774757",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "カードダスEX ハイパーバトル ワンピース グランドボックス",
-   "price": 120000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m62435774757_1.jpg?1789657283",
-   "seller_id": "463541711",
-   "condition": "Like new",
-   "listed_at": "2026-09-17T15:01:23+09:00",
-   "detected_at": "2026-09-17T19:04:23+00:00",
-   "lag_seconds": 46980,
    "score": 20.49,
    "hits": [
     "ハイパーバトル",
