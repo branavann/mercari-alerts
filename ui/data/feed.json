@@ -1,6 +1,82 @@
 {
- "generated_at": "2026-10-31T23:38:05+00:00",
+ "generated_at": "2026-11-01T02:37:44+00:00",
  "entries": [
+  {
+   "id": "m55913610389",
+   "url": "https://jp.mercari.com/item/m55913610389",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1991年24号幽遊白書表紙ドラゴンボールスラムダンク電影少女",
+   "price": 4500,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55913610389_1.jpg?1793500532",
+   "seller_id": "133895056",
+   "condition": "Worn",
+   "listed_at": "2026-11-01T02:35:32+09:00",
+   "detected_at": "2026-11-01T02:37:44+00:00",
+   "lag_seconds": 32532,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m54207136233",
+   "url": "https://jp.mercari.com/item/m54207136233",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年 6号 表紙SLAM DUNK",
+   "price": 6000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m54207136233_1.jpg?1793497180",
+   "seller_id": "133895056",
+   "condition": "Worn",
+   "listed_at": "2026-11-01T01:39:40+09:00",
+   "detected_at": "2026-11-01T02:37:44+00:00",
+   "lag_seconds": 35884,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m41661441550",
+   "url": "https://jp.mercari.com/item/m41661441550",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "美品 週刊少年ジャンプ 1991年15号 ドラゴンボール スーパーサイヤ人初登場",
+   "price": 95000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m41661441550_1.jpg?1793493523",
+   "seller_id": "133895056",
+   "condition": "Fair",
+   "listed_at": "2026-11-01T00:38:43+09:00",
+   "detected_at": "2026-11-01T02:37:44+00:00",
+   "lag_seconds": 39541,
+   "score": 30.06,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ",
+    "5号"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m30446007638",
    "url": "https://jp.mercari.com/item/m30446007638",
@@ -7533,31 +7609,6 @@
    ],
    "status": "borderline",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m96689205487",
-   "url": "https://jp.mercari.com/item/m96689205487",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "ゆい様 リクエスト 2点 まとめ商品",
-   "price": 2800,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m96689205487_1.jpg?1789596241",
-   "seller_id": "588324706",
-   "condition": "Fair",
-   "listed_at": "2026-09-16T22:04:01+09:00",
-   "detected_at": "2026-09-17T00:19:55+00:00",
-   "lag_seconds": 40554,
-   "score": 22.05,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
