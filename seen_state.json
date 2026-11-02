@@ -1285,7 +1285,7 @@
   },
   "wsj-1991-issue-5": {
    "initialized": true,
-   "last_checked": "2026-11-02T16:35:43+00:00",
+   "last_checked": "2026-11-02T23:41:54+00:00",
    "prices": [
     9900,
     15000,
@@ -1349,6 +1349,10 @@
     12000
    ],
    "seen_ids": [
+    "m20867110166",
+    "m64116789400",
+    "m59901274130",
+    "2JZ2ALvW9jkykBdNPbHaF5",
     "m69639896794",
     "2JMWRGgtnXTUPjfGFQgjwR",
     "m54637476151",
@@ -1375,14 +1379,9 @@
     "2JYW7aAke5ffR9zeA8QCJQ",
     "2JYWphuyikfT4m4342f2oy",
     "2JYyiWm3xApHRsa8sM3CaS",
-    "m23097915070",
-    "2JYQ3WxFk9bKx47e29GnwX",
-    "2JYSiu4rU8RaYJzM8M8tbU",
     "m90877373953",
     "2JYSn5UxC6pZRuwyenRcTs",
     "m94395784806",
-    "m20867110166",
-    "m64116789400",
     "m83945233681",
     "m55851466325",
     "2JYVFtEtaS6AW6DqBEkyaq",
@@ -1395,9 +1394,11 @@
     "2JYXM9F5ZqFuq4M4CYzsfj",
     "m62279185878",
     "m34241236954",
+    "m23097915070",
     "m66850448678",
     "m16711590294",
-    "m59901274130",
+    "2JYQ3WxFk9bKx47e29GnwX",
+    "2JYSiu4rU8RaYJzM8M8tbU",
     "m37280797503",
     "2JYVA2Wi29rEuLm3gq5DGU",
     "m77552555021",
@@ -1947,8 +1948,7 @@
     "m10515617791",
     "m58041333009",
     "m51712829826",
-    "m30429971411",
-    "m18898889986"
+    "m30429971411"
    ]
   }
  },
