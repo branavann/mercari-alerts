@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T06:41:36+00:00",
+ "generated_at": "2026-11-02T16:35:43+00:00",
  "entries": [
   {
    "id": "m55851466325",
@@ -7296,108 +7296,6 @@
    ],
    "status": "borderline",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m26141242159",
-   "url": "https://jp.mercari.com/item/m26141242159",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年28号 電影少女表紙　ジョジョの奇妙な冒険巻頭カラー",
-   "price": 3000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m26141242159_1.jpg?1789737064",
-   "seller_id": "333857380",
-   "condition": "Worn",
-   "listed_at": "2026-09-18T13:11:04+09:00",
-   "detected_at": "2026-09-18T14:15:13+00:00",
-   "lag_seconds": 36249,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m61511575233",
-   "url": "https://jp.mercari.com/item/m61511575233",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "新品 ワンピースカードダスEX スターターキット　未開封　アラバスタ王国の決戦",
-   "price": 70000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m61511575233_1.jpg?1789736487",
-   "seller_id": "867693301",
-   "condition": "New",
-   "listed_at": "2026-09-18T13:01:27+09:00",
-   "detected_at": "2026-09-18T14:15:01+00:00",
-   "lag_seconds": 36814,
-   "score": 16.89,
-   "hits": [
-    "ルフィ海賊団",
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m10832408712",
-   "url": "https://jp.mercari.com/item/m10832408712",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース カードダス　ハイパーバトル ナミ S05 海賊専門の泥棒",
-   "price": 38000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m10832408712_1.jpg?1789734419",
-   "seller_id": "768485382",
-   "condition": "Worn",
-   "listed_at": "2026-09-18T12:26:59+09:00",
-   "detected_at": "2026-09-18T14:15:01+00:00",
-   "lag_seconds": 38882,
-   "score": 20.49,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m59902065469",
-   "url": "https://jp.mercari.com/item/m59902065469",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "✅当時物 週刊少年ジャンプ 1991年47号 幽遊白書 ドラゴンボール",
-   "price": 1500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m59902065469_1.jpg?1789710676",
-   "seller_id": "372387509",
-   "condition": "Worn",
-   "listed_at": "2026-09-18T05:51:16+09:00",
-   "detected_at": "2026-09-18T09:48:26+00:00",
-   "lag_seconds": 46630,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
