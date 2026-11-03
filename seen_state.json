@@ -1285,8 +1285,9 @@
   },
   "wsj-1991-issue-5": {
    "initialized": true,
-   "last_checked": "2026-11-03T11:57:44+00:00",
+   "last_checked": "2026-11-03T19:25:25+00:00",
    "prices": [
+    3200,
     13800,
     4500,
     5980,
@@ -1345,10 +1346,18 @@
     6600,
     6999,
     12000,
-    12000,
     12000
    ],
    "seen_ids": [
+    "m27566900404",
+    "m82167403564",
+    "m19181315929",
+    "m33415324915",
+    "2JTg92B2PbfnmwRwZrzPb6",
+    "m28404437521",
+    "m20465551022",
+    "2JYWphuyikfT4m4342f2oy",
+    "m31774446989",
     "2JJiKSNQD88hryYX5Zp5rK",
     "2JYQrk2bHEVr2cY3E77jVP",
     "m82148298008",
@@ -1371,14 +1380,10 @@
     "m96893994342",
     "m20867110166",
     "m64116789400",
-    "m59901274130",
-    "2JZ2ALvW9jkykBdNPbHaF5",
     "m69639896794",
     "2JMWRGgtnXTUPjfGFQgjwR",
     "m54637476151",
-    "m38344192471",
     "m22751281870",
-    "m10323281545",
     "2JYT9hcWHUqB4NPhq58TjH",
     "m14862852345",
     "m30735534801",
@@ -1391,6 +1396,10 @@
     "2JYSn5UxC6pZRuwyenRcTs",
     "m94395784806",
     "m83945233681",
+    "m59901274130",
+    "2JZ2ALvW9jkykBdNPbHaF5",
+    "m38344192471",
+    "m10323281545",
     "m55851466325",
     "2JYVFtEtaS6AW6DqBEkyaq",
     "2JTFvEGXBM9T7goSCTwC7U",
@@ -1402,14 +1411,12 @@
     "2JYRwpE79hZsdiz6ABK2Tx",
     "2JTiozmxJ3xDyUL3VfbjSd",
     "2JXw3SfuXrFJTcXegxJ2vs",
-    "m33415324915",
     "m25458293298",
     "m68853774382",
     "2JYXM9F5ZqFuq4M4CYzsfj",
     "m23097915070",
     "m63556569496",
     "2JYW7aAke5ffR9zeA8QCJQ",
-    "2JYWphuyikfT4m4342f2oy",
     "m96410030435",
     "m62279185878",
     "m34241236954",
@@ -1436,7 +1443,6 @@
     "2JYtehhZ5pmw5wMMp6mCrp",
     "m94791556009",
     "2JYRUoqgUHRZTYVfBEQDb4",
-    "2JTg92B2PbfnmwRwZrzPb6",
     "HVQgJmeR5BfN5K5vxz9ybf",
     "m63159048628",
     "m22850722354",
@@ -1453,7 +1459,6 @@
     "m71239617372",
     "m34407059349",
     "m66922449643",
-    "m27566900404",
     "2JYR4u8vXrPWRxRxcAuGMw",
     "2JYu4oJtyBK8efdVeYWCQL",
     "2JYu4oGtmbxeATg6T2x2rm",
@@ -1523,7 +1528,6 @@
     "m55285359633",
     "m57752297444",
     "caZapxDNxvXPkMH6smhgKm",
-    "m82167403564",
     "m43306915754",
     "9y7bjDLHLezZVhGtN7tFvR",
     "m20393085412",
@@ -1563,7 +1567,6 @@
     "m81350752322",
     "m25498104742",
     "m84286949267",
-    "m19181315929",
     "2JYQCRqxV22iY7psQAajzn",
     "m76251601343",
     "m60218739724",
@@ -1668,7 +1671,6 @@
     "2JKL6rcTUERugBpdzUKTfS",
     "2JQWDnTNiNjTwfLUF4NCxd",
     "2JKjEgUEYwmgNo7byHbXtC",
-    "m20465551022",
     "m25443464727",
     "2JYSpFxQpSJ9WwGCpwRgeQ",
     "m83239927304",
@@ -1946,9 +1948,7 @@
     "m24986978240",
     "m92692587058",
     "m46377463171",
-    "m26908871859",
-    "m61556329606",
-    "m22603142919"
+    "m26908871859"
    ]
   }
  },
@@ -2232,10 +2232,6 @@
   "479c73fc65ec6086": {
    "id": "m25458293298",
    "t": "2026-11-01T09:46:22+00:00"
-  },
-  "49329343460f1e5c": {
-   "id": "m64532050986",
-   "t": "2026-09-19T16:45:42+00:00"
   },
   "49b2a6f4bc3471db": {
    "id": "2JTFvEGXBM9T7goSCTwC7U",
@@ -2768,6 +2764,10 @@
   "d4e6895f8521c9a0": {
    "id": "2JPAdVegWdJMUux7RAxYSa",
    "t": "2026-10-29T12:51:49+00:00"
+  },
+  "d5ee25de225baa03": {
+   "id": "m28404437521",
+   "t": "2026-11-03T19:25:25+00:00"
   },
   "d608ae4604b1947b": {
    "id": "m65643744795",

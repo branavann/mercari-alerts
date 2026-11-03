@@ -1,6 +1,30 @@
 {
- "generated_at": "2026-11-03T11:57:44+00:00",
+ "generated_at": "2026-11-03T19:25:25+00:00",
  "entries": [
+  {
+   "id": "m28404437521",
+   "url": "https://jp.mercari.com/item/m28404437521",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1994年40号新連載奴の名はMARIA",
+   "price": 3200,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m28404437521_1.jpg?1709256653",
+   "seller_id": "616752399",
+   "condition": "Good",
+   "listed_at": "2024-03-01T01:30:53+09:00",
+   "detected_at": "2026-11-03T19:25:25+00:00",
+   "lag_seconds": null,
+   "score": 14.83,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m14117161881",
    "url": "https://jp.mercari.com/item/m14117161881",
@@ -7116,31 +7140,6 @@
     "神経質な方"
    ],
    "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m64532050986",
-   "url": "https://jp.mercari.com/item/m64532050986",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年24号 表紙:幽遊白書",
-   "price": 5000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m64532050986_1.jpg?1789831765",
-   "seller_id": "701934906",
-   "condition": "Fair",
-   "listed_at": "2026-09-19T15:29:25+09:00",
-   "detected_at": "2026-09-19T16:45:42+00:00",
-   "lag_seconds": 36977,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
    "deal": false,
    "relist": false,
    "target_hit": false
