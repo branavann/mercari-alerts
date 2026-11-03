@@ -1,6 +1,57 @@
 {
- "generated_at": "2026-11-02T23:41:54+00:00",
+ "generated_at": "2026-11-03T04:03:48+00:00",
  "entries": [
+  {
+   "id": "m87319686111",
+   "url": "https://jp.mercari.com/item/m87319686111",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【レア】週刊少年ジャンプ 1991年 5号 尾田栄一郎 FLY UP BOY",
+   "price": 33333,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m87319686111_1.jpg?1793669238",
+   "seller_id": "442332804",
+   "condition": "Fair",
+   "listed_at": "2026-11-03T01:27:18+09:00",
+   "detected_at": "2026-11-03T04:03:48+00:00",
+   "lag_seconds": 41790,
+   "score": 32.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ",
+    "年5",
+    "5号"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m19166765591",
+   "url": "https://jp.mercari.com/item/m19166765591",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ1995年31号新連載SHADOWLADYドラゴンボール1991",
+   "price": 5980,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m19166765591_1.jpg?1793668474",
+   "seller_id": "481753663",
+   "condition": "Fair",
+   "listed_at": "2026-11-03T01:14:34+09:00",
+   "detected_at": "2026-11-03T04:03:48+00:00",
+   "lag_seconds": 42554,
+   "score": 14.83,
+   "hits": [
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m55851466325",
    "url": "https://jp.mercari.com/item/m55851466325",
