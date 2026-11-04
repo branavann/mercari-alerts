@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T19:25:25+00:00",
+ "generated_at": "2026-11-04T00:08:53+00:00",
  "entries": [
   {
    "id": "m28404437521",
@@ -7107,32 +7107,6 @@
    "detected_at": "2026-09-20T01:30:07+00:00",
    "lag_seconds": 20901453,
    "score": 18.58,
-   "hits": [
-    "ハイパーバトル",
-    "ワンピース",
-    "カードダス",
-    "神経質な方"
-   ],
-   "status": "borderline",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m65424790830",
-   "url": "https://jp.mercari.com/item/m65424790830",
-   "marketplace": "mercari",
-   "alert": "op-hyperbattle-ce2",
-   "alert_label": "One Piece Hyper Battle C-E2",
-   "name": "ワンピース ハイパーバトル　ナミ 9枚まとめ売り",
-   "price": 40000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m65424790830_1.jpg?1789853059",
-   "seller_id": "315611187",
-   "condition": "Poor",
-   "listed_at": "2026-09-19T21:24:19+09:00",
-   "detected_at": "2026-09-19T21:26:07+00:00",
-   "lag_seconds": 32508,
-   "score": 19.95,
    "hits": [
     "ハイパーバトル",
     "ワンピース",
