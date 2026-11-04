@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T14:49:32+00:00",
+ "generated_at": "2026-11-04T21:08:40+00:00",
  "entries": [
   {
    "id": "m44303175802",
@@ -6901,31 +6901,6 @@
    ],
    "status": "borderline",
    "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m66661166722",
-   "url": "https://jp.mercari.com/item/m66661166722",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年26号 燃える！お兄さん",
-   "price": 1222,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m66661166722_1.jpg?1786712531",
-   "seller_id": "495041784",
-   "condition": "Good",
-   "listed_at": "2026-08-14T13:02:11+09:00",
-   "detected_at": "2026-09-20T16:11:08+00:00",
-   "lag_seconds": 3240537,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": true,
    "relist": false,
    "target_hit": false
   }
