@@ -1,6 +1,80 @@
 {
- "generated_at": "2026-11-06T02:44:32+00:00",
+ "generated_at": "2026-11-06T09:56:36+00:00",
  "entries": [
+  {
+   "id": "m72563102356",
+   "url": "https://jp.mercari.com/item/m72563102356",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年16号",
+   "price": 5800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m72563102356_1.jpg?1793956478",
+   "seller_id": "526496184",
+   "condition": "Good",
+   "listed_at": "2026-11-06T09:14:38+09:00",
+   "detected_at": "2026-11-06T09:56:36+00:00",
+   "lag_seconds": 34918,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "m98074216474",
+   "url": "https://jp.mercari.com/item/m98074216474",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊少年ジャンプ 1991年47号 幽遊白書（連載１周年)",
+   "price": 4800,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m98074216474_1.jpg?1793955486",
+   "seller_id": "526496184",
+   "condition": "Fair",
+   "listed_at": "2026-11-06T08:58:06+09:00",
+   "detected_at": "2026-11-06T09:56:36+00:00",
+   "lag_seconds": 35910,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "2JZB4YBUHgyc2UwVqyBDBE",
+   "url": "https://jp.mercari.com/item/2JZB4YBUHgyc2UwVqyBDBE",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "本/少年漫画 アイキュー ジャンプ 1991 年 20 ほ",
+   "price": 12656,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JZB4Y9mVJNFgZqbVr8cjV.webp@webp",
+   "seller_id": "0",
+   "condition": "Fair",
+   "listed_at": "2026-11-06T04:02:24+09:00",
+   "detected_at": "2026-11-06T09:56:36+00:00",
+   "lag_seconds": 53652,
+   "score": 19.68,
+   "hits": [
+    "ジャンプ1991",
+    "1991年"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m51894832678",
    "url": "https://jp.mercari.com/item/m51894832678",
