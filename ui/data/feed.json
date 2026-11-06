@@ -1,6 +1,55 @@
 {
- "generated_at": "2026-11-06T09:56:36+00:00",
+ "generated_at": "2026-11-06T17:21:05+00:00",
  "entries": [
+  {
+   "id": "m65673526573",
+   "url": "https://jp.mercari.com/item/m65673526573",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "週刊ヤングジャンプ 1991年7月11日 No.29 CoCo 破れ有",
+   "price": 1000,
+   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m65673526573_1.jpg?1793977801",
+   "seller_id": "500453241",
+   "condition": "Worn",
+   "listed_at": "2026-11-06T15:10:01+09:00",
+   "detected_at": "2026-11-06T17:21:05+00:00",
+   "lag_seconds": 40264,
+   "score": 19.68,
+   "hits": [
+    "ジャンプ1991",
+    "1991年"
+   ],
+   "status": "match",
+   "deal": true,
+   "relist": false,
+   "target_hit": false
+  },
+  {
+   "id": "2JKL6wtowqucSvm6heuzrL",
+   "url": "https://jp.mercari.com/item/2JKL6wtowqucSvm6heuzrL",
+   "marketplace": "mercari",
+   "alert": "wsj-1991-issue-5",
+   "alert_label": "WSJ 1991 Issue 5",
+   "name": "【中古】コミック雑誌 週刊少年ジャンプ 1991年11月11日号 No.47",
+   "price": 4600,
+   "thumbnail": "https://assets.mercari-shops-static.com/-/small/plain/2JKL6wsbymg248bktgyHQk.webp@webp",
+   "seller_id": "0",
+   "condition": "Good",
+   "listed_at": "2026-01-05T10:59:01+09:00",
+   "detected_at": "2026-11-06T17:21:05+00:00",
+   "lag_seconds": 26407324,
+   "score": 27.56,
+   "hits": [
+    "ジャンプ1991",
+    "1991年",
+    "週刊少年ジャンプ"
+   ],
+   "status": "match",
+   "deal": false,
+   "relist": false,
+   "target_hit": false
+  },
   {
    "id": "m72563102356",
    "url": "https://jp.mercari.com/item/m72563102356",
@@ -6989,29 +7038,6 @@
     "5号"
    ],
    "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m55617815062",
-   "url": "https://jp.mercari.com/item/m55617815062",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "1991年少年ジャンプ増刊WinterSpecial 岩泉舞 岸大武郎バスタード",
-   "price": 3480,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m55617815062_1.jpg?1782132577",
-   "seller_id": "504966508",
-   "condition": "Good",
-   "listed_at": "2026-06-22T12:49:37+09:00",
-   "detected_at": "2026-09-22T12:29:47+00:00",
-   "lag_seconds": 7980010,
-   "score": 8.68,
-   "hits": [
-    "1991年"
-   ],
-   "status": "borderline",
    "deal": false,
    "relist": false,
    "target_hit": false
