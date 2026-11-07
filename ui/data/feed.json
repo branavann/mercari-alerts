@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T15:33:23+00:00",
+ "generated_at": "2026-11-07T19:38:38+00:00",
  "entries": [
   {
    "id": "m73145752773",
@@ -7015,55 +7015,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m53376787439",
-   "url": "https://jp.mercari.com/item/m53376787439",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ Winter Special 1991年",
-   "price": 9999,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m53376787439_1.jpg?1790174054",
-   "seller_id": "298882720",
-   "condition": "Fair",
-   "listed_at": "2026-09-23T14:34:14+09:00",
-   "detected_at": "2026-09-23T17:24:08+00:00",
-   "lag_seconds": 42594,
-   "score": 16.56,
-   "hits": [
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m18172658812",
-   "url": "https://jp.mercari.com/item/m18172658812",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年49号 まじかるタルるートくんポスター付",
-   "price": 5500,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m18172658812_1.jpg?1790171741",
-   "seller_id": "787626535",
-   "condition": "Poor",
-   "listed_at": "2026-09-23T13:55:41+09:00",
-   "detected_at": "2026-09-23T17:24:08+00:00",
-   "lag_seconds": 44907,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
