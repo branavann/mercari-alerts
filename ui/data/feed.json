@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T22:16:22+00:00",
+ "generated_at": "2026-11-07T02:14:09+00:00",
  "entries": [
   {
    "id": "m65673526573",
@@ -6988,57 +6988,6 @@
    ],
    "status": "match",
    "deal": true,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m70683689299",
-   "url": "https://jp.mercari.com/item/m70683689299",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年6号 スラムダンク表紙 ドラゴンボール",
-   "price": 4980,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m70683689299_1.jpg?1790119290",
-   "seller_id": "643649405",
-   "condition": "Fair",
-   "listed_at": "2026-09-22T23:21:30+09:00",
-   "detected_at": "2026-09-23T01:31:17+00:00",
-   "lag_seconds": 40187,
-   "score": 27.56,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ"
-   ],
-   "status": "match",
-   "deal": false,
-   "relist": false,
-   "target_hit": false
-  },
-  {
-   "id": "m28359761038",
-   "url": "https://jp.mercari.com/item/m28359761038",
-   "marketplace": "mercari",
-   "alert": "wsj-1991-issue-5",
-   "alert_label": "WSJ 1991 Issue 5",
-   "name": "週刊少年ジャンプ 1991年 15号　ドラゴンボールスーパーサイヤ人初登場",
-   "price": 30000,
-   "thumbnail": "https://static.mercdn.net/thumb/item/webp/m28359761038_1.jpg?1790121024",
-   "seller_id": "501803122",
-   "condition": "Poor",
-   "listed_at": "2026-09-22T23:50:24+09:00",
-   "detected_at": "2026-09-23T01:31:17+00:00",
-   "lag_seconds": 38453,
-   "score": 30.06,
-   "hits": [
-    "ジャンプ1991",
-    "1991年",
-    "週刊少年ジャンプ",
-    "5号"
-   ],
-   "status": "match",
-   "deal": false,
    "relist": false,
    "target_hit": false
   }
